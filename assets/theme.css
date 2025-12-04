@@ -8264,3 +8264,26 @@ body.search-template #MainContent,
     max-width: 4rem;
   }
 }
+
+/* Custom styling begin here */
+
+.dc_shop-all-button{
+  height: 50px;
+  margin-bottom:30px;
+  background-color: rgb(var(--color-primary));
+  border-color: rgb(var(--color-primary));
+}
+
+.dc_shop-all-button:hover{
+  background-color: rgb(var(--color-secondary));
+}
+
+.dc_button-label{
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff
+}
+
+.dc_shop-all-button:hover .dc_button-label {
+  color: #D06834;
+}

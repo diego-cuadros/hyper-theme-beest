@@ -125,23 +125,29 @@
                   </span>
                 </a>
               {%- endif -%}
-              {%- if shop.customer_accounts_enabled -%}
-                <a
-                  href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-                  class="account-button flex items-center gap-2"
-                >
-                  {%- render 'icon-account', size: 'large' -%}
-                  <span>
-                    {%- liquid
-                      if customer
-                        echo 'customer.account_fallback' | t
-                      else
-                        echo 'customer.account_action' | t
-                      endif
-                    -%}
-                  </span>
-                </a>
-              {%- endif -%}
+              {% unless section.settings.use_shop_all_instead_of_login_button %}
+                {%- if shop.customer_accounts_enabled -%}
+                  <a
+                    href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+                    class="account-button flex items-center gap-2"
+                  >
+                    {%- render 'icon-account', size: 'large' -%}
+                    <span>
+                      {%- liquid
+                        if customer
+                          echo 'customer.account_fallback' | t
+                        else
+                          echo 'customer.account_action' | t
+                        endif
+                      -%}
+                    </span>
+                  </a>
+                {%- endif -%}
+              {% else %}
+                <button class="btn dc_shop-all-button">
+                  <a class="dc_button-label" href="https://www.beestusa.com/collections/all">Shop All</a>
+                </button>
+              {% endunless %}
               {%- if section.settings.enable_language_selector or section.settings.enable_country_selector -%}
                 <div class="menu-drawer__localization-form flex flex-wrap gap-x-6 gap-y-4">
                   {%- liquid
