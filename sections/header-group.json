@@ -17,14 +17,14 @@
         "announcement_bar_GNhNin": {
           "type": "announcement_bar",
           "settings": {
-            "text": "Free shipping over $50",
+            "text": "FREE SHIPPING OVER $50",
             "link": ""
           }
         },
         "announcement_bar_aDyKVa": {
           "type": "announcement_bar",
           "settings": {
-            "text": "Shop RV Roof Sealant",
+            "text": "SHOP RV ROOF SEALANT",
             "link": "https://www.beestusa.com/product/beest-rv-roof-sealant-liquid-rubber-coating"
           }
         }
@@ -34,8 +34,7 @@
         "announcement_bar_aDyKVa"
       ],
       "custom_css": [
-        ".slider-controls {display: none;}",
-        ".announcement-bar__text {font-size: 16px;}"
+        ".announcement-bar__text {font-weight: 600; font-family: 'Manrope', sans-serif;}"
       ],
       "name": "t:sections.announcement-bar.name",
       "settings": {
@@ -76,15 +75,7 @@
       "block_order": [
         "product_list_KxDD84"
       ],
-      "custom_css": [
-        ".search__input {height: 46px; border-radius: 8px;}",
-        ".search__input::placeholder {font-size: 14px;}",
-        ".search__field-icon {background-color: #d06834; border-radius: 4px; padding: 10px; right: 5px;}",
-        ".search__field-icon > svg {width: 14px; height: 14px;}",
-        ".search__field-icon > svg > path {stroke: #ffffff;}",
-        ".header__buttons > a {background: none;}",
-        ".menu__item {font-size: 14px;}"
-      ],
+      "custom_css": [],
       "settings": {
         "container": "fixed",
         "color_scheme": "scheme-1",
@@ -96,6 +87,7 @@
         "enable_collapse_on_scroll": true,
         "show_sperator_line": false,
         "customer_account_style": "icon-with-text",
+        "use_shop_all_instead_of_login_button": true,
         "show_social_media_icons": false,
         "enable_language_selector": false,
         "enable_country_selector": false,
