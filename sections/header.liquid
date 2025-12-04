@@ -64,20 +64,6 @@
   {% endif %}
 >
   <div class="header__top header__top--{{ header_layout }} items-center relative section--padding page-width page-width--{{ section.settings.container }}">
-    {%- if menu_mobile != blank -%}
-      <div class="header__icons header__icons--left lg:justify-start z-1 lg:hidden no-js-hidden">
-        <div class="header__buttons flex items-center">
-          <button
-            class="menu-drawer-button btn btn--inherit flex flex-col items-center justify-center lg:hidden"
-            aria-controls="MenuDrawer"
-            aria-label="{{ 'accessibility.menu_drawer' | t }}"
-          >
-            <span class="hamburger-line"></span>
-          </button>
-        </div>
-      </div>
-    {%- endif -%}
-
     {%- if request.page_type == 'index' -%}
       <h1 class="header__logo flex justify-center items-center z-1">
     {%- else -%}
@@ -246,6 +232,19 @@
             {%- endif -%}
           </cart-count>
         </a>
+        {%- if menu_mobile != blank -%}
+          <div class="header__icons header__icons--left lg:justify-start z-1 lg:hidden no-js-hidden">
+            <div class="header__buttons flex items-center">
+              <button
+                class="menu-drawer-button btn btn--inherit flex flex-col items-center justify-center lg:hidden"
+                aria-controls="MenuDrawer"
+                aria-label="{{ 'accessibility.menu_drawer' | t }}"
+              >
+                <span class="hamburger-line"></span>
+              </button>
+            </div>
+          </div>
+        {%- endif -%}
       </div>
     </div>
   </div>
