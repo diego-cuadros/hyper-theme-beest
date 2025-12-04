@@ -92,7 +92,7 @@
         "menu_mobile": "",
         "header_layout": "logo-left-search-center",
         "menu_trigger": "hover",
-        "sticky_header": "on-scroll-up",
+        "sticky_header": "none",
         "enable_collapse_on_scroll": true,
         "show_sperator_line": false,
         "customer_account_style": "icon-with-text",
