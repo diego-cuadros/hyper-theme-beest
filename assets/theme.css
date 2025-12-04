@@ -8321,25 +8321,6 @@ body.search-template #MainContent,
   width: 28px;
   height: 28px;
 }
-/*Slide show on home page*/
-@media only screen and (min-width: 768px) {
-  .slideshow__text {
-    right: 25%;
-    max-width: 40%;
-  }
-  .slideshow__title {
-    font-size: 56px;
-    font-weight: 500;
-    line-height: 120%;
-    letter-spacing: 0;
-  }
-  .slideshow__subtitle {
-    font-size: 20px;
-    background-color: #222222;
-    border-radius: 4px;
-    padding: 4px 12px;
-  }
-}
 
 /*Shop all button on menu drawer*/
 .dc_shop-all-button{
