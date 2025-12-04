@@ -12,10 +12,14 @@
     "image_with_text_overlay_gEWbcF": {
       "type": "image-with-text-overlay",
       "blocks": {
-        "subheading_9TTyQP": {
-          "type": "subheading",
+        "custom_tag_eJBJpp": {
+          "type": "custom_tag",
           "settings": {
-            "subheading": "Add a tagline"
+            "custom_tag_text": "RESTOCK: HD4000",
+            "background_color": "#222222",
+            "background_opacity": 50,
+            "text_color": "#FFFFFF",
+            "font_size": 20
           }
         },
         "heading_cq7B3y": {
@@ -47,7 +51,7 @@
         }
       },
       "block_order": [
-        "subheading_9TTyQP",
+        "custom_tag_eJBJpp",
         "heading_cq7B3y",
         "button_fQTFcb",
         "text_gmpjJm"
@@ -57,7 +61,7 @@
         ".image-with-text-ovelay__content-wrapper > div {padding-left: 100px; width: 60%;}",
         ".rich-text__heading {font-size: 56px;}",
         ".rich-text__text {font-size: 14px;}",
-        "@media only screen and (max-width: 768px) {.image-with-text-ovelay__content-wrapper > div {padding-left: 0px; width:100%; } .rich-text__heading {font-size: 32px; }}"
+        "@media only screen and (max-width: 768px) {.image-with-text-ovelay__content-wrapper > div {padding-left: 0px; width: 100%; } .rich-text__heading {font-size: 32px; }}"
       ],
       "name": "t:sections.image-with-text-overlay.name",
       "settings": {
