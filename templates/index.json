@@ -1,0 +1,217 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_BwzmBC": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_MXAJHP": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "scheme-info",
+            "background": "shopify://shop_images/hero_image.avif",
+            "image_overlay_opacity": 0,
+            "content_position": "middle-center",
+            "text_alignment": "left",
+            "subheading": "SEAL, PROTECT, AND SHINE!",
+            "title": "The Only RV Roof Coating You'll Ever Need – Shop and Save!",
+            "highlight_style": "none",
+            "highlight_font_style": "normal",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd1",
+            "description": "<p>⭐️⭐️⭐️⭐️⭐️ 10,000+ Happy Customers!</p>",
+            "description_size": "text-base",
+            "button_label": "Shop Now",
+            "button_link": "https://www.beestusa.com/product/beest-rv-roof-sealant-liquid-rubber-coating",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": false
+          }
+        }
+      },
+      "block_order": [
+        "slide_MXAJHP"
+      ],
+      "custom_css": [
+        "@media only screen and (min-width: 768px) {.slideshow__text {right: 25%; max-width: 40%; } .slideshow__title {font-size: 56px; font-weight: 500; line-height: 120%; letter-spacing: 0; } .slideshow__subtitle {font-size: 20px; background-color: #222222; border-radius: 4px; padding: 4px 12px; }}"
+      ],
+      "name": "t:sections.slideshow.name",
+      "settings": {
+        "container": "full",
+        "slide_height": "large",
+        "show_controls": true,
+        "autoplay": false,
+        "autoplay_delay": 3,
+        "show_text_below": false,
+        "text_alignment_mobile": "center",
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "featured_collection_fNpBbf": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_3KPkcF": {
+          "type": "collection",
+          "settings": {
+            "collection": "rv",
+            "title": "",
+            "show_banner": false,
+            "color_scheme": "scheme-1",
+            "card_link": "",
+            "image_overlay_opacity": 0,
+            "content_position": "top-left",
+            "content_alignment": "left",
+            "subheading": "",
+            "subheading_style": "",
+            "heading": "Collections",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "description": "",
+            "text_size": "text-base",
+            "button_label": "Button label",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "collection_3KPkcF"
+      ],
+      "name": "t:sections.featured-collection.presets__1.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "Best Sellers",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "#1d349a",
+        "highlight_text_color": "#d06834",
+        "heading_size": "h2",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "limit": 4,
+        "columns": 4,
+        "column_gap": "extra-small",
+        "row_gap": "inherit",
+        "enable_slider": true,
+        "content_overflow": true,
+        "navigation_position": "bottom",
+        "pcard_image_ratio": "1/1",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "show_progress_bar": true,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "collection_list_8H4MWF": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_XemkEX": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "rv",
+            "image": "shopify://shop_images/RV_Application_Category.avif",
+            "title": ""
+          }
+        },
+        "featured_collection_J4RwKq": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "concrete",
+            "image": "shopify://shop_images/Concrete_category.avif",
+            "title": ""
+          }
+        },
+        "featured_collection_E4EKh9": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "rust",
+            "image": "shopify://shop_images/Corrosion_category.avif",
+            "title": ""
+          }
+        },
+        "featured_collection_hiPccV": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "sealants-coating",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_XemkEX",
+        "featured_collection_J4RwKq",
+        "featured_collection_E4EKh9",
+        "featured_collection_hiPccV"
+      ],
+      "name": "t:sections.collection-list.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-10",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "Shop by Categories",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "card_color_scheme": "",
+        "card_style": "standard",
+        "card_heading_size": "text-base",
+        "card_text_line_limit": "none",
+        "card_image_ratio": "1/1",
+        "card_image_width": "full",
+        "card_image_padding": "none",
+        "rounded_card_image": false,
+        "card_show_border": true,
+        "mobile_layout": "vertical",
+        "columns_desktop": 4,
+        "column_gap": "medium",
+        "row_gap": "inherit",
+        "grid_bordered": false,
+        "columns_mobile": "3",
+        "swipe_on_mobile": true,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    }
+  },
+  "order": [
+    "slideshow_BwzmBC",
+    "featured_collection_fNpBbf",
+    "collection_list_8H4MWF"
+  ]
+}

@@ -1,0 +1,115 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement_bar_NAwEyb": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_bar_GNhNin": {
+          "type": "announcement_bar",
+          "settings": {
+            "text": "Free shipping over $50",
+            "link": ""
+          }
+        },
+        "announcement_bar_aDyKVa": {
+          "type": "announcement_bar",
+          "settings": {
+            "text": "Shop RV Roof Sealant",
+            "link": "https://www.beestusa.com/product/beest-rv-roof-sealant-liquid-rubber-coating"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_bar_GNhNin",
+        "announcement_bar_aDyKVa"
+      ],
+      "custom_css": [
+        ".slider-controls {display: none;}",
+        ".announcement-bar__text {font-size: 16px;}"
+      ],
+      "name": "t:sections.announcement-bar.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "content_width": 30,
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "padding_top": 6,
+        "padding_bottom": 6
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "product_list_KxDD84": {
+          "type": "product_list",
+          "settings": {
+            "menu_title": "RV Applications",
+            "menu_columns": 3,
+            "show_menu_column_divider": true,
+            "enable_hl_link": false,
+            "hl_link_style": "text_color",
+            "hl_link_color": "",
+            "heading": "Product Type",
+            "promotions_width": 38,
+            "number_of_columns": 3,
+            "product_list": [
+              "beest-rv-roof-sealant-liquid-rubber-coating",
+              "beest-rv-roof-cleaner-32oz",
+              "beest-rv-solar-sparkle-32oz"
+            ],
+            "show_product_vendor": false,
+            "show_product_type": false,
+            "show_progress_bar": true
+          }
+        }
+      },
+      "block_order": [
+        "product_list_KxDD84"
+      ],
+      "custom_css": [
+        ".search__input {height: 46px; border-radius: 8px;}",
+        ".search__input::placeholder {font-size: 14px;}",
+        ".search__field-icon {background-color: #d06834; border-radius: 4px; padding: 10px; right: 5px;}",
+        ".search__field-icon > svg {width: 14px; height: 14px;}",
+        ".search__field-icon > svg > path {stroke: #ffffff;}",
+        ".header__buttons > a {background: none;}",
+        ".menu__item {font-size: 14px;}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "menu": "main-menu",
+        "menu_mobile": "",
+        "header_layout": "logo-left-search-center",
+        "menu_trigger": "hover",
+        "sticky_header": "on-scroll-up",
+        "enable_collapse_on_scroll": true,
+        "show_sperator_line": false,
+        "customer_account_style": "icon-with-text",
+        "show_social_media_icons": false,
+        "enable_language_selector": false,
+        "enable_country_selector": false,
+        "header_top_padding_top": 20,
+        "header_top_padding_bottom": 20,
+        "navigation_color_scheme": "",
+        "navigation_content_alignment": "start",
+        "navigation_padding_top": 10,
+        "navigation_padding_bottom": 10
+      }
+    }
+  },
+  "order": [
+    "announcement_bar_NAwEyb",
+    "header"
+  ]
+}
