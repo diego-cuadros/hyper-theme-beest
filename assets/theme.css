@@ -8266,7 +8266,62 @@ body.search-template #MainContent,
 }
 
 /* Custom styling begin here */
+/*Hide slider controls on announcement bar*/
+.slider-controls {
+  display: none;
+}
+.announcement-bar__text {
+  font-size: 16px;
+}
 
+/* Header custom styles */
+.search__input {
+  height: 46px;
+  border-radius: 8px;
+}
+.search__input::placeholder {
+  font-size: 14px;
+}
+.search__field-icon {
+  background-color: #d06834;
+  border-radius: 4px;
+  padding: 10px;
+  right: 5px;
+}
+.search__field-icon > svg {
+  width: 14px;
+  height: 14px;
+}
+.search__field-icon > svg > path {
+  stroke: #ffffff;
+}
+.header__buttons > a {
+  background: none;
+}
+.menu__item {
+  font-size: 14px;
+}
+/*Slide show on home page*/
+@media only screen and (min-width: 768px) {
+  .slideshow__text {
+    right: 25%;
+    max-width: 40%;
+  }
+  .slideshow__title {
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: 0;
+  }
+  .slideshow__subtitle {
+    font-size: 20px;
+    background-color: #222222;
+    border-radius: 4px;
+    padding: 4px 12px;
+  }
+}
+
+/*Shop all button on menu drawer*/
 .dc_shop-all-button{
   height: 50px;
   margin-bottom:30px;
