@@ -84,6 +84,27 @@
             {%- assign motion_delay = 50 -%}
             {% for block in section.blocks %}
               {% case block.type %}
+                {% when 'custom_tag' %}
+                  {% assign bg = block.settings.background_color
+                    | color_to_rgb
+                    | replace: 'rgb(', ''
+                    | replace: ')', ''
+                    | replace: ' ', ''
+                  %}
+                  {% assign opacity = block.settings.background_opacity | divided_by: 100.0 %}
+
+                  <div class="dc_tag-line">
+                    <p
+                      class="dc_tag-line_text"
+                      style="
+                        background-color: rgba({{ bg }}, {{ opacity }});
+                        color: {{ block.settings.text_color }};
+                        font-size: {{ block.settings.font_size }}px;
+                      "
+                    >
+                      {{ block.settings.custom_tag_text }}
+                    </p>
+                  </div>
                 {% when 'subheading' %}
                   <motion-element
                     data-motion="fade-up"
@@ -439,6 +460,51 @@
           "id": "subheading",
           "default": "Add a tagline",
           "label": "t:general.subheading.label"
+        }
+      ]
+    },
+    {
+      "type": "custom_tag",
+      "name": "🔥 Custom Tag",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "custom_tag_text",
+          "default": "Add a tagline",
+          "label": "Tagline text"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background color",
+          "default": "#FFA500"
+        },
+        {
+          "type": "range",
+          "id": "background_opacity",
+          "label": "Background opacity",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 100,
+          "unit": "%"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text color",
+          "default": "#000000"
+        },
+        {
+          "type": "range",
+          "id": "font_size",
+          "label": "Font size",
+          "min": 10,
+          "max": 60,
+          "step": 1,
+          "default": 16,
+          "unit": "px"
         }
       ]
     },

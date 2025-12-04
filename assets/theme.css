@@ -8343,3 +8343,17 @@ body.search-template #MainContent,
 .dc_shop-all-button:hover .dc_button-label {
   color: #D06834;
 }
+
+
+/* Custom Tag Line on image with text overlay */
+.dc_tag-line, .dc_tag-line_text{
+  margin:0px;
+}
+
+.dc_tag-line_text{
+  background-color:orange;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 20px;
+  padding: 4px 12px;
+}
