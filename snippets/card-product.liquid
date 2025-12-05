@@ -100,7 +100,7 @@
   assign color_scheme_first = settings.color_schemes | first
   assign parent_color_scheme = parent_color_scheme | default: color_scheme_first
 
-  if color_inherit == nil
+  if color_inherit == null
     assign parent_background = parent_color_scheme.settings.background | downcase
     assign card_background = settings.pcard_color_scheme.settings.background | downcase
     assign color_inherit = false
@@ -310,6 +310,9 @@
         </p>
       {%- endif -%}
       <h3 class="product-card__title text-pcard-title">
+        {%- if show_price -%}
+          {% render 'price', product: product, alignment: settings.pcard_content_alignment %}
+        {%- endif -%}
         <a
           class="reversed-link block {% if settings.pcard_title_line_limit != 'none' %} text-limit-{{ settings.pcard_title_line_limit }}{% endif %}"
           href="{{ product.url }}"
@@ -317,9 +320,6 @@
           <span class="reversed-link__text">{{- product.title -}}</span>
         </a>
       </h3>
-      {%- if show_price -%}
-        {% render 'price', product: product, alignment: settings.pcard_content_alignment %}
-      {%- endif -%}
       {%- if show_color_swatches -%}
         {%- render 'pcard-color-swatch',
           product: product,

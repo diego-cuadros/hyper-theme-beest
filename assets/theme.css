@@ -8387,5 +8387,14 @@ body.search-template #MainContent,
       border-top-left-radius: 35px;
       border-top-right-radius: 35px;
       margin-top: -50px;
-    }
+}
+
+@media only screen and (max-width:768px){
+  .dc_layout-decor {
+    height: 40px !important;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    margin-top: -30px;
+  }
+}  
 
