@@ -84,6 +84,26 @@
             {%- assign motion_delay = 50 -%}
             {% for block in section.blocks %}
               {% case block.type %}
+                {% when 'score_block' %}
+                  <div class="dc_score-container">
+                    <div class="dc_score-stars">
+                      {% for i in (1..block.settings.star_count) %}
+                        {% render 'icon-star',
+                          star_color: block.settings.star_color,
+                          star_size: block.settings.star_size
+                        %}
+                      {% endfor %}
+                    </div>
+                    <div
+                      class="dc_score-text"
+                      style="
+                        color: {{ block.settings.text_color }};
+                        font-size: {{ block.settings.text_size }}px;
+                      "
+                    >
+                      {{ block.settings.score_text }}
+                    </div>
+                  </div>
                 {% when 'custom_tag' %}
                   {% assign bg = block.settings.background_color
                     | color_to_rgb
@@ -502,6 +522,60 @@
           "label": "Font size",
           "min": 10,
           "max": 60,
+          "step": 1,
+          "default": 16,
+          "unit": "px"
+        }
+      ]
+    },
+    {
+      "type": "score_block",
+      "name": "🔥Score Block",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "range",
+          "id": "star_count",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5,
+          "label": "Number of stars"
+        },
+        {
+          "type": "color",
+          "id": "star_color",
+          "label": "Star color",
+          "default": "#FFD700"
+        },
+        {
+          "type": "range",
+          "id": "star_size",
+          "label": "Star size",
+          "min": 10,
+          "max": 40,
+          "step": 2,
+          "default": 16,
+          "unit": "px"
+        },
+        {
+          "type": "text",
+          "id": "score_text",
+          "label": "Text",
+          "default": "2,000,000+ Happy Customers"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text color",
+          "default": "#000000"
+        },
+        {
+          "type": "range",
+          "id": "text_size",
+          "label": "Text size",
+          "min": 10,
+          "max": 40,
           "step": 1,
           "default": 16,
           "unit": "px"

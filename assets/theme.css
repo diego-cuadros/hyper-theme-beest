@@ -8357,3 +8357,22 @@ body.search-template #MainContent,
   font-size: 20px;
   padding: 4px 12px;
 }
+
+/* Stars block on image with text overlay  */
+.dc_score-container{
+  display:flex; 
+  align-items:center;
+  justify-content: left; 
+  gap:8px;
+  margin-top:12px;
+}
+
+@media only screen and (max-width:767px){
+  .dc_score-container{
+    justify-content: center; 
+  }
+}
+
+.dc_score-stars{
+  display: flex;
+}
