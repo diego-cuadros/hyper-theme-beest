@@ -49,7 +49,7 @@
             "star_color": "#ffffff",
             "star_size": 16,
             "score_text": "2,000,000+ Happy Customers",
-            "text_color": "#FFFFFF",
+            "text_color": "#ffffff",
             "text_size": 14
           }
         }
@@ -61,12 +61,12 @@
         "score_block_FitfBr"
       ],
       "custom_css": [
-        ".image-with-text-ovelay__content-wrapper > div {padding-left: 100px; width: 60%;}",
+        ".image-with-text-ovelay__content-wrapper > div {padding-left: 100px; width: 700px;}",
         ".rich-text__heading {font-size: 56px;}",
         ".rich-text__text {font-size: 14px;}",
-        ".btn {width: 50%;}",
-        "@media only screen and (min-width: 1650px) {.image-with-text-ovelay__content-wrapper > div {transform: translateX(50%); }}",
-        "@media only screen and (max-width: 768px) {.image-with-text-ovelay__content-wrapper > div {padding-left: 0; width: 100%; } .rich-text__heading {font-size: 32px; } .btn {width: 100%; }}"
+        ".btn {width: 300px;}",
+        "@media only screen and (min-width: 1650px) {.image-with-text-ovelay__content-wrapper > div {padding-left: 0; width: 700px; position: relative; left: calc(50% - 650px - 60px); transform: none; }}",
+        "@media only screen and (max-width: 768px) {.image-with-text-ovelay__content-wrapper > div {padding-left: 0; width:100%; } .rich-text__heading {font-size: 32px; } .btn {width: 100%; }}"
       ],
       "name": "t:sections.image-with-text-overlay.name",
       "settings": {
