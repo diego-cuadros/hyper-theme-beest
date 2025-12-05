@@ -1,0 +1,46 @@
+
+/* Make section 2 columns */
+.dc_section__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Left column text */
+.dc-lookbook-banner__info {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Force the banner to be perfectly square (1:1) */
+.dc_section__container .lookbook-card .media {
+  --aspect-ratio: 1 !important;
+  --aspect-ratio-mobile: 1 !important;
+  aspect-ratio: 1 / 1;
+}
+
+/* Make sure the image fills its square */
+.dc_section__container .lookbook-card .media-wrapper img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Mobile: stack the columns on top of each other */
+@media (max-width: 749px) {
+  .dc_section__container {
+    grid-template-columns: 1fr;
+  }
+
+  .dc-lookbook-banner__info {
+    order: 2; /* optional: text under the image */
+  }
+
+  .lookbook-card {
+    order: 1;
+  }
+}
