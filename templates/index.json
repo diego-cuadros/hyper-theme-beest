@@ -18,7 +18,7 @@
             "custom_tag_text": "RESTOCK: HD4000",
             "background_color": "#222222",
             "background_opacity": 50,
-            "text_color": "#FFFFFF",
+            "text_color": "#ffffff",
             "font_size": 20
           }
         },
@@ -42,11 +42,15 @@
             "button_icon": "none"
           }
         },
-        "text_gmpjJm": {
-          "type": "text",
+        "score_block_FitfBr": {
+          "type": "score_block",
           "settings": {
-            "text": "<p>⭐️⭐️⭐️⭐️⭐️ 2,000,000+ Happy Customers</p>",
-            "text_size": "text-sm"
+            "star_count": 5,
+            "star_color": "#ffffff",
+            "star_size": 16,
+            "score_text": "2,000,000+ Happy Customers",
+            "text_color": "#FFFFFF",
+            "text_size": 14
           }
         }
       },
@@ -54,14 +58,15 @@
         "custom_tag_eJBJpp",
         "heading_cq7B3y",
         "button_fQTFcb",
-        "text_gmpjJm"
+        "score_block_FitfBr"
       ],
       "custom_css": [
-        "@media only screen and (min-width: 1650px) {.image-with-text-ovelay__content-wrapper > div {transform: translateX(50%); }}",
         ".image-with-text-ovelay__content-wrapper > div {padding-left: 100px; width: 60%;}",
         ".rich-text__heading {font-size: 56px;}",
         ".rich-text__text {font-size: 14px;}",
-        "@media only screen and (max-width: 768px) {.image-with-text-ovelay__content-wrapper > div {padding-left: 0px; width: 100%; } .rich-text__heading {font-size: 32px; }}"
+        ".btn {width: 50%;}",
+        "@media only screen and (min-width: 1650px) {.image-with-text-ovelay__content-wrapper > div {transform: translateX(50%); }}",
+        "@media only screen and (max-width: 768px) {.image-with-text-ovelay__content-wrapper > div {padding-left: 0; width: 100%; } .rich-text__heading {font-size: 32px; } .btn {width: 100%; }}"
       ],
       "name": "t:sections.image-with-text-overlay.name",
       "settings": {
