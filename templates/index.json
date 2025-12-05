@@ -207,7 +207,7 @@
       ],
       "custom_css": [
         ".section__heading {font-size: 32px;}",
-        "@media only screen and (max-width: 768px) {.section__heading {font-size: 24px; } .collection-card__title{font-size:14px; }}",
+        "@media only screen and (max-width: 768px) {.section__heading {font-size: 24px; } .collection-card__title {font-size: 14px; }}",
         ".collection-card {border: 0px; border-radius: 12px;}",
         ".collection-card__wrapper {padding: 0px; position: relative;}",
         ".collection-card__inner {background: linear-gradient(to top, rgba(74, 58, 54, 0.9), rgba(0, 0, 0, 0)); bottom: 0; position: absolute;}",
@@ -253,11 +253,82 @@
         "show_section_divider": false,
         "divider_width": "fixed"
       }
+    },
+    "lookbook_banner_QmFkyy": {
+      "type": "lookbook-banner",
+      "blocks": {
+        "hotspot_48GhG8": {
+          "type": "hotspot",
+          "settings": {
+            "heading": "Hotspot",
+            "description": "<p>Each piece is built for longevity, ensuring durability, repairability, flexibility, and resale value.</p>",
+            "top": 45,
+            "left": 30,
+            "top_mobile": 45,
+            "left_mobile": 30
+          }
+        },
+        "hotspot_Rz39Wy": {
+          "type": "hotspot",
+          "settings": {
+            "heading": "Hotspot",
+            "description": "<p>Each piece is built for longevity, ensuring durability, repairability, flexibility, and resale value.</p>",
+            "top": 50,
+            "left": 70,
+            "top_mobile": 50,
+            "left_mobile": 70
+          }
+        },
+        "hotspot_Bz8HfG": {
+          "type": "hotspot",
+          "settings": {
+            "heading": "Hotspot",
+            "description": "<p>Each piece is built for longevity, ensuring durability, repairability, flexibility, and resale value.</p>",
+            "top": 62,
+            "left": 43,
+            "top_mobile": 62,
+            "left_mobile": 43
+          }
+        }
+      },
+      "block_order": [
+        "hotspot_48GhG8",
+        "hotspot_Rz39Wy",
+        "hotspot_Bz8HfG"
+      ],
+      "name": "t:sections.banner-with-hotspots.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "Banner with hotspots",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "description_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "icon_style": "plus",
+        "icon_color": "dark",
+        "card_color_scheme": "",
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
     }
   },
   "order": [
     "image_with_text_overlay_gEWbcF",
     "featured_collection_fNpBbf",
-    "collection_list_8H4MWF"
+    "collection_list_8H4MWF",
+    "lookbook_banner_QmFkyy"
   ]
 }
