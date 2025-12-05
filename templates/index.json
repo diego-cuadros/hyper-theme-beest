@@ -66,7 +66,7 @@
         ".rich-text__text {font-size: 14px;}",
         ".btn {width: 300px;}",
         "@media only screen and (min-width: 1650px) {.image-with-text-ovelay__content-wrapper > div {padding-left: 0; width: 700px; position: relative; left: calc(50% - 650px - 60px); transform: none; }}",
-        "@media only screen and (max-width: 768px) {.image-with-text-ovelay__content-wrapper > div {padding-left: 0; width:100%; } .rich-text__heading {font-size: 32px; } .btn {width: 100%; }}"
+        "@media only screen and (max-width: 768px) {.image-with-text-ovelay__content-wrapper > div {padding-left: 0; width: 100%; } .rich-text__heading {font-size: 32px; } .btn {width: 100%; }}"
       ],
       "name": "t:sections.image-with-text-overlay.name",
       "settings": {
@@ -82,57 +82,9 @@
         "mobile_height": "extra-large",
         "content_position_mobile": "top-center-mobile",
         "content_alignment_mobile": "center",
-        "padding_top": 50,
-        "padding_bottom": 50,
+        "padding_top": 0,
+        "padding_bottom": 0,
         "enable_preload_image": false
-      }
-    },
-    "slideshow_BwzmBC": {
-      "type": "slideshow",
-      "blocks": {
-        "slide_MXAJHP": {
-          "type": "slide",
-          "settings": {
-            "color_scheme": "scheme-info",
-            "background": "shopify://shop_images/hero_image.avif",
-            "image_overlay_opacity": 40,
-            "content_position": "middle-center",
-            "text_alignment": "left",
-            "subheading": "SEAL, PROTECT, AND SHINE!",
-            "title": "The Only RV Roof Coating You'll Ever Need – Shop and Save!",
-            "highlight_style": "none",
-            "highlight_font_style": "normal",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "hd1",
-            "description": "<p>⭐️⭐️⭐️⭐️⭐️ 10,000+ Happy Customers!</p>",
-            "description_size": "text-base",
-            "button_label": "Shop Now",
-            "button_link": "https://www.beestusa.com/product/beest-rv-roof-sealant-liquid-rubber-coating",
-            "button_style": "btn--primary",
-            "button_icon": "none",
-            "enable_preload_image": false
-          }
-        }
-      },
-      "block_order": [
-        "slide_MXAJHP"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".slideshow__title {font-size: 56px; font-weight: 500; line-height: 120%; letter-spacing: 0;}",
-        "@media only screen and (max-width: 768px) {.slideshow__title {font-size: 32px; }}"
-      ],
-      "name": "t:sections.slideshow.name",
-      "settings": {
-        "container": "full",
-        "slide_height": "large",
-        "show_controls": true,
-        "autoplay": false,
-        "autoplay_delay": 3,
-        "show_text_below": false,
-        "text_alignment_mobile": "center",
-        "accessibility_info": "Slideshow about our brand"
       }
     },
     "featured_collection_fNpBbf": {
@@ -170,6 +122,12 @@
       "block_order": [
         "collection_3KPkcF"
       ],
+      "custom_css": [
+        ".f-column {max-width: 296px;}",
+        ".f-price__regular .f-price-item--regular {color: #d06835; letter-spacing: 1px;}",
+        ".reversed-link {line-height: 1.2; letter-spacing: 1px;}",
+        "@media only screen and (max-width: 768px) {.reversed-link {font-size: 16px; } .f-price__regular .f-price-item--regular {font-size: 16px; } .rich-text__heading {font-size: 24px; }}"
+      ],
       "name": "t:sections.featured-collection.presets__1.name",
       "settings": {
         "container": "fixed",
@@ -181,7 +139,7 @@
         "highlight_style": "none",
         "highlight_font_style": "italic",
         "highlight_style_color": "#1d349a",
-        "highlight_text_color": "#d06834",
+        "highlight_text_color": "#d06835",
         "heading_size": "h2",
         "description": "",
         "text_size": "text-base",
@@ -200,7 +158,7 @@
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "show_progress_bar": true,
-        "padding_top": 50,
+        "padding_top": 0,
         "padding_bottom": 50,
         "show_section_divider": false,
         "divider_width": "fixed"
@@ -291,7 +249,6 @@
   },
   "order": [
     "image_with_text_overlay_gEWbcF",
-    "slideshow_BwzmBC",
     "featured_collection_fNpBbf",
     "collection_list_8H4MWF"
   ]

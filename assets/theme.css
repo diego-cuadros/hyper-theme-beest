@@ -8376,3 +8376,16 @@ body.search-template #MainContent,
 .dc_score-stars{
   display: flex;
 }
+
+/* Stripe with border radius on top at the bottom of hero on home pagre */
+.dc_layout-decor {
+      display: block !important;
+      position: relative;
+      width: 100%;
+      background: white !important; 
+      height: 80px !important;
+      border-top-left-radius: 35px;
+      border-top-right-radius: 35px;
+      margin-top: -50px;
+    }
+

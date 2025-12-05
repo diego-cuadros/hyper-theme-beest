@@ -34,7 +34,7 @@
         "announcement_bar_aDyKVa"
       ],
       "custom_css": [
-        ".announcement-bar__text {font-weight: 600; font-family: 'Manrope', sans-serif;}"
+        ".announcement-bar__text {font-weight: 600; font-family: \"Manrope\", sans-serif;}"
       ],
       "name": "t:sections.announcement-bar.name",
       "settings": {
