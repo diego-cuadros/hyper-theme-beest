@@ -56,15 +56,40 @@
   %}
   <div class="dc_section__container">
     <div class="dc-lookbook-banner__info">
-      <p class="dc_hero-lookbook-tagline">Tagline</p>
-      <h2 class="dc_hero-lookbook-hero-title">Battery Powered Backpack Sprayer</h2>
-      <p class="dc_hero-lookbook-hero-description">
-        The HD4000 Backpack Sprayer delivers powerful, battery-powered performance with no pumping required, lasting up
-        to 8 hours on a single charge. Designed for comfort and durability.
+      <p
+        class="dc_hero-lookbook-tagline"
+        style="color={{ section.settings.custom_tagline_color }}; background-color:{{ section.settings.custom_tagline_bg_color }};"
+      >
+        {{ section.settings.custom_tagline }}
       </p>
-      <button class="btn btn--primary">Shop Now</button>
+
+      <h2 class="dc_hero-lookbook-hero-title">
+        {{ section.settings.custom_hero_title }}
+      </h2>
+
+      <p class="dc_hero-lookbook-hero-description">
+        {{ section.settings.custom_hero_description }}
+      </p>
+
+      <a href="{{ section.settings.custom_button_link }}" class="dc_hero-lookbook-btn btn btn--primary">
+        {{ section.settings.custom_button_text }}
+      </a>
     </div>
     <div class="lookbook-card relative">
+      <div
+        class="dc_hero-lookbook_mobile-header"
+      >
+        <p
+          class="dc_hero-lookbook-tagline_mobile"
+          style="color:{{  section.settings.custom_tagline_color }}; background-color:{{ section.settings.custom_tagline_bg_color }};"
+        >
+          {{ section.settings.custom_tagline }}
+        </p>
+        <h2 class="dc_hero-lookbook-hero-title_mobile">
+          {{ section.settings.custom_hero_title }}
+        </h2>
+      </div>
+
       <div
         class="media"
         style="--aspect-ratio:{{ image_ratio }};--aspect-ratio-mobile:{{ image_mobile_aspect_ratio }};"
@@ -113,6 +138,35 @@
           {%- endif %}
         </motion-element>
       </div>
+      <section class="dc_lookbook-feature_mobile-only">
+        <div class="dc_lookbook-feature__item">
+          <div class="dc_lookbook-feature__icon">{% render 'icon-check' %}</div>
+          <div class="dc_lookbook-feature__content">
+            <p class="dc_lookbook-feature__title">6–8 Hours Long Battery Life</p>
+            <p class="dc_lookbook-feature__text">The battery pumps 200+ gallons per charge.</p>
+          </div>
+        </div>
+
+        <hr class="dc_lookbook-feature__divider">
+
+        <div class="dc_lookbook-feature__item">
+          <div class="dc_lookbook-feature__icon">{% render 'icon-check' %}</div>
+          <div class="dc_lookbook-feature__content">
+            <p class="dc_lookbook-feature__title">Maximum Comfort & Support</p>
+            <p class="dc_lookbook-feature__text">Double-padded straps and back pad reduce fatigue.</p>
+          </div>
+        </div>
+
+        <hr class="dc_lookbook-feature__divider">
+
+        <div class="dc_lookbook-feature__item">
+          <div class="dc_lookbook-feature__icon">{% render 'icon-check' %}</div>
+          <div class="dc_lookbook-feature__content">
+            <p class="dc_lookbook-feature__title">Heavy-duty, Leak-free Design</p>
+            <p class="dc_lookbook-feature__text">The HD wand, wide-mouth lid, and screen filter ensure durability.</p>
+          </div>
+        </div>
+      </section>
 
       {%- liquid
         assign lookbook_icon_index = 0
@@ -145,6 +199,46 @@
     "groups": ["header", "footer", "custom.overlay"]
   },
   "settings": [
+    {
+      "type": "text",
+      "id": "custom_tagline",
+      "label": "Tagline",
+      "default": "Tagline"
+    },
+    {
+      "type": "color",
+      "id": "custom_tagline_color",
+      "label": "Color for tag line"
+    },
+    {
+      "type": "color",
+      "id": "custom_tagline_bg_color",
+      "label": "Color for background color tag line"
+    },
+    {
+      "type": "text",
+      "id": "custom_hero_title",
+      "label": "Hero Title",
+      "default": "Battery Powered Backpack Sprayer"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_hero_description",
+      "label": "Hero Description",
+      "default": "The HD4000 Backpack Sprayer delivers powerful, battery-powered performance with no pumping required, lasting up to 8 hours on a single charge. Designed for comfort and durability."
+    },
+    {
+      "type": "text",
+      "id": "custom_button_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "custom_button_link",
+      "label": "Button Link",
+      "default": "/collections/all"
+    },
     {
       "type": "header",
       "content": "t:general.general.name"
