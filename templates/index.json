@@ -254,10 +254,10 @@
         "divider_width": "fixed"
       }
     },
-    "lookbook_banner_QmFkyy": {
-      "type": "lookbook-banner",
+    "custom_hero_lookbook_banner_YJnKNw": {
+      "type": "custom-hero-lookbook-banner",
       "blocks": {
-        "hotspot_48GhG8": {
+        "hotspot_XbNtfU": {
           "type": "hotspot",
           "settings": {
             "heading": "Hotspot",
@@ -268,7 +268,7 @@
             "left_mobile": 30
           }
         },
-        "hotspot_Rz39Wy": {
+        "hotspot_XqjwfT": {
           "type": "hotspot",
           "settings": {
             "heading": "Hotspot",
@@ -279,7 +279,7 @@
             "left_mobile": 70
           }
         },
-        "hotspot_Bz8HfG": {
+        "hotspot_X3ExHN": {
           "type": "hotspot",
           "settings": {
             "heading": "Hotspot",
@@ -292,18 +292,18 @@
         }
       },
       "block_order": [
-        "hotspot_48GhG8",
-        "hotspot_Rz39Wy",
-        "hotspot_Bz8HfG"
+        "hotspot_XbNtfU",
+        "hotspot_XqjwfT",
+        "hotspot_X3ExHN"
       ],
-      "name": "t:sections.banner-with-hotspots.name",
+      "name": "🔥Custom Hero LookBook",
       "settings": {
         "container": "fixed",
         "color_scheme": "",
         "section_header_alignment": "center",
         "section_header_alignment_mobile": "inherit",
         "subheading": "",
-        "heading": "Banner with hotspots",
+        "heading": "",
         "highlight_style": "none",
         "highlight_font_style": "italic",
         "highlight_style_color": "",
@@ -315,6 +315,7 @@
         "button_link": "",
         "button_style": "btn--underline",
         "button_icon": "none",
+        "image": "shopify://shop_images/Diseno_sin_titulo.png",
         "icon_style": "plus",
         "icon_color": "dark",
         "card_color_scheme": "",
@@ -329,6 +330,6 @@
     "image_with_text_overlay_gEWbcF",
     "featured_collection_fNpBbf",
     "collection_list_8H4MWF",
-    "lookbook_banner_QmFkyy"
+    "custom_hero_lookbook_banner_YJnKNw"
   ]
 }
