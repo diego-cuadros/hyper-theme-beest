@@ -264,9 +264,9 @@
             "title": "Worldwide Shipping",
             "text": "From our door to yours — rely on our global network for quick and secure delivery, wherever you are.",
             "card_color": "#1f1f1f",
-            "card_border_color": "#D63A2F",
+            "card_border_color": "#ADADAD",
             "title_color": "#ffffff",
-            "text_color": "#c9c9c9"
+            "text_color": "#ADADAD"
           }
         },
         "extra_feature_zdkngw": {
@@ -275,10 +275,10 @@
             "icon": "shopify://shop_images/Frame_1.png",
             "title": "30-Days Free Returns",
             "text": "Your satisfaction is our priority. Enjoy free returns within 30 days, making every purchase completely risk-free.",
-            "card_color": "#222222",
-            "card_border_color": "#ffffff",
+            "card_color": "#1f1f1f",
+            "card_border_color": "#ADADAD",
             "title_color": "#ffffff",
-            "text_color": "#c9c9c9"
+            "text_color": "#ADADAD"
           }
         },
         "extra_feature_mUgjrX": {
@@ -287,10 +287,10 @@
             "icon": "shopify://shop_images/Frame_2.png",
             "title": "1 Year Warranty",
             "text": "Lorem ipsum dolor sit amet consectetur. Dictumst dictum dignissim sapien congue mattis ut.",
-            "card_color": "#222222",
-            "card_border_color": "#ffffff",
+            "card_color": "#1f1f1f",
+            "card_border_color": "#ADADAD",
             "title_color": "#ffffff",
-            "text_color": "#c9c9c9"
+            "text_color": "#ADADAD"
           }
         },
         "extra_feature_EdNK7T": {
@@ -299,10 +299,10 @@
             "icon": "shopify://shop_images/Frame_3.png",
             "title": "24/7 Friendly Support",
             "text": "Whether it's day or night, our supportive team is just a click away, ready to provide friendly help.",
-            "card_color": "#222222",
-            "card_border_color": "#ffffff",
+            "card_color": "#1f1f1f",
+            "card_border_color": "#ADADAD",
             "title_color": "#ffffff",
-            "text_color": "#c9c9c9"
+            "text_color": "#ADADAD"
           }
         },
         "features_YcJNJa": {
@@ -385,6 +385,7 @@
         "custom_tagline_bg_color": "#3a3a3a",
         "custom_hero_title": "Battery Powered Backpack Sprayer",
         "custom_hero_description": "The HD4000 Backpack Sprayer delivers powerful, battery-powered performance with no pumping required, lasting up to 8 hours on a single charge. Designed for comfort and durability.",
+        "custom_hero_description_text_color": "#ADADAD",
         "custom_button_text": "SHOP HD 4000 NOW",
         "custom_button_link": "shopify://collections/all",
         "container": "fixed",
