@@ -35,7 +35,7 @@
   {% endif -%}
 </style>
 <div class="section image-with-text-overlay section--padding">
-  <div class="section__container page-width page-width--{{ container }}">
+  <div class="section__container page-width page-width--{{ container }} dc_main">
     <div class="relative overflow-hidden{% unless container == 'full' %} blocks-radius{% endunless %}">
       <parallax-element
         class="block w-full h-full overflow-hidden"
@@ -80,7 +80,12 @@
       </parallax-element>
       <div class="image-with-text-ovelay__content card-media--large">
         <div class="image-with-text-ovelay__content-wrapper content-overlay content-overlay--{{ section.settings.content_position_mobile }} content-overlay--{{ section.settings.content_position }} color-{{ section.settings.color_scheme }}{% if container == 'full' %} page-width{% endif %}">
-          <div class="relative z-1 rich-text text-{{ section.settings.content_alignment_mobile }} md:text-{{ section.settings.content_alignment }}">
+          <div
+            class="relative z-1 rich-text text-{{ section.settings.content_alignment_mobile }} md:text-{{ section.settings.content_alignment }} dc_wrapper"
+            {% if section.settings.container_visible == true %}
+              style="background-color:{{ section.settings.container_color }}"
+            {% endif %}
+          >
             {%- assign motion_delay = 50 -%}
             {% for block in section.blocks %}
               {% case block.type %}
@@ -136,7 +141,7 @@
                   </motion-element>
                   {%- assign motion_delay = motion_delay | plus: 50 -%}
                 {% when 'heading' %}
-                  <h2 class="rich-text__heading {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
+                  <h2 class="rich-text__heading {{ block.settings.heading_size }} dc_h2" {{ block.shopify_attributes }}>
                     <motion-element data-motion="fade-up" data-motion-delay="{{ motion_delay }}" class="block">
                       {% render 'highlight-text',
                         hl_text: block.settings.heading,
@@ -152,7 +157,7 @@
                   <motion-element
                     data-motion="fade-up"
                     data-motion-delay="{{ motion_delay }}"
-                    class="block rich-text__text rte {{ block.settings.text_size }}"
+                    class="block rich-text__text rte {{ block.settings.text_size }} dc_p"
                     {{ block.shopify_attributes }}
                   >
                     {{- block.settings.text -}}
@@ -298,6 +303,18 @@
       "id": "color_scheme",
       "label": "t:general.colors.label",
       "default": "scheme-inverse"
+    },
+    {
+      "type": "checkbox",
+      "id": "container_visible",
+      "label": "Container visible",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "container_color",
+      "label": "Container color",
+      "default": "#ffffff"
     },
     {
       "type": "select",

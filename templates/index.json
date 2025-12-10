@@ -70,6 +70,7 @@
       ],
       "name": "t:sections.image-with-text-overlay.name",
       "settings": {
+        "use_custom_decor": false,
         "container": "full",
         "image": "shopify://shop_images/hero_image.avif",
         "desktop_height": "extra-medium",
@@ -77,6 +78,8 @@
         "enable_parallax": false,
         "parallax_direction": "vertical",
         "color_scheme": "scheme-info",
+        "container_visible": false,
+        "container_color": "#ffffff",
         "content_position": "middle-left",
         "content_alignment": "left",
         "mobile_height": "extra-large",
@@ -264,9 +267,9 @@
             "title": "Worldwide Shipping",
             "text": "From our door to yours — rely on our global network for quick and secure delivery, wherever you are.",
             "card_color": "#1f1f1f",
-            "card_border_color": "#ADADAD",
+            "card_border_color": "#adadad",
             "title_color": "#ffffff",
-            "text_color": "#ADADAD"
+            "text_color": "#adadad"
           }
         },
         "extra_feature_zdkngw": {
@@ -276,9 +279,9 @@
             "title": "30-Days Free Returns",
             "text": "Your satisfaction is our priority. Enjoy free returns within 30 days, making every purchase completely risk-free.",
             "card_color": "#1f1f1f",
-            "card_border_color": "#ADADAD",
+            "card_border_color": "#adadad",
             "title_color": "#ffffff",
-            "text_color": "#ADADAD"
+            "text_color": "#adadad"
           }
         },
         "extra_feature_mUgjrX": {
@@ -288,9 +291,9 @@
             "title": "1 Year Warranty",
             "text": "Lorem ipsum dolor sit amet consectetur. Dictumst dictum dignissim sapien congue mattis ut.",
             "card_color": "#1f1f1f",
-            "card_border_color": "#ADADAD",
+            "card_border_color": "#adadad",
             "title_color": "#ffffff",
-            "text_color": "#ADADAD"
+            "text_color": "#adadad"
           }
         },
         "extra_feature_EdNK7T": {
@@ -300,9 +303,9 @@
             "title": "24/7 Friendly Support",
             "text": "Whether it's day or night, our supportive team is just a click away, ready to provide friendly help.",
             "card_color": "#1f1f1f",
-            "card_border_color": "#ADADAD",
+            "card_border_color": "#adadad",
             "title_color": "#ffffff",
-            "text_color": "#ADADAD"
+            "text_color": "#adadad"
           }
         },
         "features_YcJNJa": {
@@ -385,7 +388,7 @@
         "custom_tagline_bg_color": "#3a3a3a",
         "custom_hero_title": "Battery Powered Backpack Sprayer",
         "custom_hero_description": "The HD4000 Backpack Sprayer delivers powerful, battery-powered performance with no pumping required, lasting up to 8 hours on a single charge. Designed for comfort and durability.",
-        "custom_hero_description_text_color": "#ADADAD",
+        "custom_hero_description_text_color": "#adadad",
         "custom_button_text": "SHOP HD 4000 NOW",
         "custom_button_link": "shopify://collections/all",
         "container": "fixed",
@@ -414,12 +417,88 @@
         "padding_top": 50,
         "padding_bottom": 50
       }
+    },
+    "image_with_text_overlay_e8gK4d": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_ai3mnB": {
+          "type": "heading",
+          "settings": {
+            "heading": "Personalized Support Documents",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd1"
+          }
+        },
+        "text_d3XjhR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Get Lawn Care Expert advice for your landscape. Schedule your free consultation today!</p>",
+            "text_size": "text-base"
+          }
+        },
+        "button_kgQDBx": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact Us",
+            "button_link": "shopify://pages/contact",
+            "button_style": "btn--secondary",
+            "button_icon": "none"
+          }
+        },
+        "subheading_bxPicP": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Call 1 (800) 613-6889"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ai3mnB",
+        "text_d3XjhR",
+        "button_kgQDBx",
+        "subheading_bxPicP"
+      ],
+      "custom_css": [
+        ".dc_main > div {border-radius: 12px;}",
+        ".dc_wrapper {max-width: 473px; border-radius: 20px; padding: 24px;}",
+        ".dc_h2 {font-size: 32px;}",
+        ".dc_p {font-size: 16px;}",
+        ".btn {height: 50px; width: 196px;}",
+        ".text-subheading {font-size: 14px; font-weight: 500; margin: 6px;}",
+        "@media only screen and (max-width: 749px) {.dc_h2 {font-size: 24px; text-align: center; } .dc_p {text-align: center; } .btn {width: 100%; } .btn__text {font-size: 16px; } .text-subheading {text-align: center; }}"
+      ],
+      "name": "t:sections.image-with-text-overlay.name",
+      "settings": {
+        "use_custom_decor": false,
+        "container": "fixed",
+        "image": "shopify://shop_images/Senior_caring_image.jpg",
+        "desktop_height": "extra-small",
+        "overlay_opacity": 0,
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "color_scheme": "scheme-14",
+        "container_visible": true,
+        "container_color": "#222222",
+        "content_position": "middle-left",
+        "content_alignment": "left",
+        "image_mobile": "shopify://shop_images/Senior_caring_image.webp",
+        "mobile_height": "extra-large",
+        "content_position_mobile": "bottom-center-mobile",
+        "content_alignment_mobile": "left",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "enable_preload_image": false
+      }
     }
   },
   "order": [
     "image_with_text_overlay_gEWbcF",
     "featured_collection_fNpBbf",
     "collection_list_8H4MWF",
-    "custom_hero_lookbook_banner_YJnKNw"
+    "custom_hero_lookbook_banner_YJnKNw",
+    "image_with_text_overlay_e8gK4d"
   ]
 }
