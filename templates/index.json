@@ -257,6 +257,30 @@
     "custom_hero_lookbook_banner_YJnKNw": {
       "type": "custom-hero-lookbook-banner",
       "blocks": {
+        "features_YcJNJa": {
+          "type": "features",
+          "settings": {
+            "feature_title": "Feature title",
+            "feature_text": "Feature description text.",
+            "feature_text_color": "#7f7878"
+          }
+        },
+        "features_aLyxGr": {
+          "type": "features",
+          "settings": {
+            "feature_title": "Feature title",
+            "feature_text": "Feature description text.",
+            "feature_text_color": "#7f7878"
+          }
+        },
+        "features_A9akNw": {
+          "type": "features",
+          "settings": {
+            "feature_title": "Feature title",
+            "feature_text": "Feature description text.",
+            "feature_text_color": "#7f7878"
+          }
+        },
         "hotspot_XbNtfU": {
           "type": "hotspot",
           "settings": {
@@ -292,14 +316,24 @@
         }
       },
       "block_order": [
+        "features_YcJNJa",
+        "features_aLyxGr",
+        "features_A9akNw",
         "hotspot_XbNtfU",
         "hotspot_XqjwfT",
         "hotspot_X3ExHN"
       ],
       "name": "🔥Custom Hero LookBook",
       "settings": {
+        "custom_tagline": "Tagline",
+        "custom_tagline_color": "#ffffff",
+        "custom_tagline_bg_color": "#222222",
+        "custom_hero_title": "Battery Powered Backpack Sprayer",
+        "custom_hero_description": "The HD4000 Backpack Sprayer delivers powerful, battery-powered performance with no pumping required, lasting up to 8 hours on a single charge. Designed for comfort and durability.",
+        "custom_button_text": "Shop Now",
+        "custom_button_link": "shopify://collections/all",
         "container": "fixed",
-        "color_scheme": "",
+        "color_scheme": "scheme-info",
         "section_header_alignment": "center",
         "section_header_alignment_mobile": "inherit",
         "subheading": "",
