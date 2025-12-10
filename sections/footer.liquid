@@ -220,6 +220,14 @@
                           button_icon: section.settings.button_icon
                         %}
                       </div>
+                      {%- liquid
+                        assign button_style = 'btn btn--icon-circle ' | append: section.settings.social_button_style
+                      -%}
+                      {%- render 'social-icons',
+                        class: 'footer__list-social dc_footer__list-social',
+                        item_class: button_style,
+                        size: 'large'
+                      -%}
                       {%- if block.settings.newsletter_term != blank -%}
                         <div class="footer-newsletter__term rte text-subtext">
                           {{ block.settings.newsletter_term }}

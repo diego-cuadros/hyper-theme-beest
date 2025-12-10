@@ -8397,3 +8397,49 @@ body.search-template #MainContent,
     margin-top: -30px;
   }
 }  
+
+/* Custom styles for footer */
+.dc_footer__list-social{
+  margin-top: 20px;
+}
+
+.dc_newsletter-form{
+  background-color: #ffffff;
+  border-radius: 100px;
+  padding:3px;
+}
+
+.form-control:focus{
+  background-color: #fff;
+  color: rgb(74,58,54);
+}
+
+@media only screen and (max-width:768px){
+/* baseline: push everything after by default */
+.footer__top-wrapper > .footer-block {
+  order: 10 !important;
+}
+
+/* About block (first) — selects the .footer-block that has the About details inside */
+.footer__top-wrapper > .footer-block:has(> details[id*="DEKGYP"]) {
+  order: 1 !important;
+}
+
+/* Contact block (second) */
+.footer__top-wrapper > .footer-block:has(> details[id*="4eCrBB"]) {
+  order: 2 !important;
+}
+
+/* Newsletter block (third) — targets by class as well, to override utility orders */
+.footer__top-wrapper > .footer-block.footer-block--newsletter {
+  order: 3 !important;
+}
+
+.footer__top-wrapper > div.footer-block:nth-of-type(2) 
+  .accordion-details__content.linklist {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 16px;
+}
+}
+
