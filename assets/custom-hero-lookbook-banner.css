@@ -269,3 +269,25 @@
   }
 }
 
+/* Fix shop now button styles */
+
+.dc_hero-lookbook-btn.btn--primary {
+  position: relative;
+  z-index: 2; /* keep text above */
+}
+
+.dc_hero-lookbook-btn.btn--primary::before {
+  z-index: -1 !important; /* push overlay behind the content */
+}
+@media only screen and (max-width: 749px) {
+  .dc_hero-lookbook-btn {
+    width: 100% !important;
+  }
+
+
+  .dc-lookbook-banner__info {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 24px 30px !important; 
+  }
+}
