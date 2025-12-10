@@ -257,6 +257,42 @@
     "custom_hero_lookbook_banner_YJnKNw": {
       "type": "custom-hero-lookbook-banner",
       "blocks": {
+        "extra_feature_ife9Hi": {
+          "type": "extra_feature",
+          "settings": {
+            "title": "Feature title",
+            "text": "Feature text description goes here.",
+            "title_color": "#ffffff",
+            "text_color": "#c9c9c9"
+          }
+        },
+        "extra_feature_zdkngw": {
+          "type": "extra_feature",
+          "settings": {
+            "title": "Feature title",
+            "text": "Feature text description goes here.",
+            "title_color": "#ffffff",
+            "text_color": "#c9c9c9"
+          }
+        },
+        "extra_feature_mUgjrX": {
+          "type": "extra_feature",
+          "settings": {
+            "title": "Feature title",
+            "text": "Feature text description goes here.",
+            "title_color": "#ffffff",
+            "text_color": "#c9c9c9"
+          }
+        },
+        "extra_feature_EdNK7T": {
+          "type": "extra_feature",
+          "settings": {
+            "title": "Feature title",
+            "text": "Feature text description goes here.",
+            "title_color": "#ffffff",
+            "text_color": "#c9c9c9"
+          }
+        },
         "features_YcJNJa": {
           "type": "features",
           "settings": {
@@ -316,6 +352,10 @@
         }
       },
       "block_order": [
+        "extra_feature_ife9Hi",
+        "extra_feature_zdkngw",
+        "extra_feature_mUgjrX",
+        "extra_feature_EdNK7T",
         "features_YcJNJa",
         "features_aLyxGr",
         "features_A9akNw",

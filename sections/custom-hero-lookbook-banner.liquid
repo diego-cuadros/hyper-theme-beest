@@ -188,20 +188,25 @@
     <div class="dc_extra-features__container">
       {% for block in section.blocks %}
         {% if block.type == 'extra_feature' %}
-          <div class="dc_extra-features__card" {{ block.shopify_attributes }}>
+          <div
+            class="dc_extra-features__card"
+            {{ block.shopify_attributes }}
+            style="background-color:{{ block.settings.card_color }}; border-color:{{ block.settings.card_border_color }}"
+          >
             <div class="dc_extra-features__icon">
               {% if block.settings.icon != blank %}
                 <img src="{{ block.settings.icon | image_url: width: 64 }}" alt="">
               {% endif %}
             </div>
+            <div class="dc_extra-features__written-content">
+              <h3 class="dc_extra-features__title" style="color: {{ block.settings.title_color }}">
+                {{ block.settings.title }}
+              </h3>
 
-            <h3 class="dc_extra-features__title" style="color: {{ block.settings.title_color }}">
-              {{ block.settings.title }}
-            </h3>
-
-            <p class="dc_extra-features__text" style="color: {{ block.settings.text_color }}">
-              {{ block.settings.text }}
-            </p>
+              <p class="dc_extra-features__text" style="color: {{ block.settings.text_color }}">
+                {{ block.settings.text }}
+              </p>
+            </div>
           </div>
         {% endif %}
       {% endfor %}
@@ -717,6 +722,18 @@
           "id": "text",
           "label": "Feature Text",
           "default": "Feature text description goes here."
+        },
+        {
+          "type": "color",
+          "id": "card_color",
+          "label": "Card color",
+          "default": "#222222"
+        },
+        {
+          "type": "color",
+          "id": "card_border_color",
+          "label": "Card border color",
+          "default": "#ffffff"
         },
         {
           "type": "color",
