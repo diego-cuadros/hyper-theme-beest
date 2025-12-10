@@ -260,8 +260,11 @@
         "extra_feature_ife9Hi": {
           "type": "extra_feature",
           "settings": {
-            "title": "Feature title",
-            "text": "Feature text description goes here.",
+            "icon": "shopify://shop_images/Frame.png",
+            "title": "Worldwide Shipping",
+            "text": "From our door to yours — rely on our global network for quick and secure delivery, wherever you are.",
+            "card_color": "#1f1f1f",
+            "card_border_color": "#D63A2F",
             "title_color": "#ffffff",
             "text_color": "#c9c9c9"
           }
@@ -269,8 +272,11 @@
         "extra_feature_zdkngw": {
           "type": "extra_feature",
           "settings": {
-            "title": "Feature title",
-            "text": "Feature text description goes here.",
+            "icon": "shopify://shop_images/Frame_1.png",
+            "title": "30-Days Free Returns",
+            "text": "Your satisfaction is our priority. Enjoy free returns within 30 days, making every purchase completely risk-free.",
+            "card_color": "#222222",
+            "card_border_color": "#ffffff",
             "title_color": "#ffffff",
             "text_color": "#c9c9c9"
           }
@@ -278,8 +284,11 @@
         "extra_feature_mUgjrX": {
           "type": "extra_feature",
           "settings": {
-            "title": "Feature title",
-            "text": "Feature text description goes here.",
+            "icon": "shopify://shop_images/Frame_2.png",
+            "title": "1 Year Warranty",
+            "text": "Lorem ipsum dolor sit amet consectetur. Dictumst dictum dignissim sapien congue mattis ut.",
+            "card_color": "#222222",
+            "card_border_color": "#ffffff",
             "title_color": "#ffffff",
             "text_color": "#c9c9c9"
           }
@@ -287,8 +296,11 @@
         "extra_feature_EdNK7T": {
           "type": "extra_feature",
           "settings": {
-            "title": "Feature title",
-            "text": "Feature text description goes here.",
+            "icon": "shopify://shop_images/Frame_3.png",
+            "title": "24/7 Friendly Support",
+            "text": "Whether it's day or night, our supportive team is just a click away, ready to provide friendly help.",
+            "card_color": "#222222",
+            "card_border_color": "#ffffff",
             "title_color": "#ffffff",
             "text_color": "#c9c9c9"
           }
@@ -296,57 +308,60 @@
         "features_YcJNJa": {
           "type": "features",
           "settings": {
-            "feature_title": "Feature title",
-            "feature_text": "Feature description text.",
+            "feature_title": "6–8 Hours Long Battery Life",
+            "feature_text": "The battery pumps 200+ gallons per charge.",
             "feature_text_color": "#7f7878"
           }
         },
         "features_aLyxGr": {
           "type": "features",
           "settings": {
-            "feature_title": "Feature title",
-            "feature_text": "Feature description text.",
+            "feature_title": "Maximum Comfort & Support",
+            "feature_text": "Double-padded straps and back pad reduce fatigue.",
             "feature_text_color": "#7f7878"
           }
         },
         "features_A9akNw": {
           "type": "features",
           "settings": {
-            "feature_title": "Feature title",
-            "feature_text": "Feature description text.",
+            "feature_title": "Heavy-duty, Leak-free Design",
+            "feature_text": "The HD wand, wide-mouth lid, and screen filter ensure durability.",
             "feature_text_color": "#7f7878"
           }
         },
         "hotspot_XbNtfU": {
           "type": "hotspot",
           "settings": {
-            "heading": "Hotspot",
-            "description": "<p>Each piece is built for longevity, ensuring durability, repairability, flexibility, and resale value.</p>",
-            "top": 45,
-            "left": 30,
-            "top_mobile": 45,
-            "left_mobile": 30
+            "pin_background_color": "#ffffff",
+            "pin_icon_color": "#d06835",
+            "heading": "6-8 Hour Long Battery Life",
+            "top": 15,
+            "left": 39,
+            "top_mobile": 25,
+            "left_mobile": 40
           }
         },
         "hotspot_XqjwfT": {
           "type": "hotspot",
           "settings": {
-            "heading": "Hotspot",
-            "description": "<p>Each piece is built for longevity, ensuring durability, repairability, flexibility, and resale value.</p>",
-            "top": 50,
-            "left": 70,
-            "top_mobile": 50,
-            "left_mobile": 70
+            "pin_background_color": "#ffffff",
+            "pin_icon_color": "#d06835",
+            "heading": "Maximum Comfort & Support",
+            "top": 30,
+            "left": 80,
+            "top_mobile": 35,
+            "left_mobile": 75
           }
         },
         "hotspot_X3ExHN": {
           "type": "hotspot",
           "settings": {
-            "heading": "Hotspot",
-            "description": "<p>Each piece is built for longevity, ensuring durability, repairability, flexibility, and resale value.</p>",
-            "top": 62,
-            "left": 43,
-            "top_mobile": 62,
+            "pin_background_color": "#ffffff",
+            "pin_icon_color": "#d06835",
+            "heading": "Heavy-Duty Leak Free-Design",
+            "top": 75,
+            "left": 40,
+            "top_mobile": 58,
             "left_mobile": 43
           }
         }
@@ -365,23 +380,23 @@
       ],
       "name": "🔥Custom Hero LookBook",
       "settings": {
-        "custom_tagline": "Tagline",
-        "custom_tagline_color": "#ffffff",
-        "custom_tagline_bg_color": "#222222",
+        "custom_tagline": "HD4000",
+        "custom_tagline_color": "#ff5413",
+        "custom_tagline_bg_color": "#3a3a3a",
         "custom_hero_title": "Battery Powered Backpack Sprayer",
         "custom_hero_description": "The HD4000 Backpack Sprayer delivers powerful, battery-powered performance with no pumping required, lasting up to 8 hours on a single charge. Designed for comfort and durability.",
-        "custom_button_text": "Shop Now",
+        "custom_button_text": "SHOP HD 4000 NOW",
         "custom_button_link": "shopify://collections/all",
         "container": "fixed",
-        "color_scheme": "scheme-info",
+        "color_scheme": "scheme-14",
         "section_header_alignment": "center",
         "section_header_alignment_mobile": "inherit",
         "subheading": "",
         "heading": "",
         "highlight_style": "none",
         "highlight_font_style": "italic",
-        "highlight_style_color": "",
-        "highlight_text_color": "",
+        "highlight_style_color": "#9f3939",
+        "highlight_text_color": "#672e2e",
         "heading_size": "h1",
         "description": "",
         "description_size": "text-base",

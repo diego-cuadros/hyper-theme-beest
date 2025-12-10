@@ -248,6 +248,12 @@
     gap: 14px;
   }
 
+  .dc_extra-features__icon {
+  flex-shrink: 0;
+  width: 32px;    
+  height: 32px;
+}
+
   .dc_extra-features__icon img{
     width: 32px;
     height: 32px;
@@ -264,6 +270,7 @@
 
   .dc_extra-features__text {
     font-size: 14px;
+    text-align: left;
   }
 }
 

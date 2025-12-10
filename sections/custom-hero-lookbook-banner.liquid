@@ -58,7 +58,7 @@
     <div class="dc-lookbook-banner__info">
       <p
         class="dc_hero-lookbook-tagline"
-        style="color={{ section.settings.custom_tagline_color }}; background-color:{{ section.settings.custom_tagline_bg_color }};"
+        style="color:{{  section.settings.custom_tagline_color }}; background-color:{{ section.settings.custom_tagline_bg_color }};"
       >
         {{ section.settings.custom_tagline }}
       </p>
@@ -67,7 +67,10 @@
         {{ section.settings.custom_hero_title }}
       </h2>
 
-      <p class="dc_hero-lookbook-hero-description">
+      <p
+        class="dc_hero-lookbook-hero-description"
+        style="color:{{ section.settings.custom_hero_description_text_color }}"
+      >
         {{ section.settings.custom_hero_description }}
       </p>
 
@@ -191,7 +194,7 @@
           <div
             class="dc_extra-features__card"
             {{ block.shopify_attributes }}
-            style="background-color:{{ block.settings.card_color }}; border-color:{{ block.settings.card_border_color }}"
+            style="background-color:{{ block.settings.card_color }};  border: 1px solid {{ block.settings.card_border_color }};"
           >
             <div class="dc_extra-features__icon">
               {% if block.settings.icon != blank %}
@@ -247,6 +250,12 @@
       "id": "custom_hero_description",
       "label": "Hero Description",
       "default": "The HD4000 Backpack Sprayer delivers powerful, battery-powered performance with no pumping required, lasting up to 8 hours on a single charge. Designed for comfort and durability."
+    },
+    {
+      "type": "color",
+      "id": "custom_hero_description_text_color",
+      "label": "Color for your description text",
+      "default": "#222222"
     },
     {
       "type": "text",
