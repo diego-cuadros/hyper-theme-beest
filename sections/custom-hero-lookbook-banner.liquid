@@ -170,7 +170,7 @@
           --top-mobile: {{ block.settings.top_mobile }}%; --left-mobile: {{ block.settings.left_mobile }}%;
         {%- endif -%}
         {%- endcapture -%}
-          {% render 'lookbook-icon',
+          {% render 'custom-lookbook-icon',
             section_settings: section.settings,
             block: block,
             hotspot_style: hotspot_style,
@@ -782,9 +782,16 @@
           "content": "t:general.general.name"
         },
         {
-          "type": "image_picker",
-          "id": "image",
-          "label": "t:general.image.label"
+          "type": "color",
+          "id": "pin_background_color",
+          "label": "Pin background color",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "pin_icon_color",
+          "label": "Pin icon color",
+          "default": "#ffffff"
         },
         {
           "type": "header",
@@ -795,12 +802,6 @@
           "id": "heading",
           "label": "t:general.heading.label",
           "default": "Hotspot"
-        },
-        {
-          "type": "richtext",
-          "id": "description",
-          "label": "t:general.text.label",
-          "default": "<p>Each piece is built for longevity, ensuring durability, repairability, flexibility, and resale value.</p>"
         },
         {
           "type": "header",
