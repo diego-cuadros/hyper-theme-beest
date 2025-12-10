@@ -184,6 +184,29 @@
       {%- endfor -%}
     </div>
   </div>
+  <section class="dc_section-container">
+    <div class="dc_extra-features__container">
+      {% for block in section.blocks %}
+        {% if block.type == 'extra_feature' %}
+          <div class="dc_extra-features__card" {{ block.shopify_attributes }}>
+            <div class="dc_extra-features__icon">
+              {% if block.settings.icon != blank %}
+                <img src="{{ block.settings.icon | image_url: width: 64 }}" alt="">
+              {% endif %}
+            </div>
+
+            <h3 class="dc_extra-features__title" style="color: {{ block.settings.title_color }}">
+              {{ block.settings.title }}
+            </h3>
+
+            <p class="dc_extra-features__text" style="color: {{ block.settings.text_color }}">
+              {{ block.settings.text }}
+            </p>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
 </div>
 {% schema %}
 {
@@ -673,6 +696,42 @@
     }
   ],
   "blocks": [
+    {
+      "type": "extra_feature",
+      "name": "Extra Feature",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Feature Title",
+          "default": "Feature title"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Feature Text",
+          "default": "Feature text description goes here."
+        },
+        {
+          "type": "color",
+          "id": "title_color",
+          "label": "Title Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color",
+          "default": "#c9c9c9"
+        }
+      ]
+    },
     {
       "type": "features",
       "name": "feature",

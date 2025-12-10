@@ -186,3 +186,70 @@
 }
 }
 
+/* Styles for the extra features */
+
+.dc_extra-features__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+}
+
+/* DESKTOP: 4 columns */
+@media (min-width: 768px) {
+  .dc_extra-features__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* CARD */
+.dc_extra-features__card {  
+  background: #1d1d1d;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #2a2a2a;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ICON */
+.dc_extra-features__icon img {
+  width: 28px;
+  height: 28px;
+  opacity: 0.9;
+}
+
+/* TITLE */
+.dc_extra-features__title {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* TEXT */
+.dc_extra-features__text {
+  color: #c9c9c9;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .dc_extra-features__card {
+    padding: 28px;
+    gap: 12px;
+  }
+
+  .dc_extra-features__title {
+    font-size: 18px;
+  }
+
+  .dc_extra-features__text {
+    font-size: 15px;
+  }
+}
+
