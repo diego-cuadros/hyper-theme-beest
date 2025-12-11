@@ -492,6 +492,57 @@
         "padding_bottom": 50,
         "enable_preload_image": false
       }
+    },
+    "custom_brand_promise_4rpX9b": {
+      "type": "custom-brand-promise",
+      "blocks": {
+        "feature_tGqKnq": {
+          "type": "feature",
+          "settings": {
+            "icon": "",
+            "label": "Worldwide Shipping"
+          }
+        },
+        "feature_tkBwpp": {
+          "type": "feature",
+          "settings": {
+            "icon": "",
+            "label": "30-Days Free Returns"
+          }
+        },
+        "feature_DpFr4N": {
+          "type": "feature",
+          "settings": {
+            "icon": "",
+            "label": "1 Year Warranty"
+          }
+        },
+        "feature_Uj6MNm": {
+          "type": "feature",
+          "settings": {
+            "icon": "",
+            "label": "24/7 Friendly Support"
+          }
+        }
+      },
+      "block_order": [
+        "feature_tGqKnq",
+        "feature_tkBwpp",
+        "feature_DpFr4N",
+        "feature_Uj6MNm"
+      ],
+      "name": "🔥Custom brand promise",
+      "settings": {
+        "section_background_color": "#f5f5f5",
+        "background_color": "#222222",
+        "text_color": "#b5b5b5",
+        "heading": "The Beest Brand Promise",
+        "heading_color": "#FFFFFF",
+        "text": "Lorem ipsum dolor sit amet consectetur. Feugiat in duis egestas suscipit sit nisi urna sapien pellentesque. Convallis auctor orci gravida nullam.",
+        "body_text_color": "#b5b5b5",
+        "border_color_grid": "#b5b5b5",
+        "logo": "shopify://shop_images/favicon.png"
+      }
     }
   },
   "order": [
@@ -499,6 +550,7 @@
     "featured_collection_fNpBbf",
     "collection_list_8H4MWF",
     "custom_hero_lookbook_banner_YJnKNw",
-    "image_with_text_overlay_e8gK4d"
+    "image_with_text_overlay_e8gK4d",
+    "custom_brand_promise_4rpX9b"
   ]
 }

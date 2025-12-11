@@ -57,13 +57,14 @@
 
   .dc_brand-promise__icon {
     width: 28px;
-    margin-right: 16px;
+    margin:0px;
+    display: flex;
+    align-items: center;
   }
 
-  .dc_brand-promise__icon svg {
+  .dc_brand-promise__icon img {
     width: 20px;
     height: 20px;
-    fill: blue;
   }
 
   .dc_brand-promise__label {

@@ -32,7 +32,15 @@
               class="dc_brand-promise__icon"
               style="color:{{ section.settings.body_text_color }};"
             >
-              {{ block.settings.icon }}
+              {% if block.settings.icon %}
+                <img
+                  src="{{ block.settings.icon | img_url: '64x' }}"
+                  alt="Feature icon"
+                  class="dc_brand-promise__icon-img"
+                  width="{{ block.settings.icon.width }}"
+                  height="{{ block.settings.icon.height }}"
+                >
+              {% endif %}
             </div>
             <div
               class="dc_brand-promise__label"
@@ -105,9 +113,9 @@
       "name": "Feature",
       "settings": [
         {
-          "type": "html",
+          "type": "image_picker",
           "id": "icon",
-          "label": "Icon (SVG)"
+          "label": "Select an icon for your feature"
         },
         {
           "type": "text",
