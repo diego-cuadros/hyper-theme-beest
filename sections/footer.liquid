@@ -162,9 +162,12 @@
                       >
                         {%- if block_title != blank -%}
                           <summary class="accordion-details__summary flex items-center justify-between gap-2">
-                            <h3 class="footer-block__heading inline-richtext {{ block.settings.heading_size }}">
+                            <p
+                              class="footer-block__heading inline-richtext {{ block.settings.heading_size }}"
+                              style="color:{{ block.settings.color_menu_heading }}"
+                            >
                               {{- block_title -}}
-                            </h3>
+                            </p>
                             <span class="flex items-center lg:hidden">
                               {%- render 'icon-plus-toggle', size: 'small' -%}
                             </span>
@@ -331,14 +334,20 @@
         </div>
         <div class="footer__info flex items-center">
           {% if section.settings.footer_bottom_menu != blank %}
-            <p class="footer__copyright-content">
+            <p class="footer__copyright-content" style="color:{{ section.settings.color_for_link_at_bottom }}">
               &copy; {{ 'now' | date: '%Y' }}
               All rights reserved.
             </p>
             <ul class="linklist linklist--horizontal list-unstyled">
               {% for link in linklists[section.settings.footer_bottom_menu].links %}
                 <li>
-                  <a href="{{ link.url }}" class="reversed-link">{{ link.title | escape }}</a>
+                  <a
+                    href="{{ link.url }}"
+                    class="reversed-link"
+                    style="color:{{ section.settings.color_for_link_at_bottom }}"
+                  >
+                    {{- link.title | escape -}}
+                  </a>
                 </li>
               {% endfor %}
             </ul>
@@ -409,8 +418,18 @@
             {
               "value": "hd1",
               "label": "t:general.text_size.options__hd1.label"
+            },
+            {
+              "value": "p",
+              "label": "Parragraph format"
             }
           ]
+        },
+        {
+          "type": "color",
+          "id": "color_menu_heading",
+          "label": "Color for meanu heading",
+          "default": "#ffffff"
         },
         {
           "type": "link_list",
@@ -1022,6 +1041,12 @@
       "label": "Enable logo on footer",
       "info": "This will display the logo instead of the powered by shopify text",
       "default": true
+    },
+    {
+      "type": "color",
+      "id": "color_for_link_at_bottom",
+      "label": "Color for links at the bottom",
+      "default": "#ffffff"
     },
     {
       "type": "checkbox",
