@@ -8414,23 +8414,20 @@ body.search-template #MainContent,
   color: rgb(74,58,54);
 }
 
-@media only screen and (max-width:768px){
-/* baseline: push everything after by default */
+@media only screen and (max-width:1024px){
 .footer__top-wrapper > .footer-block {
   order: 10 !important;
 }
 
-/* About block (first) — selects the .footer-block that has the About details inside */
 .footer__top-wrapper > .footer-block:has(> details[id*="DEKGYP"]) {
   order: 1 !important;
 }
 
-/* Contact block (second) */
 .footer__top-wrapper > .footer-block:has(> details[id*="4eCrBB"]) {
   order: 2 !important;
 }
 
-/* Newsletter block (third) — targets by class as well, to override utility orders */
+
 .footer__top-wrapper > .footer-block.footer-block--newsletter {
   order: 3 !important;
 }
@@ -8455,7 +8452,7 @@ body.search-template #MainContent,
 }
 
 .footer-logo {
-  max-width: 226px; /* change as you wish */
+  max-width: 226px; 
   height: auto;
 }
 
@@ -8465,7 +8462,34 @@ body.search-template #MainContent,
   }
 }
 
-@media only screen and (max-width:768px){
+.accordion-details__content span, .footer-newsletter__description, .btn__text, .form-control, .form-control::placeholder{
+  font-size: 16px;
+}
+
+.footer__info p, .footer__info a, .footer-block__heading  {
+  font-size: 14px;
+}
+
+.footer-block__heading{
+  margin:0px;
+}
+
+
+@media only screen and (max-width:1024px){
+    .accordion-details__summary {
+      padding:0px !important;
+    }
+
+    .accordion-details__content{
+      padding: 0px 0px 16px 0px !important;
+      min-height: 30px !important;
+      gap:0px !important;
+    }
+    .linklist--vertical li + li {
+    padding: 0 !important;
+}
+
+
     .footer__copyright {
         order: -1;
     }
@@ -8476,3 +8500,21 @@ body.search-template #MainContent,
       gap:16px;
     }
   }
+
+
+.newsletter-form  {
+  height: 54px;
+}
+
+.form-control, .btn {
+  height: 48px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .accordion-details__summary {
+    border-bottom: 0px;
+  }
+  .accordion-details__summary span {
+    display: none;
+  }
+}
