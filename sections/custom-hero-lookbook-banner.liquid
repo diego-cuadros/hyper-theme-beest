@@ -198,7 +198,12 @@
           >
             <div class="dc_extra-features__icon">
               {% if block.settings.icon != blank %}
-                <img src="{{ block.settings.icon | image_url: width: 64 }}" alt="">
+                <img
+                  src="{{ block.settings.icon | image_url: width: 64 }}"
+                  alt=""
+                  width="{{ section.settings.logo.width }}"
+                  height="{{ section.settings.logo.height }}"
+                >
               {% endif %}
             </div>
             <div class="dc_extra-features__written-content">

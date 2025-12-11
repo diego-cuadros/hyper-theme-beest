@@ -499,28 +499,28 @@
         "feature_tGqKnq": {
           "type": "feature",
           "settings": {
-            "icon": "",
+            "icon": "shopify://shop_images/Frame.png",
             "label": "Worldwide Shipping"
           }
         },
         "feature_tkBwpp": {
           "type": "feature",
           "settings": {
-            "icon": "",
+            "icon": "shopify://shop_images/Frame_2.png",
             "label": "30-Days Free Returns"
           }
         },
         "feature_DpFr4N": {
           "type": "feature",
           "settings": {
-            "icon": "",
+            "icon": "shopify://shop_images/Frame_3.png",
             "label": "1 Year Warranty"
           }
         },
         "feature_Uj6MNm": {
           "type": "feature",
           "settings": {
-            "icon": "",
+            "icon": "shopify://shop_images/Frame_1.png",
             "label": "24/7 Friendly Support"
           }
         }
@@ -537,7 +537,7 @@
         "background_color": "#222222",
         "text_color": "#b5b5b5",
         "heading": "The Beest Brand Promise",
-        "heading_color": "#FFFFFF",
+        "heading_color": "#ffffff",
         "text": "Lorem ipsum dolor sit amet consectetur. Feugiat in duis egestas suscipit sit nisi urna sapien pellentesque. Convallis auctor orci gravida nullam.",
         "body_text_color": "#b5b5b5",
         "border_color_grid": "#b5b5b5",

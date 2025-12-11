@@ -1,13 +1,14 @@
 .dc_brand-promise {
     padding: 40px 0;
+    display:flex;
+    justify-content:center;
   }
 
   .dc_brand-promise__inner {
-    color: #ffffff;
     border-radius: 15px;
     padding: 32px 40px;
-    margin: 0px 50px;
-    max-width: 100%;
+    margin:0px;
+    max-width: 1440px;
     display: flex;
     gap: 64px;
   }
