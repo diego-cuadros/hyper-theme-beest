@@ -8441,5 +8441,38 @@ body.search-template #MainContent,
   grid-template-columns: 1fr 1fr;
   gap: 8px 16px;
 }
+
+.footer__top-wrapper > div.footer-block:nth-of-type(1) {
+  margin-top: 30px;
+}
 }
 
+/* Styles for logo on footer */
+.footer__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo {
+  max-width: 226px; /* change as you wish */
+  height: auto;
+}
+
+@media only screen and (min-width:1024px){
+   .footer__top-wrapper > .footer-block:nth-child(2) {
+    margin-left: auto;
+  }
+}
+
+@media only screen and (max-width:768px){
+    .footer__copyright {
+        order: -1;
+    }
+    .footer__bottom-row{
+      gap:32px;
+    }
+    .footer__info{
+      gap:16px;
+    }
+  }

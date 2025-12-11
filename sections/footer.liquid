@@ -260,7 +260,7 @@
         endif
       %}
       {% if enable_country_selector or enable_language_selector or show_social or section.settings.payment_enable %}
-        <div class="footer__bottom-row flex justify-between items-end{% if section.settings.footer_layout == "reverse" %} flex-row-reverse{% endif %}{% if section.settings.show_sperator_line %} show-separator-line{% endif %}">
+        <div class="footer__bottom-row flex justify-between items-center{% if section.settings.footer_layout == "reverse" %} flex-row-reverse{% endif %}{% if section.settings.show_sperator_line %} show-separator-line{% endif %}">
           <div class="{% if section.settings.footer_layout == "reverse" %}flex flex-wrap gap-6{% else %}grid gap-5{% endif %}">
             <div class="footer__localization relative z-2 flex items-center">
               {%- if enable_country_selector -%}
@@ -294,13 +294,31 @@
           {%- endif -%}
         </div>
       {% endif %}
-      <div class="footer__bottom-row flex justify-between items-start">
+      <div class="footer__bottom-row flex justify-between items-center">
         <div class="footer__copyright">
-          <p class="footer__copyright-content">
-            &copy; {{ 'now' | date: '%Y' }}
-            <a class="link-underline" href="{{ routes.root_url }}">{{ shop.name }}</a>.
-            {{ powered_by_link }}
-          </p>
+          {% if section.settings.enable_logo_on_footer %}
+            {%- if settings.logo != blank -%}
+              <a href="{{ routes.root_url }}" class="footer__logo block">
+                <img
+                  src="{{ settings.logo | image_url: width: 250 }}"
+                  srcset="
+                    {{ settings.logo | image_url: width: 250 }} 1x,
+                    {{ settings.logo | image_url: width: 500 }} 2x
+                  "
+                  width="{{ settings.logo.width }}"
+                  height="{{ settings.logo.height }}"
+                  alt="{{ settings.logo.alt | default: shop.name | escape }}"
+                  class="footer-logo mx-auto"
+                >
+              </a>
+            {% endif %}
+          {% else %}
+            <p class="footer__copyright-content">
+              &copy; {{ 'now' | date: '%Y' }}
+              <a class="link-underline" href="{{ routes.root_url }}">{{ shop.name }}</a>.
+              {{ powered_by_link }}
+            </p>
+          {% endif %}
 
           {%- if shop.features.follow_on_shop? and section.settings.enable_follow_on_shop -%}
             <div class="footer__follow-on-shop">
@@ -313,6 +331,10 @@
         </div>
         <div class="footer__info flex items-center">
           {% if section.settings.footer_bottom_menu != blank %}
+            <p class="footer__copyright-content">
+              &copy; {{ 'now' | date: '%Y' }}
+              All rights reserved.
+            </p>
             <ul class="linklist linklist--horizontal list-unstyled">
               {% for link in linklists[section.settings.footer_bottom_menu].links %}
                 <li>
@@ -993,6 +1015,13 @@
     {
       "type": "header",
       "content": "t:sections.footer.settings.header__9.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_logo_on_footer",
+      "label": "Enable logo on footer",
+      "info": "This will display the logo instead of the powered by shopify text",
+      "default": true
     },
     {
       "type": "checkbox",
