@@ -1,6 +1,6 @@
 {{ 'custom-brand-promise.css' | asset_url | stylesheet_tag }}
 
-<section class="dc_brand-promise" style="background-color:{{ section.settings.section_background_color }};">
+<div class="dc_brand-promise" style="background-color:{{ section.settings.section_background_color }};">
   <div
     class="dc_brand-promise__inner"
     style="background-color:{{ section.settings.background_color }}; color: {{ section.settings.tex_color }};"
@@ -53,7 +53,7 @@
       </div>
     </div>
   </div>
-</section>
+</div>
 
 {% schema %}
 {

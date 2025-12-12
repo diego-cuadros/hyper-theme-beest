@@ -1,0 +1,188 @@
+<style>
+  .reviews-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 16px;
+    text-align: center;
+    font-family: sans-serif;
+  }
+
+  .reviews-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    line-height: 1.4;
+  }
+
+  .masonry {
+    column-count: 3; /* number of columns */
+    column-gap: 20px; /* horizontal spacing */
+  }
+
+  @media (max-width: 900px) {
+    .masonry {
+      column-count: 2;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .masonry {
+      column-count: 1;
+    }
+  }
+
+  .card {
+    background: #fff;
+    border: 1px solid #e3e3e3;
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 20px; /* vertical spacing */
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    break-inside: avoid; /* prevents breaking inside columns */
+  }
+
+  .card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 12px;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .stars {
+    color: #ff7a00;
+    font-size: 14px;
+  }
+
+  .date {
+    color: #888;
+  }
+
+  .buyer {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .verified {
+    color: #4caf50;
+    font-size: 12px;
+  }
+  .masonry {
+    column-count: 3;
+    column-gap: 20px;
+  }
+
+  @media (max-width: 900px) {
+    .masonry {
+      column-count: 2; /* stays two columns on tablets + mobile */
+    }
+  }
+
+  @media (max-width: 600px) {
+    .masonry {
+      column-count: 2; /* force 2 columns even on small screens */
+    }
+  }
+</style>
+<section class="reviews-section">
+  <h2>
+    ⭐️⭐️⭐️⭐️⭐️<br>
+    Over 2,000,000 Happy Customers
+  </h2>
+
+  <div class="masonry">
+    <!-- REVIEW 1 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="stars">★★★★★</span>
+        <span class="date">07/11/2025</span>
+      </div>
+      <p>Outstanding sprayer system. Great assortment of application nozzles. Great capacity and easy to carry.</p>
+      <div class="buyer">
+        <strong>Jim Bradley</strong><br>
+        <span class="verified">✔ Verified Buyer</span>
+      </div>
+      <img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=800&q=80" alt="">
+    </div>
+
+    <!-- REVIEW 2 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="stars">★★★★★</span>
+        <span class="date">07/11/2025</span>
+      </div>
+      <p>Working well so far, I've only had it for a couple of weeks.</p>
+      <div class="buyer">
+        <strong>Sierra Johnson</strong><br>
+        <span class="verified">✔ Verified Buyer</span>
+      </div>
+      <img src="https://images.unsplash.com/photo-1597004891513-820993c7f1e0?auto=format&fit=crop&w=800&q=80" alt="">
+    </div>
+
+    <!-- REVIEW 3 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="stars">★★★★★</span>
+        <span class="date">07/11/2025</span>
+      </div>
+      <p>This sprayer changed my whole gardening routine. Light, powerful, and the battery lasts surprisingly long.</p>
+      <div class="buyer">
+        <strong>Daniel Ruiz</strong><br>
+        <span class="verified">✔ Verified Buyer</span>
+      </div>
+      <img src="https://images.unsplash.com/photo-1585314062404-58e8f8df0f43?auto=format&fit=crop&w=800&q=80" alt="">
+    </div>
+
+    <!-- IMAGE 1 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=800&q=80" alt="">
+    </div>
+
+    <!-- IMAGE 2 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=80" alt="">
+    </div>
+
+    <!-- IMAGE 3 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1524592714635-d77511a4834a?auto=format&fit=crop&w=800&q=80" alt="">
+    </div>
+
+    <!-- IMAGE 4 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80" alt="">
+    </div>
+
+    <!-- IMAGE 5 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=800&q=80" alt="">
+    </div>
+
+    <!-- IMAGE 6 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=800&q=80" alt="">
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Masonry Reviews",
+  "tag": "section",
+  "class": "masonry-reviews-section",
+  "settings": [],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Masonry Reviews"
+    }
+  ]
+}
+{% endschema %}

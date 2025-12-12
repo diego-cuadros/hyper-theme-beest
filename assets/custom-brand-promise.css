@@ -2,6 +2,7 @@
     padding: 40px 0;
     display:flex;
     justify-content:center;
+    width: 100%;
   }
 
   .dc_brand-promise__inner {
@@ -11,6 +12,7 @@
     max-width: 1440px;
     display: flex;
     gap: 64px;
+    width: 100%;
   }
 
   .dc_brand-promise__left {
