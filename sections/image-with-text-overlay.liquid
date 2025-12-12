@@ -185,9 +185,6 @@
       ></div>
     </div>
   </div>
-  {% if section.settings.use_custom_decor == true %}
-    <div class="dc_layout-decor"></div>
-  {% endif %}
 </div>
 {% schema %}
 {
@@ -196,12 +193,6 @@
     {
       "type": "header",
       "content": "t:general.general.name"
-    },
-    {
-      "type": "checkbox",
-      "id": "use_custom_decor",
-      "label": "Use custom stripe at the bottom",
-      "default": false
     },
     {
       "type": "select",
