@@ -70,7 +70,7 @@
       ],
       "name": "t:sections.image-with-text-overlay.name",
       "settings": {
-        "use_custom_decor": false,
+        "use_custom_decor": true,
         "container": "full",
         "image": "shopify://shop_images/hero_image.avif",
         "desktop_height": "extra-medium",
@@ -220,7 +220,7 @@
       "settings": {
         "container": "fixed",
         "color_scheme": "scheme-inverse",
-        "section_header_alignment": "left",
+        "section_header_alignment": "center",
         "section_header_alignment_mobile": "inherit",
         "subheading": "",
         "heading": "Shop by Categories",
@@ -267,7 +267,7 @@
             "title": "Worldwide Shipping",
             "text": "From our door to yours — rely on our global network for quick and secure delivery, wherever you are.",
             "card_color": "#1f1f1f",
-            "card_border_color": "#adadad",
+            "card_border_color": "#2e2e2e",
             "title_color": "#ffffff",
             "text_color": "#adadad"
           }
@@ -279,7 +279,7 @@
             "title": "30-Days Free Returns",
             "text": "Your satisfaction is our priority. Enjoy free returns within 30 days, making every purchase completely risk-free.",
             "card_color": "#1f1f1f",
-            "card_border_color": "#adadad",
+            "card_border_color": "#2e2e2e",
             "title_color": "#ffffff",
             "text_color": "#adadad"
           }
@@ -291,7 +291,7 @@
             "title": "1 Year Warranty",
             "text": "Lorem ipsum dolor sit amet consectetur. Dictumst dictum dignissim sapien congue mattis ut.",
             "card_color": "#1f1f1f",
-            "card_border_color": "#adadad",
+            "card_border_color": "#2e2e2e",
             "title_color": "#ffffff",
             "text_color": "#adadad"
           }
@@ -303,7 +303,7 @@
             "title": "24/7 Friendly Support",
             "text": "Whether it's day or night, our supportive team is just a click away, ready to provide friendly help.",
             "card_color": "#1f1f1f",
-            "card_border_color": "#adadad",
+            "card_border_color": "#2e2e2e",
             "title_color": "#ffffff",
             "text_color": "#adadad"
           }
@@ -467,7 +467,7 @@
         ".dc_h2 {font-size: 32px;}",
         ".dc_p {font-size: 16px;}",
         ".btn {height: 50px; width: 196px;}",
-        ".text-subheading {font-size: 14px; font-weight: 500; margin: 6px;}",
+        ".text-subheading {font-size: 14px; font-weight: 500; margin: 6px; width: 196px; text-align: center;}",
         "@media only screen and (max-width: 749px) {.dc_h2 {font-size: 24px; text-align: center; } .dc_p {text-align: center; } .btn {width: 100%; } .btn__text {font-size: 16px; } .text-subheading {text-align: center; }}"
       ],
       "name": "t:sections.image-with-text-overlay.name",
@@ -593,7 +593,15 @@
         "image_only_L3mMGD"
       ],
       "name": "🔥 Masonry Reviews",
-      "settings": {}
+      "settings": {
+        "background_color": "#f5f5f5",
+        "card_background_color": "#ffffff",
+        "background_color_for_title_on_mobile": "#333333",
+        "background_color_for_title_text_on_mobile": "#ffffff",
+        "color_for_stars": "#ff7a00",
+        "section_title": "Over 1,000,000+ Happy customers",
+        "verified_badge_color": "#333333"
+      }
     },
     "custom_brand_promise_4rpX9b": {
       "type": "custom-brand-promise",
@@ -642,7 +650,7 @@
         "heading_color": "#ffffff",
         "text": "Lorem ipsum dolor sit amet consectetur. Feugiat in duis egestas suscipit sit nisi urna sapien pellentesque. Convallis auctor orci gravida nullam.",
         "body_text_color": "#b5b5b5",
-        "border_color_grid": "#b5b5b5",
+        "border_color_grid": "#2f2f2f",
         "logo": "shopify://shop_images/favicon.png"
       }
     }
