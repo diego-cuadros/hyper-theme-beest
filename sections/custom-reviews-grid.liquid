@@ -1,108 +1,47 @@
 {{ 'custom-reviews-grid.css' | asset_url | stylesheet_tag }}
+
 <section class="dc_reviews-section" style="background-color:lightgray;">
   <h2>
     <span class="dc_review-stars">★★★★★</span><br>
     Over 2,000,000 Happy Customers
   </h2>
 
-  <div class="masonry">
-    <!-- REVIEW 1 -->
-    <div class="dc_review_card">
-      <div class="dc_review_inner-card">
-        <div class="dc_review-header">
-          <span class="dc_review-stars">★★★★★</span>
-          <span class="dc_review-date">07/11/2025</span>
-        </div>
-        <p>Outstanding sprayer system. Great assortment of application nozzles. Great capacity and easy to carry.</p>
-        <div class="dc_review-buyer">
-          <strong>Jim Bradley</strong><br>
-          <span class="dc_review-verified-badge">✔ Verified Buyer</span>
-        </div>
-      </div>
-      <img
-        src="https://cdn.shopify.com/s/files/1/0703/4522/8508/files/7d777eb48f8fe3ec7a783f8ec768fe2b6e1ebcfb.png?v=1765553614"
-        alt=""
-      >
-    </div>
+  <div class="dc_review_mansory">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'review' %}
+          <div class="dc_review_card">
+            <div class="dc_review_inner-card">
+              <div class="dc_review-header">
+                <span class="dc_review-stars">{{ block.settings.stars }}</span>
+                <span class="dc_review-date">{{ block.settings.date }}</span>
+              </div>
 
-    <!-- IMAGE 1 -->
-    <div class="dc_review_card">
-      <img
-        src="https://cdn.shopify.com/s/files/1/0703/4522/8508/files/Screenshot_2025-12-11_at_1.28.13_PM.png?v=1765477713"
-        alt=""
-      >
-    </div>
+              {% if block.settings.review != blank %}
+                <p>{{ block.settings.review }}</p>
+              {% endif %}
 
-    <!-- REVIEW 2 -->
-    <div class="dc_review_card">
-      <div class="dc_review_inner-card">
-        <div class="dc_review-header">
-          <span class="dc_review-stars">★★★★★</span>
-          <span class="dc_review-date">07/11/2025</span>
-        </div>
-        <p>Love it works great! No issues so far.</p>
-        <div class="dc_review-buyer">
-          <strong>Jim Mozzarella</strong><br>
-          <span class="dc_review-verified-badge">✔ Verified Buyer</span>
-        </div>
-      </div>
-      <img
-        src="https://cdn.shopify.com/s/files/1/0703/4522/8508/files/29f6d19a76d5a60707227e1d23cc7fe9fcf2a959.png?v=1765553493"
-        alt=""
-      >
-    </div>
+              <div class="dc_review-buyer">
+                <strong>{{ block.settings.buyer_name }}</strong><br>
+                {% if block.settings.verified %}
+                  <span class="dc_review-verified-badge">✔ Verified Buyer</span>
+                {% endif %}
+              </div>
+            </div>
 
-    <!-- REVIEW 3 -->
-    <div class="dc_review_card">
-      <div class="dc_review_inner-card">
-        <div class="dc_review-header">
-          <span class="dc_review-stars">★★★★★</span>
-          <span class="dc_review-date">07/11/2025</span>
-        </div>
-        <p>Working well so far, ive only had it for a couple of weeks</p>
-        <div class="dc_review-buyer">
-          <strong>Daniel Ruiz</strong><br>
-          <span class="dc_review-verified-badge">✔ Verified Buyer</span>
-        </div>
-      </div>
-      <img
-        src="https://cdn.shopify.com/s/files/1/0703/4522/8508/files/e75d7cebbf5e66829a3716368ddf13bf211e2877.png?v=1765555117"
-        alt=""
-      >
-    </div>
+            {% if block.settings.image %}
+              <img src="{{ block.settings.image | image_url }}" alt="">
+            {% endif %}
+          </div>
 
-    <!-- IMAGE 1 -->
-    <div class="dc_review_card">
-      <img
-        src="https://cdn.shopify.com/s/files/1/0703/4522/8508/files/46652d1289137ed21bac345459f9f92eaa9698b0.png?v=1765555202"
-        alt=""
-      >
-    </div>
-
-    <!-- IMAGE 4 -->
-    <div class="dc_review_card">
-      <img
-        src="https://cdn.shopify.com/s/files/1/0703/4522/8508/files/f22189492da424682dabe79ed83a5e49ae1569e6.png?v=1765555367"
-        alt=""
-      >
-    </div>
-    <!-- Review -->
-    <div class="dc_review_card">
-      <div class="dc_review_inner-card">
-        <div class="dc_review-header">
-          <span class="dc_review-stars">★★★★★</span>
-          <span class="dc_review-date">07/11/2025</span>
-        </div>
-        <p>
-          Changed my life no joke. as someone with arthritis, pumping my old sprayer was TORTURE. this thing has
-          literally changed how i feel about yard work.
-        </p>
-        <div class="dc_review-buyer">
-          <strong>Daniel Ruiz</strong><br>
-          <span class="dc_review-verified-badge">✔ Verified Buyer</span>
-        </div>
-      </div>
-    </div>
+        {% when 'image_only' %}
+          <div class="dc_review_card">
+            {% if block.settings.image %}
+              <img src="{{ block.settings.image | image_url }}" alt="">
+            {% endif %}
+          </div>
+      {% endcase %}
+    {% endfor %}
   </div>
 </section>
 
@@ -112,10 +51,63 @@
   "tag": "section",
   "class": "masonry-reviews-section",
   "settings": [],
-  "blocks": [],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "stars",
+          "label": "Stars",
+          "default": "★★★★★"
+        },
+        {
+          "type": "text",
+          "id": "date",
+          "label": "Review Date",
+          "default": "07/11/2025"
+        },
+        {
+          "type": "textarea",
+          "id": "review",
+          "label": "Review Text"
+        },
+        {
+          "type": "text",
+          "id": "buyer_name",
+          "label": "Buyer Name",
+          "default": "John Doe"
+        },
+        {
+          "type": "checkbox",
+          "id": "verified",
+          "label": "Verified Badge",
+          "default": true
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Optional Review Image"
+        }
+      ]
+    },
+    {
+      "type": "image_only",
+      "name": "Image Only",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
-      "name": "🔥 Masonry Reviews"
+      "name": "🔥 Masonry Reviews",
+      "blocks": [{ "type": "review" }, { "type": "image_only" }]
     }
   ]
 }

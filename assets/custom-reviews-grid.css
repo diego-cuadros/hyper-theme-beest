@@ -1,3 +1,15 @@
+  .dc_review_mansory {
+    column-count: 4; /* number of columns */
+    column-gap: 12px; /* horizontal spacing */
+  }
+
+  @media (max-width: 900px) {
+    .dc_review_mansory {
+      column-count: 2;
+    }
+  }
+
+
 .dc_reviews-section {
     max-width: 1200px;
     margin: 0 auto;
@@ -25,11 +37,14 @@
    gap: 12px;
     width: 100%;
     box-sizing: border-box;
-    break-inside: avoid; /* prevents breaking inside columns */
+    break-inside: avoid;
+    margin-bottom: 12px;
   }
 
   .dc_review_card img {
     border-radius: 12px;
+    width: 100%;
+  display: block;
   }
 
   .dc_review_inner-card{
@@ -95,23 +110,5 @@
     font-size: 14px;
   }
     }
-
-
-
-
-  /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
-
-  .masonry {
-    column-count: 4; /* number of columns */
-    column-gap: 12px; /* horizontal spacing */
-  }
-
-  @media (max-width: 900px) {
-    .masonry {
-      column-count: 2;
-    }
-  }
-
-
 
   
