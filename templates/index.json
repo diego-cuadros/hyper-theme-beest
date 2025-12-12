@@ -493,6 +493,11 @@
         "enable_preload_image": false
       }
     },
+    "custom_reviews_grid_77yVbd": {
+      "type": "custom-reviews-grid",
+      "name": "🔥 Masonry Reviews",
+      "settings": {}
+    },
     "custom_brand_promise_4rpX9b": {
       "type": "custom-brand-promise",
       "blocks": {
@@ -551,6 +556,7 @@
     "collection_list_8H4MWF",
     "custom_hero_lookbook_banner_YJnKNw",
     "image_with_text_overlay_e8gK4d",
+    "custom_reviews_grid_77yVbd",
     "custom_brand_promise_4rpX9b"
   ]
 }
