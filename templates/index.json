@@ -70,7 +70,6 @@
       ],
       "name": "t:sections.image-with-text-overlay.name",
       "settings": {
-        "use_custom_decor": true,
         "container": "full",
         "image": "shopify://shop_images/hero_image.avif",
         "desktop_height": "extra-medium",
@@ -88,6 +87,13 @@
         "padding_top": 0,
         "padding_bottom": 0,
         "enable_preload_image": false
+      }
+    },
+    "custom_empty_stripe_QCnepD": {
+      "type": "custom-empty-stripe",
+      "name": "🔥 Layout Decor",
+      "settings": {
+        "decor_color": "#ffffff"
       }
     },
     "featured_collection_fNpBbf": {
@@ -472,7 +478,6 @@
       ],
       "name": "t:sections.image-with-text-overlay.name",
       "settings": {
-        "use_custom_decor": false,
         "container": "fixed",
         "image": "shopify://shop_images/Senior_caring_image.jpg",
         "desktop_height": "extra-small",
@@ -657,6 +662,7 @@
   },
   "order": [
     "image_with_text_overlay_gEWbcF",
+    "custom_empty_stripe_QCnepD",
     "featured_collection_fNpBbf",
     "collection_list_8H4MWF",
     "custom_hero_lookbook_banner_YJnKNw",

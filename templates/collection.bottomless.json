@@ -52,6 +52,13 @@
         "padding_bottom": 0
       }
     },
+    "custom_empty_stripe_8H7Wd7": {
+      "type": "custom-empty-stripe",
+      "name": "🔥 Layout Decor",
+      "settings": {
+        "decor_color": "#ffffff"
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "custom_css": [],
@@ -80,6 +87,7 @@
   "order": [
     "breadcrumbs_Gxg9wp",
     "banner",
+    "custom_empty_stripe_8H7Wd7",
     "product-grid"
   ]
 }
