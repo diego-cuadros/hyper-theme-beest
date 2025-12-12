@@ -8518,3 +8518,8 @@ body.search-template #MainContent,
     display: none;
   }
 }
+
+/* Hide account icon on acount/login on top bar */
+.account-button span{
+  display: none;
+}

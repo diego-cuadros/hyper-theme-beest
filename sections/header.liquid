@@ -183,7 +183,7 @@
             class="account-button reversed-link flex items-center justify-center gap-2{% if section.settings.customer_account_style == 'icon-only' %} reversed-link--icon-only{% endif %}"
             aria-label="{{ 'customer.account.title' | t }}"
           >
-            {%- render 'icon-account', size: 'large' -%}
+            {%- render 'icon-account-two', size: 'large' -%}
             {% if section.settings.customer_account_style == 'icon-with-text' %}
               <span class="reversed-link__text hidden sm:block lg:hidden xl:block whitespace-nowrap">
                 {%- liquid
