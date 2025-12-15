@@ -7641,8 +7641,6 @@ body:not(.header-pinned) .header-scrolled .header {
   content: ">";
   font-size: 14px;
   line-height: 1;
-  color: rgb(var(--color-foreground));
-  opacity: 0.6;
 }
 .breadcrumbs--last {
   overflow: hidden;

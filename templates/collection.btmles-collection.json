@@ -107,6 +107,9 @@
     },
     "breadcrumbs_Gxg9wp": {
       "type": "breadcrumbs",
+      "custom_css": [
+        ".breadcrumbs span {font-size: 16px; font-weight: 500; line-height: 130%;}"
+      ],
       "settings": {
         "container": "fixed",
         "text_alignment": "start",
@@ -117,9 +120,9 @@
     "custom_liquid_WV8Nw6": {
       "type": "custom-liquid",
       "custom_css": [],
-      "name": "t:sections.custom-liquid.name",
+      "name": "Collection Title",
       "settings": {
-        "custom_liquid": "<style>\n.dc_collection_title-container, div:has(.dc_collection_title-container) {\npadding-top:0px;\npadding-bottom:0px;\n}\n\n</style>\n\n<div class = \"dc_collection_title-container page-width page-width--fixed section--padding\" >\n<h2 class = \"dc_collection_title\">{{ collection.title }}</h2>\n</div>",
+        "custom_liquid": "<style>\n.dc_collection_title-container, div:has(.dc_collection_title-container) {\npadding-top:0px;\npadding-bottom:0px;\n}\n\n.dc_collection_title{\nmargin:0px;\nfont-size:32px;\nfont-weight:500;\n}\n\n@media only screen and (max-width:748px){\n.dc_collection_title{\nfont-size:24px;\n}\n}\n\n\n\n</style>\n\n<div class = \"dc_collection_title-container page-width page-width--fixed section--padding\" >\n<p class = \"dc_collection_title\">{{ collection.title }}</p>\n</div>",
         "color_scheme": "",
         "padding_top": 50,
         "padding_bottom": 50
