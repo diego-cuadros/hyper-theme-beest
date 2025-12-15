@@ -1,98 +1,4 @@
-<style>
-  .collection-features-banner {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    max-height: 400px;
-  }
-
-  .banner-media-wrapper {
-    width: 100%;
-  }
-
-  .banner-media picture,
-  .banner-img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  .banner-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .collection-content {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 100%;
-    color: white;
-    padding: 40px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 1440px;
-    margin: auto;
-  }
-
-  .collection-title {
-    font-size: 40px;
-    font-weight: 700;
-    margin: 0 0 12px 0;
-  }
-
-  .collection-desc {
-    font-size: 18px;
-    margin-bottom: 30px;
-    max-width: 450px;
-  }
-
-  .features-grid {
-    display: grid;
-    gap: 14px;
-    grid-template-columns: repeat(4, 1fr);
-    max-width: 900px;
-  }
-
-  .feature-item {
-    background: rgba(0, 0, 0, 0.55);
-    border-radius: 8px;
-    padding: 14px 18px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .feature-icon {
-    width: 28px;
-    height: 28px;
-  }
-
-  .feature-text {
-    font-size: 14px;
-    line-height: 1.4;
-  }
-
-  /* mobile */
-  @media (max-width: 767px) {
-    .collection-content {
-      padding: 20px 16px;
-    }
-
-    .collection-title {
-      font-size: 28px;
-    }
-
-    .features-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-</style>
+{{ 'custom-collection-banner.css' | asset_url | stylesheet_tag }}
 
 {% liquid
   # Choose banner images
@@ -144,15 +50,21 @@
   </div>
 
   <div class="collection-content">
-    <h1 class="collection-title">{{ collection.title }}</h1>
+    <h1 class="collection-title" style="color:{{ section.settings.title_color }};">{{ collection.title }}</h1>
 
     {% if section.settings.description != blank %}
-      <p class="collection-desc">{{ section.settings.description }}</p>
+      <p class="collection-desc" style="color:{{ section.settings.collection_description_color }};">
+        {{ section.settings.description }}
+      </p>
     {% endif %}
 
     <div class="features-grid">
       {% for block in section.blocks %}
-        <div class="feature-item" {{ block.shopify_attributes }}>
+        <div
+          class="feature-item"
+          {{ block.shopify_attributes }}
+          style="background-color:{{ block.settings.feature_container_color }};"
+        >
           {% if block.settings.icon %}
             <img
               src="{{ block.settings.icon | image_url: width: 48 }}"
@@ -162,7 +74,9 @@
               height="48"
             >
           {% endif %}
-          <span class="feature-text">{{ block.settings.text }}</span>
+          <span class="feature-text" style="color:{{ block.settings.feature_text_color }};">
+            {{- block.settings.text -}}
+          </span>
         </div>
       {% endfor %}
     </div>
@@ -188,6 +102,18 @@
       "type": "textarea",
       "id": "description",
       "label": "Description under collection name"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Select a color for your collection title",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "collection_description_color",
+      "label": "Select a color for your collection description",
+      "default": "#fff"
     }
   ],
   "blocks": [
@@ -205,6 +131,18 @@
           "id": "text",
           "label": "Feature text",
           "default": "Your feature text"
+        },
+        {
+          "type": "color",
+          "id": "feature_text_color",
+          "label": "Select a color for your feature text",
+          "default": "#fff"
+        },
+        {
+          "type": "color",
+          "id": "feature_container_color",
+          "label": "Select a color for your feature container",
+          "default": "#242525"
         }
       ]
     }
