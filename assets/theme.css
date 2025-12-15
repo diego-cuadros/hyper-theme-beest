@@ -8516,3 +8516,37 @@ body.search-template #MainContent,
 .account-button span{
   display: none;
 }
+
+/* Styles for collection tool bar on collection page DESKTOP*/
+
+#SortBy-collection {
+  border: none;
+  padding-left: 0px;
+  line-height: normal;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#ProductCount{
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.collection__toolbar{
+  border-top: 1px solid #CCD2D6 !important;
+  border-bottom: 1px solid #CCD2D6 !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  margin-bottom: 32px !important;
+}
+
+.collection__toolbar label {
+  font-weight: 400 !important;
+  font-size: 16px;
+}
+
+/* Styles for collection tool bar on collection page MOBILE */
