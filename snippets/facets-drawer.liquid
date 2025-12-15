@@ -13,7 +13,7 @@
     endif
   endfor
 -%}
-<div class="facet-drawer-wrapper no-js-hidden">
+<div class="facet-drawer-wrapper no-js-hidden {% if template.suffix == 'btmles-collection' %}lg:hidden{% endif %}">
   {%- if filter_type == 'vertical' -%}
     <div class="hidden xl:flex">
       <button
@@ -28,7 +28,7 @@
       </button>
     </div>
   {%- endif -%}
-  <div class="facet-drawer-button-wrap{% if filter_type == 'vertical' %} flex xl:hidden{% endif %}">
+  <div class="facet-drawer-button-wrap{% if filter_type == 'vertical' %} flex {% if template.suffix == 'btmles-collection' %}lg:hidden{% else %}xl:hidden{% endif %}{% endif %}">
     <button
       class="btn btn--secondary gap-2 facet-drawer-button"
       type="button"
