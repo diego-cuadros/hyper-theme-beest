@@ -22,7 +22,11 @@
         class="btn btn--icon gap-2 facet-drawer-button no-js-hidden"
       >
         <span class="btn__text flex gap-1 items-center">
-          {%- render 'icon-funnel', size: 'large' -%}
+          {% if template.suffix == 'btmles-collection' %}
+            {%- render 'icon-filter', size: 'large' -%}
+          {% else %}
+            {%- render 'icon-funnel', size: 'large' -%}
+          {% endif %}
           <span>{{ 'products.facets.filter_button' | t }}</span>
         </span>
       </button>
@@ -37,7 +41,11 @@
       data-facet-loading
     >
       <span class="btn__text flex gap-1 items-center">
-        {%- render 'icon-funnel', size: 'large' -%}
+        {% if template.suffix == 'btmles-collection' %}
+          {%- render 'icon-filter', size: 'large' -%}
+        {% else %}
+          {%- render 'icon-funnel', size: 'large' -%}
+        {% endif %}
         {{ 'products.facets.filter_button' | t }}
         <facet-count
           {% if active_values_count == 0 %}

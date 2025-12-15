@@ -8549,4 +8549,121 @@ body.search-template #MainContent,
   font-size: 16px;
 }
 
+
+@media (min-width: 1024px) {
+    .collection__toolbar-left {
+        gap: 0px !important;
+    }
+}
+
+
+@media only screen and (min-width:749px){
+.dc_hide_on_desktop{
+  display: none !important;
+}
+}
+
+@media only screen and (max-width:748px){
+.dc_hide_on_mobile{
+  display: none !important;
+}
+}
+
 /* Styles for collection tool bar on collection page MOBILE */
+@media only screen and (max-width:748px){
+  .section-breadcrumb{
+    padding-bottom:0px;
+  }
+  
+  .collection__toolbar{
+    border:none !important;
+  }
+
+  #SortByContainer{
+    border:1px solid #CCD2D6;
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+  }
+
+  .form-control, .btn {
+    height: auto;
+  }
+  .dc_collection__toolbar-mobile{
+    display: flex;
+    flex-direction: row;
+  }
+
+
+
+/* Custom flter button for mobile */
+
+/* === MOBILE FILTER BUTTON OVERRIDE === */
+.facet-drawer-button-wrap .facet-drawer-button {
+  background: transparent !important;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 0px !important;
+  padding: 8px !important;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: none !important;
+}
+
+/* Remove theme secondary button styles */
+.facet-drawer-button-wrap .facet-drawer-button.btn--secondary {
+  background-color: transparent !important;
+}
+
+/* Text styling */
+.facet-drawer-button-wrap .facet-drawer-button .btn__text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000 !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Icon sizing */
+.facet-drawer-button-wrap .facet-drawer-button svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Remove hover background */
+.facet-drawer-button-wrap .facet-drawer-button:hover {
+  background: transparent !important;
+}
+
+/* Hide facet count if present */
+.facet-drawer-button-wrap facet-count {
+  display: none !important;
+}
+
+
+.dc_collection__toolbar-mobile {
+    display: flex;
+    gap: 5px;
+  }
+
+  .dc_collection__toolbar-mobile > #SortByContainer,
+  .dc_collection__toolbar-mobile > .dc_custom_filter_btn {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+
+  #SortByContainer .select,
+  #SortByContainer select,
+  .dc_custom_filter_btn .facet-drawer-button {
+    width: 100%;
+  }
+
+  .collection__toolbar-left{
+    width: 100% !important;
+
+  }
+  
+  }

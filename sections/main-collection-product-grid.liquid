@@ -51,6 +51,26 @@
       <div class="sticky-element grid gap-5 z-9" style="--sticky-offset: 0px;">
         <div class="collection__toolbar flex flex-wrap items-end md:items-center justify-between gap-x-2">
           <div class="collection__toolbar-left flex md:items-center flex-col md:flex-row">
+            <div class="dc_collection__toolbar-mobile">
+              {%- if enable_sorting -%}
+                <div class="dc_hide_on_desktop no-js-hidden lg:flex items-center gap-2" id="SortByContainer">
+                  {%- render 'facet-short',
+                    results: collection,
+                    label_class: 'font-body-bolder',
+                    context: 'collection'
+                  -%}
+                </div>
+              {%- endif -%}
+              {%- if enable_filtering -%}
+                <div class="dc_custom_filter_btn dc_hide_on_desktop">
+                  {%- render 'facets-drawer',
+                    results: collection,
+                    enable_sorting: enable_sorting,
+                    filter_type: filter_type
+                  -%}
+                </div>
+              {%- endif -%}
+            </div>
             <div data-facet-loading class="md:order-last">
               {%- render 'loading-spinner' -%}
               <p id="ProductCount" class="m-0 text-subtext" role="status">
@@ -66,11 +86,13 @@
               </p>
             </div>
             {%- if enable_filtering -%}
-              {%- render 'facets-drawer',
-                results: collection,
-                enable_sorting: enable_sorting,
-                filter_type: filter_type
-              -%}
+              <div class="dc_hide_on_mobile">
+                {%- render 'facets-drawer',
+                  results: collection,
+                  enable_sorting: enable_sorting,
+                  filter_type: filter_type
+                -%}
+              </div>
             {%- endif -%}
           </div>
           <div class="collection__toolbar-right flex items-end md:items-center flex-col md:flex-row">
@@ -87,7 +109,7 @@
               </compare-switch>
             {%- endif -%}
             {%- if enable_sorting -%}
-              <div class="hidden no-js-hidden lg:flex items-center gap-2" id="SortByContainer">
+              <div class="dc_hide_on_mobile hidden no-js-hidden lg:flex items-center gap-2" id="SortByContainer">
                 {%- render 'facet-short',
                   results: collection,
                   label_class: 'font-body-bolder',
