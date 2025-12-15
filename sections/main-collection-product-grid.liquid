@@ -7,7 +7,7 @@
   assign columns_desktop = section.settings.columns_desktop
   assign columns_laptop = 4
   if columns_desktop < 4
-      assign columns_laptop = columns_desktop
+    assign columns_laptop = columns_desktop
   endif
   assign columns_tablet = 3
   assign columns_mobile = section.settings.columns_mobile | times: 1
@@ -130,7 +130,7 @@
     <div class="collection__content flex">
       {%- if collection.all_products_count > 0 -%}
         <div
-          class="no-js-hidden hidden{% if enable_filtering and filter_type == 'vertical' %} xl:block{% endif %}"
+          class="no-js-hidden hidden {% if enable_filtering and filter_type == 'vertical' %} {% if template.suffix == 'btmles-collection' %}lg:block{% else %}xl:block{% endif %}{% endif %}"
           id="FacetFiltersContainer"
         >
           <div class="sticky-element z-8" style="--sticky-offset: 7.2rem;">
