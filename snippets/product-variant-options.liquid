@@ -16,70 +16,84 @@
     picker_type: picker_type
   %}
 {% endcomment %}
-<style>
-  /* Style for button variant picker with images */
-  .product-form__input--button .button-with-image {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 12px;
-    border: 1px solid #e0e0e0;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
 
-  .product-form__input--button .button-with-image:hover {
-    border-color: #000;
-  }
-
-  .product-form__input--button input:checked + .button-with-image {
-    border-color: #000;
-    background-color: #f5f5f5;
-  }
-
-  .variant-image-wrapper {
-    width: 40px;
-    height: 40px;
-    border-radius: 4px;
-    overflow: hidden;
-    flex-shrink: 0;
-  }
-
-  .variant-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .variant-label {
-    font-size: 14px;
-    font-weight: 500;
-  }
-
-  /* Make disabled options visually distinct */
-  .product-form__input--button input.disabled + .button-with-image {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-
-  .product-form__input--button input.disabled + .button-with-image:hover {
-    border-color: #e0e0e0;
-  }
-
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .variant-image-wrapper {
-      width: 30px;
-      height: 30px;
-    }
-
+{% if block.settings.use_custom_variant_picker_style %}
+  <style>
     .product-form__input--button .button-with-image {
-      padding: 6px 10px;
-      gap: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px;
+      border: 1px solid #e0e0e0 !important;
+      background-color: transparent !important;
+      color: #222 !important;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      width: 50%;
     }
-  }
-</style>
+
+    .product-form__input--button .button-with-image:hover {
+      border-color: #222 !important;
+      background-color: transparent !important;
+      color: #222;
+    }
+
+    .product-form__input--button input:checked + .button-with-image {
+      background-color: transparent !important;
+      border-color: #222 !important;
+    }
+
+    .product-form__input--button input[type='radio'] + label {
+      justify-content: flex-start !important;
+    }
+
+    .product-form__input {
+      flex-wrap: nowrap;
+    }
+
+    .button-with-image {
+      height: 80px !important;
+      border-radius: 4px !important;
+    }
+
+    .variant-image-wrapper {
+      width: 64px;
+      height: 64px;
+      border-radius: 4px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .variant-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .variant-label {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .product-form__input--button {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+      }
+
+      .product-form__input {
+        flex-wrap: wrap !important;
+      }
+
+      .product-form__input--button .button-with-image {
+        width: 100% !important;
+      }
+    }
+  </style>
+{% endif %}
 {%- liquid
   assign product_form_id = 'product-form-' | append: section.id
   assign image_size = block.settings.swatch_size | times: 2
@@ -248,11 +262,13 @@
       {{ input_dataset }}
     >
     <label for="{{ input_id }}" class="button-with-image">
-      {% if image_url %}
-        <span class="variant-image-wrapper">
-          <img src="{{ image_url }}" alt="{{ value | escape }}" class="variant-image" loading="lazy">
-        </span>
-      {% endif -%}
+      {% if block.settings.use_custom_variant_picker_style %}
+        {% if image_url %}
+          <span class="variant-image-wrapper">
+            <img src="{{ image_url }}" alt="{{ value | escape }}" class="variant-image" loading="lazy">
+          </span>
+        {% endif -%}
+      {% endif %}
       <span class="variant-label">{{ value }}</span>
       {{ label_unavailable }}
     </label>
