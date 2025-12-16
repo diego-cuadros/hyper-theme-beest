@@ -329,6 +329,37 @@
           quick_view_modal_id: quick_view_modal_id
         -%}
       {%- endif -%}
+      {% comment %}ATC Button should go here{% endcomment %}
+      {% if section.settings.enable_static_atc_btn %}
+        <style>
+          .product-card__info .reversed-link {
+            height: 60.28px !important;
+          }
+
+          .dc_custom-atc-btn-collections {
+            border-radius: 4px !important;
+          }
+        </style>
+        <button
+          class="dc_custom-atc-btn-collections product-card__list-atc btn btn--primary w-full"
+          {% if variant.available == false %}
+            disabled
+          {% endif %}
+          onclick="window.location.href='{{ product.url }}'"
+        >
+          <span class="btn__text flex gap-1 items-center">
+            {%- if variant.available -%}
+              {%- if use_short_text_for_atc_button -%}
+                {{- 'products.product.add_to_cart_short' | t -}}
+              {%- else -%}
+                {{- 'products.product.add_to_cart' | t -}}
+              {%- endif -%}
+            {%- else -%}
+              {{- 'products.product.sold_out' | t -}}
+            {%- endif -%}
+          </span>
+        </button>
+      {% endif %}
     </div>
     <div class="product-card__list-actions hidden gap-3 flex-col">
       {%- if enable_quick_add -%}
