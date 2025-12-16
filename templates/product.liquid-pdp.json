@@ -25,54 +25,21 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "badges": {
-          "type": "badges",
-          "settings": {
-            "show_soldout_badge": true,
-            "show_sale_badge": true,
-            "sale_badge_type": "percentage"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
             "heading_size": "h1"
           }
         },
-        "meta": {
-          "type": "meta",
-          "settings": {
-            "link_color": "#1d349a",
-            "show_vendor": true,
-            "show_product_type": true,
-            "show_sku": false,
-            "show_barcode": false
-          }
-        },
         "price": {
           "type": "price",
           "settings": {}
         },
-        "icon_with_text": {
-          "type": "icon-with-text",
+        "text_VLLzk3": {
+          "type": "text",
           "settings": {
-            "layout": "horizontal",
-            "title_font": "body-bolder",
-            "title_size": "text-base",
-            "icon_1": "check",
-            "heading_1": "Modern",
-            "icon_2": "check",
-            "heading_2": "Eco-certified",
-            "icon_3": "check",
-            "heading_3": "Warranty"
-          }
-        },
-        "inventory": {
-          "type": "inventory",
-          "settings": {
-            "text_style": "body",
-            "inventory_threshold": 10,
-            "show_inventory_quantity": true
+            "text": "Transform your patio with BEEST PS-8600, a professional-grade solution that seals, protects and revitalizes surfaces, leaving them with a glossy finish.",
+            "text_style": "body"
           }
         },
         "description": {
@@ -95,153 +62,102 @@
           "type": "buy_buttons",
           "settings": {
             "show_quantity_selector": true,
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
           }
         },
-        "icon_with_text_UAYgQU": {
-          "type": "icon-with-text",
+        "grid_icon_box_kpRHWF": {
+          "type": "grid-icon-box",
           "settings": {
-            "layout": "vertical",
-            "title_font": "body",
-            "title_size": "text-base",
-            "icon_1": "car-simple",
-            "heading_1": "Free International Shipping over $500",
-            "icon_2": "arrow-up-left",
-            "heading_2": "Free Returns Within 30 days",
-            "icon_3": "star-four",
-            "heading_3": ""
-          }
-        },
-        "pickup_availability": {
-          "type": "pickup_availability",
-          "settings": {}
-        },
-        "promotion_alert_L7ipQp": {
-          "type": "promotion_alert",
-          "settings": {
-            "text_color": "#049b6e",
-            "icon": "lightning",
-            "heading": "Limited time offer",
-            "description": "<p>Get $20 off when you spend $1,000 or more! <a href=\"/collections/all\" title=\"All products\">Learn more</a></p>"
-          }
-        },
-        "complementary": {
-          "type": "complementary",
-          "settings": {
-            "block_heading": "Perfect Match With",
-            "heading_size": "h4",
             "show_below_product_media": false,
-            "make_collapsible_row": false,
-            "icon": "tag",
-            "product_list_limit": 6,
-            "layout": "grid",
-            "columns": 3,
-            "image_ratio": "1/1",
-            "enable_quick_add": true
-          }
-        },
-        "collapsible-row-1": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Specifications",
-            "heading_size": "h4",
-            "icon": "none",
-            "content": "",
-            "page": "content",
-            "default_open": true,
-            "show_below_product_media": true
-          }
-        },
-        "collapsible-row-2": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Product Details",
-            "heading_size": "h4",
-            "icon": "none",
-            "content": "<p>Designed with care and crafted from premium materials, our products combine durability, comfort, and timeless style. Each piece is thoughtfully made to enhance your living space, offering a perfect balance of functionality and elegance that complements any home and suits your unique lifestyle.</p>",
-            "page": "",
-            "default_open": false,
-            "show_below_product_media": true
-          }
-        },
-        "collapsible-row-3": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Materials & Care",
-            "heading_size": "h4",
-            "icon": "none",
-            "content": "<p>Carefully crafted from durable, sustainable materials, each piece is designed for long-lasting use and timeless style. For proper care, wipe gently with a soft, damp cloth to remove dust and dirt. Avoid using harsh chemicals, abrasive cleaners, or excessive moisture to protect the finish and maintain its pristine look.</p>",
-            "page": "",
-            "default_open": false,
-            "show_below_product_media": true
-          }
-        },
-        "payment_info": {
-          "type": "payment_info",
-          "settings": {
-            "color_scheme": "scheme-info",
-            "heading": "Payment & Security",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h5",
-            "description": "<p>Your payment information is processed securely. We do not store credit card details nor have access to your credit card information.</p>",
-            "show_payment_icons": true,
-            "show_below_product_media": true
+            "columns_desktop": 4,
+            "column_gap": "none",
+            "row_gap": "inherit",
+            "columns_mobile": "1",
+            "swipe_on_mobile": false,
+            "icon_1": "check",
+            "heading_1": "1 Year Warranty",
+            "icon_2": "check",
+            "heading_2": "Fast & Free Shipping",
+            "icon_3": "check",
+            "heading_3": "30-day money-back Guarantee",
+            "icon_4": "check",
+            "heading_4": "Made in America",
+            "icon_5": "check",
+            "heading_5": "",
+            "icon_6": "check",
+            "heading_6": "",
+            "icon_7": "check",
+            "heading_7": "",
+            "icon_8": "check",
+            "heading_8": ""
           }
         },
         "divider_pPz3Kw": {
           "type": "divider",
-          "disabled": true,
           "settings": {
             "show_below_product_media": false
           }
         },
-        "social_sharing": {
-          "type": "social_sharing",
-          "settings": {}
-        },
-        "sticky_atc_bar_7HgNgP": {
-          "type": "sticky-atc-bar",
+        "collapsible_tab_NWftFJ": {
+          "type": "collapsible_tab",
           "settings": {
-            "visibility": "all",
-            "style": "minimalist",
-            "container": "full",
-            "show_atc_button": true,
-            "show_dynamic_checkout_buttons": false,
-            "show_quantity": true
+            "heading": "Collapsible row",
+            "heading_size": "h4",
+            "icon": "check",
+            "content": "",
+            "page": "",
+            "default_open": false,
+            "show_below_product_media": true
+          }
+        },
+        "collapsible_tab_YhdJVB": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "heading_size": "h4",
+            "icon": "check",
+            "content": "",
+            "page": "",
+            "default_open": false,
+            "show_below_product_media": true
+          }
+        },
+        "collapsible_tab_8FtQY7": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "heading_size": "h4",
+            "icon": "check",
+            "content": "",
+            "page": "",
+            "default_open": false,
+            "show_below_product_media": true
           }
         }
       },
       "block_order": [
-        "badges",
         "title",
-        "meta",
         "price",
-        "icon_with_text",
-        "inventory",
+        "text_VLLzk3",
         "description",
         "variant_picker",
         "buy_buttons",
-        "icon_with_text_UAYgQU",
-        "pickup_availability",
-        "promotion_alert_L7ipQp",
-        "complementary",
-        "collapsible-row-1",
-        "collapsible-row-2",
-        "collapsible-row-3",
-        "payment_info",
+        "grid_icon_box_kpRHWF",
         "divider_pPz3Kw",
-        "social_sharing",
-        "sticky_atc_bar_7HgNgP"
+        "collapsible_tab_NWftFJ",
+        "collapsible_tab_YhdJVB",
+        "collapsible_tab_8FtQY7"
       ],
       "custom_css": [
-        "@media (min-width: 1280px) {.product {padding-inline: 5rem; }}"
+        "@media (min-width: 1280px) {.product {padding-inline: 5rem; }}",
+        ".installment,.product__tax {display: none;}",
+        ".grid-icon-box {padding: 8px;}",
+        ".grid-icon-box span {font-size: 14px !important;}",
+        "@media (max-width: 748px) {.grid-icon-box span {font-size: 11px !important; line-height: 130%; } .f-grid {display: flex; }}"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-4",
         "use_color_scheme_in_container": false,
         "enable_sticky_info": true,
         "media_size": "large",

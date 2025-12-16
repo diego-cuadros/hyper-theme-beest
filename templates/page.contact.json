@@ -183,7 +183,7 @@
       ],
       "settings": {
         "container": "fixed",
-        "section_color_scheme": "scheme-inverse",
+        "section_color_scheme": "scheme-10",
         "heading": "",
         "highlight_style": "none",
         "highlight_font_style": "italic",
