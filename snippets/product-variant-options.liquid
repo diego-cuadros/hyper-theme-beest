@@ -191,7 +191,14 @@
       {% if block.settings.use_custom_variant_picker_style %}
         {% if image_url %}
           <span class="variant-image-wrapper">
-            <img src="{{ image_url }}" alt="{{ value | escape }}" class="variant-image" loading="lazy">
+            <img
+              src="{{ image_url | image_url: width: 80 }}"
+              alt="{{ value | escape }}"
+              class="variant-image"
+              loading="lazy"
+              width="{{ image.width }}"
+              height="{{ image.height }}"
+            >
           </span>
         {% endif -%}
       {% endif %}
