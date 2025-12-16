@@ -9,10 +9,10 @@
  */
 {
   "sections": {
-    "image_with_text_overlay_gEWbcF": {
+    "image_with_text_overlay_HmxHL9": {
       "type": "image-with-text-overlay",
       "blocks": {
-        "custom_tag_eJBJpp": {
+        "custom_tag_zWkPy8": {
           "type": "custom_tag",
           "settings": {
             "custom_tag_text": "RESTOCK: HD4000",
@@ -22,7 +22,7 @@
             "font_size": 20
           }
         },
-        "heading_cq7B3y": {
+        "heading_ptaKFR": {
           "type": "heading",
           "settings": {
             "heading": "Battery Powered Backpack Sprayer",
@@ -33,7 +33,7 @@
             "heading_size": "hd1"
           }
         },
-        "button_fQTFcb": {
+        "button_DdGDgz": {
           "type": "button",
           "settings": {
             "button_label": "Show Now",
@@ -42,7 +42,7 @@
             "button_icon": "none"
           }
         },
-        "score_block_FitfBr": {
+        "score_block_JFLjji": {
           "type": "score_block",
           "settings": {
             "star_count": 5,
@@ -55,18 +55,14 @@
         }
       },
       "block_order": [
-        "custom_tag_eJBJpp",
-        "heading_cq7B3y",
-        "button_fQTFcb",
-        "score_block_FitfBr"
+        "custom_tag_zWkPy8",
+        "heading_ptaKFR",
+        "button_DdGDgz",
+        "score_block_JFLjji"
       ],
       "custom_css": [
-        ".image-with-text-ovelay__content-wrapper > div {padding-left: 100px; width: 700px;}",
-        ".rich-text__heading {font-size: 56px;}",
-        ".rich-text__text {font-size: 14px;}",
-        ".btn {width: 300px;}",
-        "@media only screen and (min-width: 1650px) {.image-with-text-ovelay__content-wrapper > div {padding-left: 0; width: 700px; position: relative; left: calc(50% - 650px - 60px); transform: none; }}",
-        "@media only screen and (max-width: 768px) {.image-with-text-ovelay__content-wrapper > div {padding-left: 0; width: 100%; } .rich-text__heading {font-size: 32px; } .btn {width: 100%; }}"
+        ".dc_wrapper {width: 528px;}",
+        "@media (min-width: 1440px) {.dc_wrapper {padding-left: calc((100vw - 1440px) / 2); padding-right: 0; width: 50%; }}"
       ],
       "name": "t:sections.image-with-text-overlay.name",
       "settings": {
@@ -661,7 +657,7 @@
     }
   },
   "order": [
-    "image_with_text_overlay_gEWbcF",
+    "image_with_text_overlay_HmxHL9",
     "custom_empty_stripe_QCnepD",
     "featured_collection_fNpBbf",
     "collection_list_8H4MWF",
