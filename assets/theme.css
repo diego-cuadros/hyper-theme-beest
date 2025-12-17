@@ -8667,3 +8667,11 @@ body.search-template #MainContent,
   }
   
   }
+
+
+  /* Custom styles for product-grid-icon-box.liquid */
+
+  .grid-icon-box img{
+    width:28px;
+    height: 28px;
+  }
