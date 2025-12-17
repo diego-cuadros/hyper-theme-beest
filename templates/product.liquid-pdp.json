@@ -157,7 +157,7 @@
       ],
       "custom_css": [
         "@media (min-width: 1280px) {.product {padding-inline: 5rem; }}",
-        ".installment,.product__tax {display: none;}",
+        ".product__tax {display: none;}",
         ".grid-icon-box {padding: 8px;}",
         ".grid-icon-box span {font-size: 14px !important;}",
         "@media (max-width: 748px) {.grid-icon-box span {font-size: 11px !important; line-height: 130%; } .f-grid {display: flex; }}"
