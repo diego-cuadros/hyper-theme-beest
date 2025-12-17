@@ -1,0 +1,126 @@
+{{ 'custom-discount-level-table.css' | asset_url | stylesheet_tag }}
+<div class="test-controls">
+  <strong>Manual Level Set:</strong>
+  <button onclick="setDiscount(1)">1</button>
+  <button onclick="setDiscount(2)">2</button>
+  <button onclick="setDiscount(3)">3</button>
+</div>
+
+<div class="dc_card">
+  <div class="dc_card__header">
+    <h2 class="dc_card__title">Limited time only – more 20% off EVERYTHING</h2>
+    <p class="dc_card__subtitle">Add more item to cart to get more discount!</p>
+  </div>
+
+  <table class="dc_table">
+    <thead class="dc_table-header">
+      <tr>
+        <th class="dc_table__th dc_table__th--left">Discount level</th>
+        <th class="dc_table__th dc_table__th--right">Total Gallons</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="dc-row-1" class="dc_row">
+        <td class="dc_row__cell dc_row__cell--left">
+          <div id="dc-line-1-btm" class="dc_row__line-bottom"></div>
+          <div id="dc-circle-1" class="dc_indicator">
+            <svg class="dc_indicator__check" viewBox="0 0 20 20">
+              <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+            </svg>
+          </div>
+          <span class="dc_row__label">20% OFF</span>
+        </td>
+        <td class="dc_row__cell dc_row__cell--right">1</td>
+      </tr>
+
+      <tr id="dc_row-2" class="dc_row">
+        <td class="dc_row__cell dc_row__cell--left">
+          <div id="dc-line-2-top" class="dc_row__line-top"></div>
+          <div id="dc-line-2-btm" class="dc_row__line-bottom"></div>
+          <div id="dc-circle-2" class="dc_indicator">
+            <svg class="dc_indicator__check" viewBox="0 0 20 20">
+              <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+            </svg>
+          </div>
+          <span class="dc_row__label">25% OFF</span>
+        </td>
+        <td class="dc_row__cell dc_row__cell--right">3-5</td>
+      </tr>
+
+      <tr id="dc-row-3" class="dc_row">
+        <td class="dc_row__cell dc_row__cell--left">
+          <div id="dc-line-3-top" class="dc_row__line-top"></div>
+          <div id="dc-circle-3" class="dc_indicator">
+            <span id="dc-lock-3" class="dc_indicator__lock">
+              {% render 'icon-locker' %}
+            </span>
+            <svg class="dc_indicator__check" viewBox="0 0 20 20">
+              <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+            </svg>
+          </div>
+          <span class="dc_row__label">30% OFF</span>
+        </td>
+        <td class="dc_row__cell dc_row__cell--right">6+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="dc_card__footer">Sales ends in <span id="dc-timer">03:24:08</span></div>
+</div>
+
+<script>
+  let currentDiscountLevel = 1; // Testing Variable
+
+  function updateUI() {
+    for (let i = 1; i <= 3; i++) {
+      const circle = document.getElementById(`dc-circle-${i}`);
+      const lineTop = document.getElementById(`dc-line-${i}-top`);
+      const lineBtm = document.getElementById(`dc-line-${i}-btm`);
+      const lock = document.getElementById(`dc-lock-${i}`);
+
+      if (i <= currentDiscountLevel) {
+        circle.classList.add('dc_indicator--active');
+        if (lock) lock.style.display = 'none';
+
+        // Line Logic
+        if (lineTop) lineTop.classList.add('dc_row__line-top--active');
+        if (lineBtm && i < currentDiscountLevel) {
+          lineBtm.classList.add('dc_row__line-bottom--active');
+        } else if (lineBtm) {
+          lineBtm.classList.remove('dc_row__line-bottom--active');
+        }
+      } else {
+        circle.classList.remove('dc_indicator--active');
+        if (lock) lock.style.display = 'inline';
+        if (lineTop) lineTop.classList.remove('dc_row__line-top--active');
+        if (lineBtm) lineBtm.classList.remove('dc_row__line-bottom--active');
+      }
+    }
+  }
+
+  function setDiscount(lvl) {
+    currentDiscountLevel = lvl;
+    updateUI();
+  }
+
+  // Countdown logic
+  let totalSeconds = 12248;
+  function startTimer() {
+    const display = document.getElementById('dc-timer');
+    setInterval(() => {
+      if (totalSeconds <= 0) return;
+      totalSeconds--;
+      const h = Math.floor(totalSeconds / 3600)
+        .toString()
+        .padStart(2, '0');
+      const m = Math.floor((totalSeconds % 3600) / 60)
+        .toString()
+        .padStart(2, '0');
+      const s = (totalSeconds % 60).toString().padStart(2, '0');
+      display.innerText = `${h}:${m}:${s}`;
+    }, 1000);
+  }
+
+  updateUI();
+  startTimer();
+</script>
