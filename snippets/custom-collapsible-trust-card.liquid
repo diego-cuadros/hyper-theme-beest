@@ -1,6 +1,13 @@
 {{ 'custom-collapsible-trust-card.css' | asset_url | stylesheet_tag }}
 
-<div class="dc-trust-card" style="background-color:{{ block.settings.background_color }};">
+<div
+  class="dc-trust-card"
+  style="
+    background-color:{{ block.settings.background_color }};
+    margin-top:{{ block.settings.margin_top }}px;
+    margin-bottom:{{ block.settings.margin_bottom }}px;
+  "
+>
   <p class="dc-trust-card__title" style="color:{{ block.settings.text_color }};">{{ block.settings.header_text }}</p>
   <div class="dc-trust-list">
     {% for i in (1..3) %}
