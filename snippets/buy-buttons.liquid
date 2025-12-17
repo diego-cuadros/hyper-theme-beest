@@ -289,7 +289,7 @@
           {%- endif -%}
         </div>
       {%- endif -%}
-      {% if block.settings.use_custom_quantity_selector_style %}
+      {% if block.settings.use_custom_quantity_selector_style and product.has_only_default_variant == false %}
         <style>
           .main-product-form {
             gap: 10px !important;
