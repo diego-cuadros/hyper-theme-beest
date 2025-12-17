@@ -105,6 +105,23 @@
             "show_below_product_media": false
           }
         },
+        "discount_level_table_Gtj3pT": {
+          "type": "discount_level_table",
+          "settings": {
+            "title": "Limited time only – more 20% off EVERYTHING",
+            "subtitle": "Add more item to cart to get more discount!",
+            "heading_left": "Discount level",
+            "heading_right": "Total Gallons",
+            "left_column_row_1": "20% OFF",
+            "right_column_row_1": "1",
+            "left_column_row_2": "25% OFF",
+            "right_column_row_2": "3-5",
+            "left_column_row_3": "30% OFF",
+            "right_column_row_3": "6+",
+            "text_before_timer": "Sale ends soon",
+            "timer_start": "01:24:08"
+          }
+        },
         "collapsible_tab_NWftFJ": {
           "type": "collapsible_tab",
           "settings": {
@@ -151,6 +168,7 @@
         "buy_buttons",
         "grid_icon_box_kpRHWF",
         "divider_pPz3Kw",
+        "discount_level_table_Gtj3pT",
         "collapsible_tab_NWftFJ",
         "collapsible_tab_YhdJVB",
         "collapsible_tab_8FtQY7"
