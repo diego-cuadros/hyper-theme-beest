@@ -54,6 +54,7 @@
             "swatch_style": "square",
             "swatch_size": 32,
             "button_style": "normal",
+            "use_custom_variant_picker_style": true,
             "size_title": "Size",
             "size_chart_from_page": ""
           }
@@ -63,7 +64,8 @@
           "settings": {
             "show_quantity_selector": true,
             "show_dynamic_checkout": false,
-            "show_gift_card_recipient": false
+            "show_gift_card_recipient": false,
+            "use_custom_quantity_selector_style": true
           }
         },
         "grid_icon_box_kpRHWF": {
@@ -76,12 +78,16 @@
             "columns_mobile": "1",
             "swipe_on_mobile": false,
             "icon_1": "check",
+            "icon_1_from_image_1": "shopify://shop_images/Frame_4.png",
             "heading_1": "1 Year Warranty",
             "icon_2": "check",
+            "icon_1_from_image_2": "shopify://shop_images/Frame_5.png",
             "heading_2": "Fast & Free Shipping",
             "icon_3": "check",
+            "icon_1_from_image_3": "shopify://shop_images/Frame_6.png",
             "heading_3": "30-day money-back Guarantee",
             "icon_4": "check",
+            "icon_1_from_image_4": "shopify://shop_images/flag_2_1.png",
             "heading_4": "Made in America",
             "icon_5": "check",
             "heading_5": "",
