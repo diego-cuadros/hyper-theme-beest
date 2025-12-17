@@ -43,6 +43,7 @@
   data-url="{{ product.url }}"
   class="section block section-{{ section.id }} section-main-product page-width section--padding{% unless section.settings.use_color_scheme_in_container %} color-{{ section.settings.color_scheme }}{% else %} use-color-scheme-in-container{% endunless %}"
 >
+  <script src="{{ 'custom-shop-pay-line.js' | asset_url }}" defer></script>
   {{ 'section-main-product.css' | asset_url | stylesheet_tag: preload: true }}
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag: preload: true }}
   {% unless product.has_only_default_variant %}
