@@ -1,6 +1,13 @@
-document.querySelectorAll('.dc-collapsible-with-table__header').forEach((button) => {
-    button.addEventListener('click', () => {
-      const item = button.closest('.dc-collapsible-with-table__item');
-      item.classList.toggle('dc-collapsible-with-table-is-open');
-    });
-  });
+document.addEventListener('click', function(e) {
+  const header = e.target.closest('.dc-collapsible-with-table__header');
+  if (header) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    
+    const item = header.closest('.dc-collapsible-with-table__item');
+    if (item) {
+      item.classList.add('dc-collapsible-with-table-is-open');
+      header.setAttribute('aria-expanded', 'true');
+    }
+  }
+});
