@@ -1,0 +1,82 @@
+.dc-collapsible-with-table {
+    border-radius: 4px;
+    padding: 16px;
+    max-width: 100%;
+  }
+
+  .dc-collapsible-with-table__title {
+    margin: 0 0 12px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .dc-collapsible-with-table__list{
+    border-top: 1px solid #ccd2d6;
+  }
+
+  .dc-collapsible-with-table__item + .dc-collapsible-with-table__item {
+    border-top: 1px solid #ccd2d6;
+  }
+
+  .dc-collapsible-with-table__header {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    padding: 14px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .dc-collapsible-with-table__header:hover {
+    cursor: pointer;
+  }
+
+  .dc-collapsible-with-table__left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 400;
+    min-width:0;
+  } 
+
+  .dc-collapsible-with-table__left p {
+    margin: 0;
+    line-height: 134%;
+    word-break: break-word;
+    white-space: normal;
+  }
+
+  .dc-collapsible-with-table__icon{
+    width: 18px;
+    height: 18px;
+  }
+
+  .dc-collapsible-with-table__chevron {
+    font-size: 18px;
+    color: #333;
+    transform: rotate(0deg);
+  }
+
+  .dc-collapsible-with-table__item.dc-collapsible-with-table-is-open .dc-collapsible-with-table__chevron {
+    transform: rotate(90deg);
+  }
+
+  .dc-collapsible-with-table__content {
+    display: none;
+    padding: 0 0 14px 32px;
+    color: #555;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .dc-collapsible-with-table__content p{
+    margin:0px;
+  }
+
+  .dc-collapsible-with-table__item.dc-collapsible-with-table-is-open .dc-collapsible-with-table__content {
+    display: block;
+  }
