@@ -163,39 +163,22 @@
             "show_below_product_media": true
           }
         },
-        "collapsible_tab_NWftFJ": {
-          "type": "collapsible_tab",
+        "collapsible_with_table_WeYK9m": {
+          "type": "collapsible_with_table",
           "settings": {
-            "heading": "Collapsible row",
-            "heading_size": "h4",
-            "icon": "check",
-            "content": "",
-            "page": "",
-            "default_open": false,
-            "show_below_product_media": true
-          }
-        },
-        "collapsible_tab_YhdJVB": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Collapsible row",
-            "heading_size": "h4",
-            "icon": "check",
-            "content": "",
-            "page": "",
-            "default_open": false,
-            "show_below_product_media": true
-          }
-        },
-        "collapsible_tab_8FtQY7": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Collapsible row",
-            "heading_size": "h4",
-            "icon": "check",
-            "content": "",
-            "page": "",
-            "default_open": false,
+            "background_color": "#ffffff",
+            "border_color": "#ccd2d6",
+            "text_color": "#222222",
+            "text_content_color": "#222222",
+            "header_text": "",
+            "info_title_1": "Specifications",
+            "info_paragraph_1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            "info_title_2": "Product Details",
+            "info_paragraph_2": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            "info_title_3": "Product Care",
+            "info_paragraph_3": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            "margin_top": 16,
+            "margin_bottom": 16,
             "show_below_product_media": true
           }
         }
@@ -212,9 +195,7 @@
         "discount_level_table_Gtj3pT",
         "collapsible_trust_card_irQwq8",
         "what_makes_it_special_t8RYPd",
-        "collapsible_tab_NWftFJ",
-        "collapsible_tab_YhdJVB",
-        "collapsible_tab_8FtQY7"
+        "collapsible_with_table_WeYK9m"
       ],
       "custom_css": [
         "@media (min-width: 1280px) {.product {padding-inline: 5rem; }}",

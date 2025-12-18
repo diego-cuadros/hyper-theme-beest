@@ -10,11 +10,6 @@
     font-weight: 600;
   }
 
-/*
-  .dc-collapsible-with-table__item + .dc-collapsible-with-table__item {
-    border-top: 1px solid #ccd2d6;
-  }*/
-
   .dc-collapsible-with-table__header {
     width: 100%;
     background: transparent;
@@ -87,3 +82,48 @@
   .dc-collapsible-with-table__content {
   display: block;
 }
+
+/* Styles for the table */
+.dc_inner-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(7, auto);
+  border:1px solid #CCD2D6;
+  border-radius: 4px;
+}
+
+.dc_inner-table_cell:nth-child(4n+1),
+.dc_inner-table_cell:nth-child(4n+2) {
+    background-color: #F5F5F5;
+}
+
+.dc_inner-table_cell:nth-child(4n+3),
+.dc_inner-table_cell:nth-child(4n+4) {
+    background-color: white;
+}
+
+.dc_inner-table_cell{
+    padding: 8px 12px;
+}
+
+
+.dc_inner-table_cell:first-child {
+    border-top-left-radius: 4px;
+}
+
+.dc_inner-table_cell:nth-child(2) {
+    border-top-right-radius: 4px;
+}
+
+.dc_inner-table_cell:last-child {
+    border-bottom-right-radius: 4px;
+}
+
+.dc_inner-table_cell:nth-last-child(2) {
+    border-bottom-left-radius: 4px;
+}
+
+.dc_inner-table_cell-left{
+    font-weight: 600;
+}
+
