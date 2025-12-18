@@ -142,6 +142,27 @@
             "margin_bottom": 16
           }
         },
+        "what_makes_it_special_t8RYPd": {
+          "type": "what_makes_it_special",
+          "settings": {
+            "special_feature_bg_color": "#ffffff",
+            "special_feature_border_color": "#ccd2d6",
+            "special_feature_text_color": "",
+            "icon": "shopify://shop_images/Vector.png",
+            "special_feature_text_heading": "What Makes it Special",
+            "special_feature_text_1": "Mix 32 oz of this concentrate with 32 oz of water.",
+            "special_feature_text_2": "1/3 of this concentrate mixed covers 50 Sq. Ft.",
+            "special_feature_text_3": "Apply 3 coats for the best hold (fully saturated mulch).",
+            "special_feature_text_4": "The entire bottle covers 50 Sq. Ft. when applied in three coats.",
+            "special_feature_text_5": "",
+            "special_feature_text_6": "",
+            "special_feature_text_7": "",
+            "special_feature_text_8": "",
+            "special_feature_text_9": "",
+            "special_feature_text_10": "",
+            "show_below_product_media": true
+          }
+        },
         "collapsible_tab_NWftFJ": {
           "type": "collapsible_tab",
           "settings": {
@@ -190,6 +211,7 @@
         "divider_pPz3Kw",
         "discount_level_table_Gtj3pT",
         "collapsible_trust_card_irQwq8",
+        "what_makes_it_special_t8RYPd",
         "collapsible_tab_NWftFJ",
         "collapsible_tab_YhdJVB",
         "collapsible_tab_8FtQY7"
