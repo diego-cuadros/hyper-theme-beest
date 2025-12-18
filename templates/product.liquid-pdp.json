@@ -122,6 +122,26 @@
             "timer_start": "01:24:08"
           }
         },
+        "collapsible_trust_card_irQwq8": {
+          "type": "collapsible_trust_card",
+          "settings": {
+            "background_color": "#ba5c5c",
+            "text_color": "#ffffff",
+            "text_content_color": "#222222",
+            "header_text": "Still deciding?gg",
+            "info_title_1": "Free Shipping On All U.S. Orders Of $40+ggg",
+            "info_icon_1": "shopify://shop_images/Frame_5.png",
+            "info_paragraph_1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.fff",
+            "info_title_2": "Free Shipping On All U.S. Orders Of $40+fff",
+            "info_icon_2": "shopify://shop_images/Frame_6.png",
+            "info_paragraph_2": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.ffff",
+            "info_title_3": "Free Shipping On All U.S. Orders Of $40+fff",
+            "info_icon_3": "shopify://shop_images/flag_2_1.png",
+            "info_paragraph_3": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            "margin_top": 16,
+            "margin_bottom": 16
+          }
+        },
         "collapsible_tab_NWftFJ": {
           "type": "collapsible_tab",
           "settings": {
@@ -169,6 +189,7 @@
         "grid_icon_box_kpRHWF",
         "divider_pPz3Kw",
         "discount_level_table_Gtj3pT",
+        "collapsible_trust_card_irQwq8",
         "collapsible_tab_NWftFJ",
         "collapsible_tab_YhdJVB",
         "collapsible_tab_8FtQY7"

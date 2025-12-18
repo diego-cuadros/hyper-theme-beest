@@ -22,7 +22,7 @@
       {% if title != blank %}
         <div class="dc-trust-item">
           <button class="dc-trust-item__header" type="button">
-            <span class="dc-trust-item__left">
+            <div class="dc-trust-item__left">
               {% if icon != blank %}
                 <img
                   class="dc_trust-item__icon"
@@ -34,10 +34,10 @@
                 >
               {% endif %}
 
-              <span style="color: {{ block.settings.text_color }};">
+              <p style="color: {{ block.settings.text_color }};">
                 {{ title }}
-              </span>
-            </span>
+              </p>
+            </div>
 
             <span class="dc-trust-item__chevron" style="color: {{ block.settings.text_color }};">›</span>
           </button>
