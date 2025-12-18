@@ -90,6 +90,7 @@
   grid-template-rows: repeat(7, auto);
   border:1px solid #CCD2D6;
   border-radius: 4px;
+  margin-top:12px;
 }
 
 .dc_inner-table_cell:nth-child(4n+1),
