@@ -367,6 +367,10 @@
             <span class="font-button">{{ 'general.share.title' | t }}</span>
             {% render 'social-sharing', url: product.url, share_image: product.featured_media.preview_image %}
           </div>
+        {% when 'what_makes_it_special', block: block, section_id: section.id %}
+          <div class="{{ block_classes }}" {{ block.shopify_attributes }}>
+            {% render 'custom-what-makes-it-special', block: block, section_id: section.id %}
+          </div>
         {% when 'discount_level_table' %}
           {% render 'custom-discount-level-table' %}
         {% when 'collapsible_trust_card' %}

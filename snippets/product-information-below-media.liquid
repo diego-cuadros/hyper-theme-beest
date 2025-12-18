@@ -34,6 +34,13 @@
         >
           {% render 'product-grid-icon-box', block: block %}
         </div>
+      {%- when 'what_makes_it_special' -%}
+        <div
+          class="{{ block_classes }}"
+          {{ block.shopify_attributes }}
+        >
+          {% render 'custom-what-makes-it-special', block: block %}
+        </div>
     {%- endcase -%}
   {%- endfor -%}
 </div>
