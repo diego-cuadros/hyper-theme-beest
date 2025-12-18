@@ -19,7 +19,7 @@
     width: 100%;
     background: transparent;
     border-radius: 0px;
-    padding: 14px 0;
+    padding: 10px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -45,6 +45,9 @@
     line-height: 134%;
     word-break: break-word;
     white-space: normal;
+    font-size: 16px;
+    font-weight: 600;
+
   }
 
   .dc-collapsible-with-table__icon{
@@ -69,9 +72,9 @@
 
   .dc-collapsible-with-table__content {
     display: none;
-    padding: 0 0 14px 32px;
+    padding: 0 0 14px 0px;
     color: #555;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
   }
 
