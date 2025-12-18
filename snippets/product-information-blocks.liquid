@@ -375,6 +375,10 @@
           {% render 'custom-discount-level-table' %}
         {% when 'collapsible_trust_card' %}
           {% render 'custom-collapsible-trust-card', block: block, section: section %}
+        {% when 'collapsible_with_table' %}
+          <div class="{{ block_classes }}" {{ block.shopify_attributes }}>
+            {% render 'custom-collapsible-with-table', block: block, section: section %}
+          </div>
         {%- when 'variant_picker' -%}
           <div class="{{ block_classes }}" {{ block.shopify_attributes }}>
             {% render 'product-variant-picker',
