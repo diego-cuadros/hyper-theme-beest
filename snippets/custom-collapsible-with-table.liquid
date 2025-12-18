@@ -10,10 +10,13 @@ collapsible with table here
     border:1px solid {{ block.settings.border_color }};
   "
 >
-  <p class="dc-collapsible-with-table__title" style="color:{{ block.settings.text_color }};">
+  <p
+    class="dc-collapsible-with-table__title"
+    style="color:{{ block.settings.text_color }}; border-bottom: 1px solid {{ block.settings.border_color }}"
+  >
     {{ block.settings.header_text }}
   </p>
-  <div class="dc-collapsible-with-table__list" style="border-top:1px solid {{ block.settings.border_color }}">
+  <div class="dc-collapsible-with-table__list">
     {% for i in (1..3) %}
       {% capture icon_key %}info_icon_{{ i }}{% endcapture %}
       {% capture title_key %}info_title_{{ i }}{% endcapture %}
