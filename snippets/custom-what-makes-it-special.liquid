@@ -22,7 +22,13 @@
     flex-direction: row;
     gap: 10px;
     justify-content: left;
-    align-items: top;
+    align-items: flex-start;
+  }
+
+  .dc_special-features-box__icon {
+    margin-top: 3px;
+    width: 14px;
+    height: 14px;
   }
 
   .dc_special-features-box__heading {
@@ -41,28 +47,30 @@
     margin: 0px;
   }
 </style>
-<div class="dc_special-features-box">
-  <p class="dc_special-features-box__heading">What Makes it Special</p>
+
+<div
+  class="dc_special-features-box"
+  style="background-color:{{ block.settings.special_feature_bg_color }}; border-color:{{ block.settings.special_feature_border_color  }};"
+>
+  <p class="dc_special-features-box__heading" style="color:{{ block.settings.special_feature_text_color }};">
+    {{ block.settings.special_feature_text_heading }}
+  </p>
   <div class="dc_special-features-box__features-container">
-    <div class="dc_special-features-box__feature">
-      <img class="dc_special-features-box__icon" src="#" width="{{ image.width }}" height="{{ image.height }}">
-      <p class="dc_special-features-box__text">Mix 32 oz of this concentrate with 32 oz of water.</p>
-    </div>
-    <div class="dc_special-features-box__feature">
-      <img class="dc_special-features-box__icon" src="#" width="{{ image.width }}" height="{{ image.height }}">
-      <p class="dc_special-features-box__text">Mix 32 oz of this concentrate with 32 oz of water.</p>
-    </div>
-    <div class="dc_special-features-box__feature">
-      <img class="dc_special-features-box__icon" src="#" width="{{ image.width }}" height="{{ image.height }}">
-      <p class="dc_special-features-box__text">Mix 32 oz of this concentrate with 32 oz of water.</p>
-    </div>
-    <div class="dc_special-features-box__feature">
-      <img class="dc_special-features-box__icon" src="#" width="{{ image.width }}" height="{{ image.height }}">
-      <p class="dc_special-features-box__text">Mix 32 oz of this concentrate with 32 oz of water.</p>
-    </div>
-    <div class="dc_special-features-box__feature">
-      <img class="dc_special-features-box__icon" src="#" width="{{ image.width }}" height="{{ image.height }}">
-      <p class="dc_special-features-box__text">Mix 32 oz of this concentrate with 32 oz of water.</p>
-    </div>
+    {% for i in (1..10) %}
+      {% assign text_key = 'special_feature_text_' | append: i %}
+      {% if block.settings.icon and block.settings[text_key] != blank %}
+        <div class="dc_special-features-box__feature">
+          <img
+            class="dc_special-features-box__icon"
+            src="{{  block.settings.icon | image_url }}"
+            width="{{ image.width }}"
+            height="{{ image.height }}"
+          >
+          <p class="dc_special-features-box__text" style="color:{{ block.settings.special_feature_text_color }};">
+            {{ block.settings[text_key] }}
+          </p>
+        </div>
+      {% endif %}
+    {% endfor %}
   </div>
 </div>
