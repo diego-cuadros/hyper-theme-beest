@@ -336,7 +336,7 @@
         ".collapsible-tabs__content-col,.collapsible-tabs__image-col,.card-media,.card-media__media-wrapper {max-width: 562px !important;}",
         ".collapsible-tabs__content-col {justify-content: flex-start;}",
         ".card-media__media-wrapper {border-radius: 12px;}",
-        ".accordion-details__summary svg{color:#FF5413;}",
+        ".accordion-details__summary svg {color: #ff5413;}",
         "@media only screen and (max-width: 748px) {.collapsible-tabs__image-col {display: none; }}"
       ],
       "name": "t:sections.collapsible-tabs.name",
@@ -469,6 +469,34 @@
         "divider_width": "fixed",
         "padding_top": 50,
         "padding_bottom": 50
+      }
+    },
+    "tabs_content_VeqDj6": {
+      "type": "tabs-content",
+      "blocks": {
+        "list_of_images_BYQqNA": {
+          "type": "list_of_images",
+          "settings": {
+            "navigation_title": "",
+            "label_for_image_1": "",
+            "label_for_image_2": "",
+            "label_for_image_3": ""
+          }
+        }
+      },
+      "block_order": [
+        "list_of_images_BYQqNA"
+      ],
+      "name": "t:sections.tabs-content.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "navigation_style": "headings",
+        "navigation_alignment": "center",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
       }
     },
     "collapsible_tabs_iwqmBM": {
@@ -607,6 +635,7 @@
     "main",
     "collapsible_tabs_eTAhFK",
     "comparison_table_cQiAFf",
+    "tabs_content_VeqDj6",
     "collapsible_tabs_iwqmBM",
     "custom_brand_promise_DpUeMH"
   ]
