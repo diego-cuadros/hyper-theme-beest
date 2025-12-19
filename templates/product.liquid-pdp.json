@@ -28,18 +28,22 @@
         "title": {
           "type": "title",
           "settings": {
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "show_above_product_media_mobile": false
           }
         },
         "price": {
           "type": "price",
-          "settings": {}
+          "settings": {
+            "show_above_product_media_mobile": false
+          }
         },
         "text_VLLzk3": {
           "type": "text",
           "settings": {
             "text": "Transform your patio with BEEST PS-8600, a professional-grade solution that seals, protects and revitalizes surfaces, leaving them with a glossy finish.",
-            "text_style": "body"
+            "text_style": "body",
+            "show_above_product_media_mobile": false
           }
         },
         "description": {
@@ -275,8 +279,8 @@
           "type": "collapsible_item",
           "settings": {
             "icon": "none",
-            "heading": "Collapsible tab heading",
-            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
+            "heading": "Spray Longer. Work Smarter",
+            "content": "<p>No more pumping—the HD4000 battery-powered sprayer delivers continuous spraying with 40–90 PSI adjustable pressure, perfect for any job.</p>",
             "custom_liquid": "",
             "page": "",
             "open": false,
@@ -287,7 +291,7 @@
           "type": "collapsible_item",
           "settings": {
             "icon": "none",
-            "heading": "Collapsible tab heading",
+            "heading": "Built for Comfort & Control",
             "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
             "custom_liquid": "",
             "page": "",
@@ -299,7 +303,7 @@
           "type": "collapsible_item",
           "settings": {
             "icon": "none",
-            "heading": "Collapsible tab heading",
+            "heading": "American-Owned. Backed for Life.",
             "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
             "custom_liquid": "",
             "page": "",
@@ -311,7 +315,7 @@
           "type": "collapsible_item",
           "settings": {
             "icon": "none",
-            "heading": "Collapsible tab heading",
+            "heading": "Lorem ipsum dolor sit amet",
             "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
             "custom_liquid": "",
             "page": "",
@@ -328,17 +332,22 @@
         "collapsible_item_axi3LU"
       ],
       "custom_css": [
+        ".collapsible-tabs__wrapper {justify-content: center; flex-wrap: nowrap; gap: 58px;}",
+        ".collapsible-tabs__content-col,.collapsible-tabs__image-col,.card-media,.card-media__media-wrapper {max-width: 562px !important;}",
+        ".collapsible-tabs__content-col {justify-content: flex-start;}",
+        ".card-media__media-wrapper {border-radius: 12px;}",
+        ".accordion-details__summary svg{color:#FF5413;}",
         "@media only screen and (max-width: 748px) {.collapsible-tabs__image-col {display: none; }}"
       ],
       "name": "t:sections.collapsible-tabs.name",
       "settings": {
         "container": "fixed",
-        "color_scheme": "scheme-info",
+        "color_scheme": "scheme-14",
         "header_layout": "vertical",
         "section_header_alignment": "left",
         "section_header_alignment_mobile": "inherit",
         "subheading": "",
-        "heading": "Heading",
+        "heading": "",
         "highlight_style": "none",
         "highlight_font_style": "italic",
         "highlight_style_color": "",
@@ -350,11 +359,12 @@
         "button_link": "",
         "button_style": "btn--primary",
         "button_icon": "none",
+        "internal_heading": "Lorem ipsum dolor sit .",
         "column_gap": "large",
         "row_gap": "inherit",
         "item_style": "standard",
-        "item_color_scheme": "",
-        "item_heading_font": "heading",
+        "item_color_scheme": "scheme-7",
+        "item_heading_font": "body",
         "item_heading_size": "h4",
         "item_icon_size": "extra-large",
         "padding_top": 50,
@@ -526,6 +536,7 @@
         "button_link": "",
         "button_style": "btn--primary",
         "button_icon": "none",
+        "internal_heading": "",
         "column_gap": "large",
         "row_gap": "inherit",
         "item_style": "standard",
