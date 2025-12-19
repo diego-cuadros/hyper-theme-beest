@@ -477,15 +477,40 @@
         "list_of_images_BYQqNA": {
           "type": "list_of_images",
           "settings": {
-            "navigation_title": "",
-            "label_for_image_1": "",
-            "label_for_image_2": "",
-            "label_for_image_3": ""
+            "navigation_title": "4 Gallon",
+            "label_bg_color": "#f5f5f5",
+            "image_1": "shopify://shop_images/tank.webp",
+            "label_for_image_1": "HD 4000",
+            "image_2": "shopify://shop_images/Frame_48102347_1.jpg",
+            "label_for_image_2": "Nozzle",
+            "image_3": "shopify://shop_images/Frame_48102345_4.jpg",
+            "label_for_image_3": "Sprayer Stick",
+            "swipe_on_mobile": true
+          }
+        },
+        "tab_PBD48A": {
+          "type": "tab",
+          "settings": {
+            "navigation_title": "4 Gallon With Cart",
+            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "tab_QD9Lzz": {
+          "type": "tab",
+          "settings": {
+            "navigation_title": "4 Gallon Prokit",
+            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
+            "custom_liquid": "",
+            "page": ""
           }
         }
       },
       "block_order": [
-        "list_of_images_BYQqNA"
+        "list_of_images_BYQqNA",
+        "tab_PBD48A",
+        "tab_QD9Lzz"
       ],
       "name": "t:sections.tabs-content.name",
       "settings": {

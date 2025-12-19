@@ -18,6 +18,7 @@
   assign image_with_text_blocks = section.blocks | where: 'type', 'image_with_text'
   assign sidebar = section.blocks | where: 'type', 'sidebar' | first
 -%}
+{{ 'custom-list-of-images.css' | asset_url | stylesheet_tag }}
 {{ 'component-tabs.css' | asset_url | stylesheet_tag }}
 {%- if sidebar -%}
   {{ 'component-help-sidebar.css' | asset_url | stylesheet_tag }}
@@ -232,55 +233,6 @@
                   {%- liquid
                     assign enable_swipe_mobile = block.settings.swipe_on_mobile
                   -%}
-                  <style>
-                    .dc_tabs-list-images__container {
-                      display: flex;
-                      justify-content: center;
-                      width: 100%;
-                    }
-
-                    .dc_tabs-list-images_inner {
-                      display: flex;
-                      flex-direction: row;
-                      gap: 16px;
-                      justify-content: center;
-                      width: 100%;
-                    }
-
-                    @media screen and (max-width: 767px) {
-                      .dc_tabs-list-images_inner {
-                        justify-content: flex-start;
-                      }
-                      .dc_tabs-list-images_inner.swipe-mobile__inner {
-                        flex-wrap: nowrap;
-                        overflow-x: auto;
-                        padding-bottom: 10px;
-                        -webkit-overflow-scrolling: touch;
-                      }
-                      .dc_tabs-list-images__item {
-                        flex: 0 0 80%;
-                      }
-                    }
-
-                    .dc_tabs-list-images__item {
-                      max-width: 400px;
-                      border-radius: 4px;
-                      overflow: hidden;
-                    }
-
-                    .dc_tabs-list-images__item img {
-                      width: 100%;
-                      display: block;
-                    }
-
-                    .dc_tabs-list_images__label {
-                      display: flex;
-                      justify-content: center;
-                      align-items: center;
-                      height: 63px;
-                      width: 100%;
-                    }
-                  </style>
 
                   <div class="page__content rte text-subtext">
                     {{ block.settings.content }}
