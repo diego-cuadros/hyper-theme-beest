@@ -40,6 +40,9 @@
   {%- if section.blocks.size > 0 -%}
     <div class="flex flex-col md:flex-row{% if sidebar != blank %} help-sidebar__wrapper help-sidebar--{{ sidebar.settings.position }}{% endif %}">
       <tabs-component class="flex-1 tabs tabs-nav--{{ nav_style }}">
+        {% if section.settings.section_heading %}
+          <h2 class="dc_tabs-content__heading">{{ section.settings.section_heading }}</h2>
+        {% endif %}
         <div
           class="tabs__header flex justify-{{ section.settings.navigation_alignment }}"
           role="tablist"
@@ -347,6 +350,11 @@
       ]
     },
     {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Type a heading for your section"
+    },
+    {
       "type": "header",
       "content": "t:general.padding.section_heading.content"
     },
@@ -416,7 +424,8 @@
         {
           "type": "image_picker",
           "label": "Select image 1",
-          "id": "image_1"
+          "id": "image_1",
+          "info": "Recommended: Use squared images."
         },
         {
           "type": "text",
@@ -426,7 +435,8 @@
         {
           "type": "image_picker",
           "label": "Select image 2",
-          "id": "image_2"
+          "id": "image_2",
+          "info": "Recommended: Use squared images."
         },
         {
           "type": "text",
@@ -436,7 +446,8 @@
         {
           "type": "image_picker",
           "label": "Select image 3",
-          "id": "image_3"
+          "id": "image_3",
+          "info": "Recommended: Use squared images."
         },
         {
           "type": "text",
