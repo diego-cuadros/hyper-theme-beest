@@ -44,7 +44,16 @@
               </p>
             </div>
 
-            <span class="dc-collapsible-with-table__chevron" style="color: {{ block.settings.text_color }};">›</span>
+            {% comment %}<span class="dc-collapsible-with-table__chevron" style="color: {{ block.settings.text_color }};">›</span>{% endcomment %}
+
+            <span class="dc-collapsible-with-table__icon">
+              <span class="dc-collapsible-with-table__icon-plus">
+                {% render 'icon-plus-toggle' %}
+              </span>
+              <span class="dc-collapsible-with-table__icon-minus">
+                {% render 'icon-minus' %}
+              </span>
+            </span>
           </div>
 
           {% if paragraph != blank %}

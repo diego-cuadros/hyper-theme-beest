@@ -49,7 +49,7 @@
     width: 18px;
     height: 18px;
   }
-
+/*
   .dc-collapsible-with-table__chevron {
     font-size: 18px;
     color: #333;
@@ -63,6 +63,38 @@
 .dc-collapsible-with-table__item.dc-collapsible-with-table-is-open
   .dc-collapsible-with-table__chevron {
   transform: rotate(90deg);
+}*/
+
+.dc-collapsible-with-table__icon {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.dc-collapsible-with-table__icon-minus {
+  display: none;
+}
+
+.dc-collapsible-with-table__icon-plus {
+  display: block;
+}
+
+.dc-collapsible-with-table__item.dc-collapsible-with-table-is-open
+.dc-collapsible-with-table__icon-plus {
+  display: none;
+}
+
+.dc-collapsible-with-table__item.dc-collapsible-with-table-is-open
+.dc-collapsible-with-table__icon-minus {
+  display: block;
+}
+
+.dc-collapsible-with-table__icon svg {
+  width: 24px;
+  height: 24px;
 }
 
   .dc-collapsible-with-table__content {
