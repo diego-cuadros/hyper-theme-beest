@@ -236,6 +236,10 @@ product-info.use-color-scheme-in-container > .product {
     inset-inline-end: -1.8rem;
   }
 }
+.product__blocks-above-media-mobile{
+  margin-top:1rem;
+  margin-bottom: 1.5rem;
+}
 
 .product__blocks-below-media {
   margin-top: 2.4rem;

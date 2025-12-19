@@ -89,6 +89,7 @@
     {%- if product.media.size > 0 -%}
       <div class="product__media-wrapper block w-full relative">
         <div class="product__media-container{% if enable_sticky_info %} sticky-element{% endif %}">
+          {% render 'custom-product-information-above-media' %}
           {% render 'product-media-gallery',
             media_layout: media_layout,
             mobile_thumbnails: mobile_thumbnails,
@@ -167,6 +168,12 @@
           ],
           "default": "body",
           "label": "t:sections.main-product.blocks.text.settings.text_style.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_above_product_media_mobile",
+          "label": "t:sections.main-product.blocks.general.settings.show_below_product_media.label",
+          "default": false
         }
       ]
     },
@@ -222,13 +229,27 @@
               "label": "t:general.text_size.options__hd1.label"
             }
           ]
+        },
+        {
+          "type": "checkbox",
+          "id": "show_above_product_media_mobile",
+          "label": "Show above media on mobile view",
+          "default": false
         }
       ]
     },
     {
       "type": "price",
       "name": "t:sections.main-product.blocks.price.name",
-      "limit": 1
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_above_product_media_mobile",
+          "label": "t:sections.main-product.blocks.general.settings.show_below_product_media.label",
+          "default": false
+        }
+      ]
     },
     {
       "type": "meta",
