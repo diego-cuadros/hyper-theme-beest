@@ -8499,8 +8499,8 @@ body.search-template #MainContent,
   height: 54px;
 }
 
-.form-control, .btn {
-  height: 48px;
+.newsletter-form__field-wrapper .btn, .newsletter-form__field-wrapper .form-control{
+height: 48px !important;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -8590,10 +8590,6 @@ body.search-template #MainContent,
   #SortByContainer .form-control{
     max-height:40px;
   }
-/*
-  .form-control, .btn {
-    height: auto;
-  }*/
 
   .dc_collection__toolbar-mobile{
     display: flex;
