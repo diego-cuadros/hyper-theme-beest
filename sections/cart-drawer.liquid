@@ -14,7 +14,7 @@
   {%- if linklists['gift-wrapping'].links != blank and linklists['gift-wrapping'].links.first.type == 'product_link' -%}
     <script src="{{ 'gift-wrapping.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
-
+  {{ 'custom-cart-drawer.css' | asset_url | stylesheet_tag }}
   <cart-drawer
     id="CartDrawer"
     class="drawer cart-drawer drawer--right"
@@ -473,6 +473,7 @@
                       data-product-id="{{ item.product_id }}"
                     ></foxkit-incart-upsell>
                   </li>
+                  {% unless forloop.last == true %}<div class="dc_cart-line-separator"></div>{% endunless %}
                 {%- endcapture -%}
 
                   {%- liquid
@@ -527,7 +528,10 @@
               items_in_cart: items_in_cart,
               class: 'text-sm'
             -%}
-            {%- if section.settings.show_cart_note or section.settings.show_shipping_rates_calculator or section.settings.show_cart_coupon -%}
+            {%- if section.settings.show_cart_note
+              or section.settings.show_shipping_rates_calculator
+              or section.settings.show_cart_coupon
+            -%}
               <div is="swipe-wrapper" class="cart-drawer__addons min-w-0 swipe--with-shadow">
                 <div class="swipe__element swipe-all disable-scroll-snap">
                   <div class="swipe-all__inner">
