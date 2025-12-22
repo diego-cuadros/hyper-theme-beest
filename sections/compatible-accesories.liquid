@@ -24,7 +24,12 @@
               {{ product.featured_image | image_url: width: 600 | image_tag: loading: 'lazy', alt: product.title }}
 
               <div class="dc_compatible-accessorie__btn-container">
-                <div class="dc_compatible-accessorie__shop-now-button">Shop Now</div>
+                <div
+                  class="dc_compatible-accessorie__shop-now-button"
+                  style="background-color: {{ section.settings.button_background_color }}; color: {{ section.settings.button_label_color }};"
+                >
+                  Shop Now
+                </div>
               </div>
             </a>
           </div>
@@ -75,6 +80,18 @@
       "id": "title",
       "label": "Title",
       "default": "Compatible Accessories"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Button background color",
+      "default": "#FF5413"
+    },
+    {
+      "type": "color",
+      "id": "button_label_color",
+      "label": "Button label color",
+      "default": "#fff"
     },
     {
       "type": "range",
