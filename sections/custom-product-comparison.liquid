@@ -1,0 +1,386 @@
+{% comment %}
+  Section: Product Comparison with Blocks
+  Usage: Add this to your theme sections folder
+  Each row is a block that can be added/removed/reordered
+{% endcomment %}
+
+{{ 'custom-product-comparison.css' | asset_url | stylesheet_tag }}
+<section class="comparison-section">
+  {% if section.settings.heading != blank %}
+    <h2 class="comparison-heading">{{ section.settings.heading }}</h2>
+  {% endif %}
+
+  <div class="comparison-container">
+    <div class="comparison-wrapper">
+      <!-- Header -->
+      <div class="comparison-header">
+        <div class="header-cell"></div>
+        <div class="header-cell">
+          <div class="product-header">
+            {% if section.settings.product_1_image %}
+              <img
+                src="{{ section.settings.product_1_image | img_url: '200x200', crop: 'center' }}"
+                alt="{{ section.settings.product_1_name }}"
+                class="product-image"
+                loading="lazy"
+                width="{{ section.settings.product_1_image.width }}"
+                height="{{ section.settings.product_1_image.height }}"
+              >
+            {% elsif section.settings.product_1 %}
+              <img
+                src="{{ section.settings.product_1.featured_image | img_url: '200x200', crop: 'center' }}"
+                alt="{{ section.settings.product_1.title }}"
+                class="product-image"
+                loading="lazy"
+                width="{{ section.settings.product_1_image.width }}"
+                height="{{ section.settings.product_1_image.height }}"
+              >
+            {% endif %}
+            <span class="product-name">{{ section.settings.product_1_name }}</span>
+          </div>
+        </div>
+        <div class="header-cell">
+          <div class="product-header">
+            {% if section.settings.product_2_image %}
+              <img
+                src="{{ section.settings.product_2_image | img_url: '200x200', crop: 'center' }}"
+                alt="{{ section.settings.product_2_name }}"
+                class="product-image"
+                loading="lazy"
+                width="{{ section.settings.product_2_image.width }}"
+                height="{{ section.settings.product_2_image.height }}"
+              >
+            {% elsif section.settings.product_2 %}
+              <img
+                src="{{ section.settings.product_2.featured_image | img_url: '200x200', crop: 'center' }}"
+                alt="{{ section.settings.product_2.title }}"
+                class="product-image"
+                loading="lazy"
+                width="{{ section.settings.product_2_image.width }}"
+                height="{{ section.settings.product_2_image.height }}"
+              >
+            {% endif %}
+            <span class="product-name">{{ section.settings.product_2_name }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Body with Blocks -->
+      <div class="comparison-body">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'comparison_row' %}
+              <div class="comparison-row" {{ block.shopify_attributes }}>
+                <div class="row-cell">{{ block.settings.row_label }}</div>
+                <div class="row-cell">
+                  {% if block.settings.showStar %}
+                    {% if block.settings.product_1_value != blank %}
+                      <svg width="88" height="14" viewBox="0 0 88 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.86875 14L4.0875 8.82368L0 5.34211L5.4 4.88158L7.5 0L9.6 4.88158L15 5.34211L10.9125 8.82368L12.1313 14L7.5 11.2553L2.86875 14Z" fill="#FF5413"/>
+                        <path d="M21.2792 14L22.4979 8.82368L18.4104 5.34211L23.8104 4.88158L25.9104 0L28.0104 4.88158L33.4104 5.34211L29.3229 8.82368L30.5417 14L25.9104 11.2553L21.2792 14Z" fill="#FF5413"/>
+                        <path d="M39.6896 14L40.9083 8.82368L36.8208 5.34211L42.2208 4.88158L44.3208 0L46.4208 4.88158L51.8208 5.34211L47.7333 8.82368L48.9521 14L44.3208 11.2553L39.6896 14Z" fill="#FF5413"/>
+                        <path d="M58.1 14L59.3187 8.82368L55.2312 5.34211L60.6312 4.88158L62.7312 0L64.8312 4.88158L70.2312 5.34211L66.1437 8.82368L67.3625 14L62.7312 11.2553L58.1 14Z" fill="#FF5413"/>
+                        <path d="M76.3191 14L77.4566 8.82368L73.6416 5.34211L78.6816 4.88158L80.6416 0L82.6016 4.88158L87.6416 5.34211L83.8266 8.82368L84.9641 14L80.6416 11.2553L76.3191 14Z" fill="#FF5413"/>
+                      </svg>
+                    {% else %}
+                      <div
+                        id="judgeme_product_reviews"
+                        class="jdgm-widget jdgm-review-widget"
+                        data-id="{{ product.id }}"
+                        data-product-title="{{ product.title | escape }}"
+                      >
+                        {{ product.metafields.judgeme.widget }}
+                      </div>
+                    {% endif %}
+                  {% endif %}
+                  {{ block.settings.product_1_value }}
+                </div>
+                <div class="row-cell">
+                  {% if block.settings.showStar %}
+                    {% if block.settings.product_1_value != blank %}
+                      <svg width="88" height="14" viewBox="0 0 88 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.86875 14L4.0875 8.82368L0 5.34211L5.4 4.88158L7.5 0L9.6 4.88158L15 5.34211L10.9125 8.82368L12.1313 14L7.5 11.2553L2.86875 14Z" fill="#FF5413"/>
+                        <path d="M21.2792 14L22.4979 8.82368L18.4104 5.34211L23.8104 4.88158L25.9104 0L28.0104 4.88158L33.4104 5.34211L29.3229 8.82368L30.5417 14L25.9104 11.2553L21.2792 14Z" fill="#FF5413"/>
+                        <path d="M39.6896 14L40.9083 8.82368L36.8208 5.34211L42.2208 4.88158L44.3208 0L46.4208 4.88158L51.8208 5.34211L47.7333 8.82368L48.9521 14L44.3208 11.2553L39.6896 14Z" fill="#FF5413"/>
+                        <path d="M58.1 14L59.3187 8.82368L55.2312 5.34211L60.6312 4.88158L62.7312 0L64.8312 4.88158L70.2312 5.34211L66.1437 8.82368L67.3625 14L62.7312 11.2553L58.1 14Z" fill="#FF5413"/>
+                        <path d="M76.3191 14L77.4566 8.82368L73.6416 5.34211L78.6816 4.88158L80.6416 0L82.6016 4.88158L87.6416 5.34211L83.8266 8.82368L84.9641 14L80.6416 11.2553L76.3191 14Z" fill="#FF5413"/>
+                      </svg>
+                    {% else %}
+                      {% assign PDP2 = block.settings.product_2 %}
+                      <div
+                        id="judgeme_product_reviews"
+                        class="jdgm-widget jdgm-review-widget"
+                        data-id="{{ PDP2.id }}"
+                        data-product-title="{{ PDP2.title | escape }}"
+                      >
+                        {{ PDP2.metafields.judgeme.widget }}
+                      </div>
+                    {% endif %}
+                  {% endif %}
+                  {{ block.settings.product_2_value }}
+                </div>
+              </div>
+
+            {% when 'price_row' %}
+              <div class="comparison-row" {{ block.shopify_attributes }}>
+                <div class="row-cell">{{ block.settings.row_label }}</div>
+                <div class="row-cell">
+                  {% if block.settings.product_1 %}
+                    <span class="price">{{ block.settings.product_1 }}</span>
+                  {% else %}
+                    <span class="price">$189.99</span>
+                  {% endif %}
+                </div>
+                <div class="row-cell">
+                  {% if block.settings.product_2 %}
+                    <span class="price">{{ block.settings.product_2 }}</span>
+                  {% else %}
+                    <span class="price">$299.99</span>
+                  {% endif %}
+                </div>
+              </div>
+
+            {% when 'button_row' %}
+              <div class="comparison-row" {{ block.shopify_attributes }}>
+                <div class="row-cell button-row"></div>
+                <div class="row-cell button-row">
+                  {% if block.settings.product_1 %}
+                    <a href="{{ block.settings.product_1 }}" class="shop-btn">
+                      {{ block.settings.button_text }}
+                    </a>
+                  {% else %}
+                    <button class="shop-btn">{{ block.settings.button_text }}</button>
+                  {% endif %}
+                </div>
+                <div class="row-cell button-row"></div>
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "🔥Product Comparison",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Why Use Petramax Mulch Glue Max"
+    },
+    {
+      "type": "header",
+      "content": "Product 1 Settings"
+    },
+    {
+      "type": "product",
+      "id": "product_1",
+      "label": "Select Product 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_1_image",
+      "label": "Product 1 Image"
+    },
+    {
+      "type": "text",
+      "id": "product_1_name",
+      "label": "Product 1 Name",
+      "default": "Petramax"
+    },
+    {
+      "type": "text",
+      "id": "product_1_reviews",
+      "label": "Reviews Count",
+      "default": "3,940"
+    },
+    {
+      "type": "header",
+      "content": "Product 2 Settings"
+    },
+    {
+      "type": "product",
+      "id": "product_2",
+      "label": "Select Product 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_2_image",
+      "label": "Product 2 Image"
+    },
+    {
+      "type": "text",
+      "id": "product_2_name",
+      "label": "Product 2 Name",
+      "default": "Others"
+    },
+    {
+      "type": "text",
+      "id": "product_2_reviews",
+      "label": "Reviews Count",
+      "default": "897"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "comparison_row",
+      "name": "Comparison Row",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "showStar",
+          "label": "Show Star",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "row_label",
+          "label": "Row Label",
+          "default": "Feature"
+        },
+        {
+          "type": "text",
+          "id": "product_1_value",
+          "label": "Product 1 Value",
+          "default": "Value 1"
+        },
+        {
+          "type": "text",
+          "id": "product_2_value",
+          "label": "Product 2 Value",
+          "default": "Value 2"
+        }
+      ]
+    },
+    {
+      "type": "price_row",
+      "name": "Price Row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "row_label",
+          "label": "Row Label",
+          "default": "Price"
+        },
+        {
+          "type": "text",
+          "id": "product_1",
+          "label": "Price 1"
+        },
+        {
+          "type": "text",
+          "id": "product_2",
+          "label": "Price 2"
+        }
+      ]
+    },
+    {
+      "type": "button_row",
+      "name": "Button Row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "SHOP NOW"
+        },
+        {
+          "type": "url",
+          "id": "product_1",
+          "label": "Button URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "🔥Product Comparison",
+      "blocks": [
+        {
+          "type": "comparison_row",
+          "settings": {
+            "row_label": "Customer Reviews",
+            "product_1_value": "★★★★★ 3,940",
+            "product_2_value": "★★★★★ 897"
+          }
+        },
+        {
+          "type": "price_row",
+          "settings": {
+            "row_label": "Price"
+          }
+        },
+        {
+          "type": "comparison_row",
+          "settings": {
+            "row_label": "Tank Capacity",
+            "product_1_value": "4 Gallon",
+            "product_2_value": "4 Gallon"
+          }
+        },
+        {
+          "type": "comparison_row",
+          "settings": {
+            "row_label": "Sprayer Type",
+            "product_1_value": "Backpack",
+            "product_2_value": "2 in 1 Cart & Backpack"
+          }
+        },
+        {
+          "type": "comparison_row",
+          "settings": {
+            "row_label": "Pump Type",
+            "product_1_value": "Battery-Operated",
+            "product_2_value": "Battery-Operated"
+          }
+        },
+        {
+          "type": "comparison_row",
+          "settings": {
+            "row_label": "Battery Life",
+            "product_1_value": "Up to 8 hrs",
+            "product_2_value": "Up to 8 hrs"
+          }
+        },
+        {
+          "type": "comparison_row",
+          "settings": {
+            "row_label": "No. of Nozzles",
+            "product_1_value": "6",
+            "product_2_value": "6"
+          }
+        },
+        {
+          "type": "comparison_row",
+          "settings": {
+            "row_label": "Pressure Control",
+            "product_1_value": "Adjustable",
+            "product_2_value": "Adjustable"
+          }
+        },
+        {
+          "type": "comparison_row",
+          "settings": {
+            "row_label": "Features",
+            "product_1_value": "Padded, Straps, Adj. Nozzles",
+            "product_2_value": "Padded, Straps, Adj. Nozzles"
+          }
+        },
+        {
+          "type": "comparison_row",
+          "settings": {
+            "row_label": "Weight When Full",
+            "product_1_value": "45 lbs",
+            "product_2_value": "65 lbs"
+          }
+        },
+        {
+          "type": "button_row"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
