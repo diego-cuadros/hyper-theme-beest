@@ -373,6 +373,18 @@
         "divider_width": "fixed"
       }
     },
+    "compatible_accesories_ewCxQP": {
+      "type": "compatible-accesories",
+      "name": "🔥Compatible Accessories",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "card_background_color": "#222222",
+        "title": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
     "tabs_content_VeqDj6": {
       "type": "tabs-content",
       "blocks": {
@@ -429,6 +441,78 @@
         "padding_bottom": 50,
         "show_section_divider": false,
         "divider_width": "fixed"
+      }
+    },
+    "compatible_accesories_cAaBkL": {
+      "type": "compatible-accesories",
+      "blocks": {
+        "product_YhYBYa": {
+          "type": "product",
+          "settings": {
+            "product": "beest-cs-9500-concrete-paver-stone-sealer"
+          }
+        },
+        "product_9BQVJy": {
+          "type": "product",
+          "settings": {
+            "product": "beest-cs-9500-concrete-paver-stone-sealer-ready-to-use-1-gallon"
+          }
+        },
+        "product_dLFHkp": {
+          "type": "product",
+          "settings": {
+            "product": "beest-closed-cell-spray-foam-insulation-for-wall-attic-240-board-ft-sq-ft-super-adhesive-for-perfect-heat-sound-proofing-one-component-polyurethane-foam-insulation-can-12-pack-27-3oz"
+          }
+        },
+        "product_pM3H9N": {
+          "type": "product",
+          "settings": {
+            "product": "beest-multipurpose-primer"
+          }
+        },
+        "product_qeGbtx": {
+          "type": "product",
+          "settings": {
+            "product": "beest-ps-8700-concrete-paver-and-stone-sealer"
+          }
+        },
+        "product_wEeTm6": {
+          "type": "product",
+          "settings": {
+            "product": "beest-rv-roof-cleaner-32oz"
+          }
+        },
+        "product_TwUP9m": {
+          "type": "product",
+          "settings": {
+            "product": "beest-rv-seam-tape-waterproof-tape-rv-roof-sealant"
+          }
+        },
+        "product_xqPQRH": {
+          "type": "product",
+          "settings": {
+            "product": "beest-seam-roller"
+          }
+        }
+      },
+      "block_order": [
+        "product_YhYBYa",
+        "product_9BQVJy",
+        "product_dLFHkp",
+        "product_pM3H9N",
+        "product_qeGbtx",
+        "product_wEeTm6",
+        "product_TwUP9m",
+        "product_xqPQRH"
+      ],
+      "name": "🔥 Compatible Accessories",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-14",
+        "card_background_color": "#2d2d2d",
+        "title": "Compatible Accessories",
+        "padding_top": 50,
+        "padding_bottom": 50
       }
     },
     "collapsible_tabs_iwqmBM": {
@@ -560,13 +644,6 @@
         "border_color_grid": "#2f2f2f",
         "logo": "shopify://shop_images/favicon.png"
       }
-    },
-    "compatible_accesories_ewCxQP": {
-      "type": "compatible-accesories",
-      "name": "🔥Compatible Accessories",
-      "settings": {
-        "title": ""
-      }
     }
   },
   "order": [
@@ -575,6 +652,7 @@
     "collapsible_tabs_eTAhFK",
     "compatible_accesories_ewCxQP",
     "tabs_content_VeqDj6",
+    "compatible_accesories_cAaBkL",
     "collapsible_tabs_iwqmBM",
     "custom_brand_promise_DpUeMH"
   ]
