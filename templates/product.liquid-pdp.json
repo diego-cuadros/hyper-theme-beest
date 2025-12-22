@@ -373,104 +373,6 @@
         "divider_width": "fixed"
       }
     },
-    "comparison_table_cQiAFf": {
-      "type": "comparison-table",
-      "blocks": {
-        "heading_KKFpia": {
-          "type": "heading",
-          "settings": {
-            "icon-1": "none",
-            "title-1": "Customer Reviews",
-            "icon-2": "none",
-            "title-2": "Price",
-            "icon-3": "none",
-            "title-3": "Tank Capacity",
-            "icon-4": "none",
-            "title-4": "Sprayer Type",
-            "icon-5": "none",
-            "title-5": "Pump Type",
-            "icon-6": "none",
-            "title-6": "Battery Life",
-            "icon-7": "none",
-            "title-7": "No. of Nozzles",
-            "icon-8": "none",
-            "title-8": "Pressure Control",
-            "icon-9": "none",
-            "title-9": "Features",
-            "icon-10": "none",
-            "title-10": "Weight When Full"
-          }
-        },
-        "content_YxcyYQ": {
-          "type": "content",
-          "settings": {
-            "product": "beest-ps-8700-concrete-paver-and-stone-sealer",
-            "text-1": "<p>Hecht and Colin describe employing a process similar</p>",
-            "text-2": "<p>44mm or 40mm</p>",
-            "text-3": "<p>Up to 18 hours</p>",
-            "text-4": "<p>S8 SiP</p>",
-            "text-5": "<p>Up to 1,000 nits</p>",
-            "text-6": "<p>6</p>",
-            "text-7": "<p>Adjustable</p>",
-            "text-8": "<p>padded</p>",
-            "text-9": "<p>Straps, ads, nozzles</p>",
-            "text-10": "<p>45lbs</p>"
-          }
-        },
-        "content_URCket": {
-          "type": "content",
-          "settings": {
-            "product": "",
-            "text-1": "<p>Inspired to create a chair where the back and arms are moulded</p>",
-            "text-2": "<p>46mm or 42mm</p>",
-            "text-3": "<p>Up to 18 hours</p>",
-            "text-4": "<p>S10 SiP</p>",
-            "text-5": "<p>Up to 2,000 nits</p>",
-            "text-6": "",
-            "text-7": "",
-            "text-8": "",
-            "text-9": "",
-            "text-10": ""
-          }
-        }
-      },
-      "block_order": [
-        "heading_KKFpia",
-        "content_YxcyYQ",
-        "content_URCket"
-      ],
-      "custom_css": [
-        ".comparison-table-card__image {display: none;}"
-      ],
-      "name": "t:sections.comparison-table.name",
-      "settings": {
-        "container": "fixed",
-        "color_scheme": "scheme-inverse",
-        "header_layout": "vertical",
-        "section_header_alignment": "left",
-        "section_header_alignment_mobile": "inherit",
-        "subheading": "",
-        "heading": "",
-        "highlight_style": "none",
-        "highlight_font_style": "italic",
-        "highlight_style_color": "",
-        "highlight_text_color": "",
-        "heading_size": "h1",
-        "description": "",
-        "text_size": "text-base",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "btn--primary",
-        "button_icon": "none",
-        "icon_size": 28,
-        "text_line_limit": "2-lines",
-        "show_view_more_button": false,
-        "show_section_divider": false,
-        "divider_width": "fixed",
-        "padding_top": 50,
-        "padding_bottom": 50
-      }
-    },
     "tabs_content_VeqDj6": {
       "type": "tabs-content",
       "blocks": {
@@ -658,13 +560,20 @@
         "border_color_grid": "#2f2f2f",
         "logo": "shopify://shop_images/favicon.png"
       }
+    },
+    "compatible_accesories_ewCxQP": {
+      "type": "compatible-accesories",
+      "name": "🔥Compatible Accessories",
+      "settings": {
+        "title": ""
+      }
     }
   },
   "order": [
     "breadcrumbs",
     "main",
     "collapsible_tabs_eTAhFK",
-    "comparison_table_cQiAFf",
+    "compatible_accesories_ewCxQP",
     "tabs_content_VeqDj6",
     "collapsible_tabs_iwqmBM",
     "custom_brand_promise_DpUeMH"
