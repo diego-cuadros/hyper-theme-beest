@@ -170,7 +170,7 @@
                       <div class="cart-item__details flex-grow flex flex-col gap-3">
                         <div class="flex justify-between gap-3">
                           <div class="grid flex-1">
-                            <div class="block"><a href="{{ item.url }}" class="cart-item__title text-pcard-title reversed-link leading-tight">{{- item.product.title | escape -}}</a></div>
+                            <div class="block"><a href="{{ item.url }}" class="cart-item__title text-pcard-title reversed-link">{{- item.product.title | escape -}}</a></div>
                             {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != null -%}
                               <div class="cart-item__options">
                                 {%- if item.product.has_only_default_variant == false -%}
