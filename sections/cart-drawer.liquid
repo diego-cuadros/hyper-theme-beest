@@ -762,92 +762,129 @@
             {%- endif -%}
           </div>
           <div class="drawer__footer-body">
-            <div class="grid gap-5">
-              <div class="grid gap-1">
-                {%- liquid
-                  assign discount_codes = cart.cart_level_discount_applications | where: 'type', 'discount_code' | map: 'title'
-                  assign cart_items_has_discount = false
-                  for item in cart.items
-                    for allocation in item.line_level_discount_allocations
-                      if allocation.discount_application.type == 'discount_code'
-                        assign cart_items_has_discount = true
-                      endif
+            {% unless section.settings.use_custom_product_recommendations %}
+              <div class="grid gap-5">
+                <div class="grid gap-1">
+                  {%- liquid
+                    assign discount_codes = cart.cart_level_discount_applications | where: 'type', 'discount_code' | map: 'title'
+                    assign cart_items_has_discount = false
+                    for item in cart.items
+                      for allocation in item.line_level_discount_allocations
+                        if allocation.discount_application.type == 'discount_code'
+                          assign cart_items_has_discount = true
+                        endif
+                      endfor
                     endfor
-                  endfor
-                -%}
-                {%- if cart.cart_level_discount_applications.size > 0 or cart_items_has_discount -%}
-                  <ul
-                    class="cart__discounts discounts list-unstyled flex flex-wrap gap-1"
-                    role="list"
-                    aria-label="{{ 'customer.order.discount' | t }}"
-                  >
-                    {%- for discount in cart.cart_level_discount_applications -%}
-                      <li
-                        class="discount text-sm-extra font-body-bold flex items-center"
-                        data-discount-code="{{ discount.title }}"
-                      >
-                        {% render 'icon-discount' %}
-                        <span>{{- discount.title -}}</span>
-                        <span class="font-body-bold">(-{{ discount.total_allocated_amount | money }})</span>
-                        <button
-                          is="cart-discount-remove"
-                          type="button"
-                          aria-label="{{ 'general.cart.coupon.remove' | t: code: discount.title }}"
-                          class="btn btn--inherit btn-remove"
+                  -%}
+                  {%- if cart.cart_level_discount_applications.size > 0 or cart_items_has_discount -%}
+                    <ul
+                      class="cart__discounts discounts list-unstyled flex flex-wrap gap-1"
+                      role="list"
+                      aria-label="{{ 'customer.order.discount' | t }}"
+                    >
+                      {%- for discount in cart.cart_level_discount_applications -%}
+                        <li
+                          class="discount text-sm-extra font-body-bold flex items-center"
+                          data-discount-code="{{ discount.title }}"
                         >
-                          {% render 'icon-close', size: 'extra-small' %}
-                          {%- render 'loading-spinner' -%}
-                        </button>
-                      </li>
-                    {%- endfor -%}
-                    {%- if cart_items_has_discount -%}
-                      {%- for item in cart.items -%}
-                        {%- for allocation in item.line_level_discount_allocations -%}
-                          {%- liquid
-                            unless allocation.discount_application.type == 'discount_code'
-                              continue
-                            endunless
-
-                            assign discount = allocation.discount_application
-
-                            assign is_displayed = discount_codes | has: discount.title
-                            if is_displayed
-                              continue
-                            endif
-
-                            assign discount_codes = item.line_level_discount_allocations | slice: forloop.index0 | map: 'discount_application' | map: 'title' | concat: discount_codes
-                          -%}
-                          <li
-                            class="discount text-sm-extra font-body-bold flex items-center"
-                            data-discount-code="{{ discount.title }}"
+                          {% render 'icon-discount' %}
+                          <span>{{- discount.title -}}</span>
+                          <span class="font-body-bold">(-{{ discount.total_allocated_amount | money }})</span>
+                          <button
+                            is="cart-discount-remove"
+                            type="button"
+                            aria-label="{{ 'general.cart.coupon.remove' | t: code: discount.title }}"
+                            class="btn btn--inherit btn-remove"
                           >
-                            {% render 'icon-discount' %}
-                            <span>{{- discount.title -}}</span>
-                            <span class="font-body-bold">(-{{ discount.total_allocated_amount | money }})</span>
-                            <button
-                              is="cart-discount-remove"
-                              type="button"
-                              aria-label="{{ 'general.cart.coupon.remove' | t: code: discount.title }}"
-                              class="btn btn--inherit btn-remove"
-                            >
-                              {% render 'icon-close', size: 'extra-small' %}
-                              {%- render 'loading-spinner' -%}
-                            </button>
-                          </li>
-                        {%- endfor -%}
+                            {% render 'icon-close', size: 'extra-small' %}
+                            {%- render 'loading-spinner' -%}
+                          </button>
+                        </li>
                       {%- endfor -%}
-                    {%- endif -%}
-                  </ul>
-                {%- endif -%}
+                      {%- if cart_items_has_discount -%}
+                        {%- for item in cart.items -%}
+                          {%- for allocation in item.line_level_discount_allocations -%}
+                            {%- liquid
+                              unless allocation.discount_application.type == 'discount_code'
+                                continue
+                              endunless
+
+                              assign discount = allocation.discount_application
+
+                              assign is_displayed = discount_codes | has: discount.title
+                              if is_displayed
+                                continue
+                              endif
+
+                              assign discount_codes = item.line_level_discount_allocations | slice: forloop.index0 | map: 'discount_application' | map: 'title' | concat: discount_codes
+                            -%}
+                            <li
+                              class="discount text-sm-extra font-body-bold flex items-center"
+                              data-discount-code="{{ discount.title }}"
+                            >
+                              {% render 'icon-discount' %}
+                              <span>{{- discount.title -}}</span>
+                              <span class="font-body-bold">(-{{ discount.total_allocated_amount | money }})</span>
+                              <button
+                                is="cart-discount-remove"
+                                type="button"
+                                aria-label="{{ 'general.cart.coupon.remove' | t: code: discount.title }}"
+                                class="btn btn--inherit btn-remove"
+                              >
+                                {% render 'icon-close', size: 'extra-small' %}
+                                {%- render 'loading-spinner' -%}
+                              </button>
+                            </li>
+                          {%- endfor -%}
+                        {%- endfor -%}
+                      {%- endif -%}
+                    </ul>
+                  {%- endif -%}
+                  <div class="totals flex justify-between h5 items-center">
+                    <span class="totals__subtotal">
+                      {{- 'sections.cart.estimated_total' | t -}}
+                    </span>
+                    <span class="totals__subtotal-value">
+                      {{- cart.total_price | money_with_currency -}}
+                    </span>
+                  </div>
+                  <div class="tax-note text-sm-extra">
+                    {%- liquid
+                      if cart.taxes_included and shop.shipping_policy.body != blank
+                        echo 'sections.cart.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url
+                      elsif cart.taxes_included
+                        echo 'sections.cart.taxes_included_but_shipping_at_checkout' | t
+                      elsif shop.shipping_policy.body != blank
+                        echo 'sections.cart.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url
+                      else
+                        echo 'sections.cart.taxes_and_shipping_at_checkout' | t
+                      endif
+                    -%}
+                  </div>
+                </div>
+                <form action="{{ routes.cart_url }}" method="POST" novalidate class="drawer__footer-buttons flex gap-2">
+                  <a href="{{ routes.cart_url }}" class="btn btn--secondary">
+                    <span class="btn__text">{{ 'general.cart.view_empty_cart' | t }}</span>
+                  </a>
+                  <button class="btn btn--primary flex-grow" type="submit" name="checkout">
+                    <span class="btn__text">{{ 'sections.cart.checkout' | t }}</span>
+                  </button>
+                </form>
+              </div>
+            {% else %}
+              <div class="dc_cart-footer">
                 <div class="totals flex justify-between h5 items-center">
-                  <span class="totals__subtotal">
-                    {{- 'sections.cart.estimated_total' | t -}}
-                  </span>
+                  <span class="totals__subtotal"> Subtotal </span>
                   <span class="totals__subtotal-value">
                     {{- cart.total_price | money_with_currency -}}
                   </span>
                 </div>
-                <div class="tax-note text-sm-extra">
+                <form action="{{ routes.cart_url }}" method="POST" novalidate class="drawer__footer-buttons flex gap-2">
+                  <button class="dc_checkout_btn btn btn--primary flex-grow" type="submit" name="checkout">
+                    <span class="btn__text" style="text-transform: uppercase;">{{ 'sections.cart.checkout' | t }}</span>
+                  </button>
+                </form>
+                <div class="tax-note text-sm-extra text-center">
                   {%- liquid
                     if cart.taxes_included and shop.shipping_policy.body != blank
                       echo 'sections.cart.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url
@@ -861,15 +898,7 @@
                   -%}
                 </div>
               </div>
-              <form action="{{ routes.cart_url }}" method="POST" novalidate class="drawer__footer-buttons flex gap-2">
-                <a href="{{ routes.cart_url }}" class="btn btn--secondary">
-                  <span class="btn__text">{{ 'general.cart.view_empty_cart' | t }}</span>
-                </a>
-                <button class="btn btn--primary flex-grow" type="submit" name="checkout">
-                  <span class="btn__text">{{ 'sections.cart.checkout' | t }}</span>
-                </button>
-              </form>
-            </div>
+            {% endunless %}
           </div>
         </div>
       </div>
