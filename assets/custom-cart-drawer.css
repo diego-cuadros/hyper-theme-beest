@@ -1,11 +1,16 @@
 @media only screen and (min-width:768px){
-    .drawer__inner {
+    #CartDrawer .drawer__inner {
   height: 95% !important;
   position: fixed !important;
   top:20px !important;
   right:20px !important;
   border-radius: 8px !important;
 }
+}
+
+.drawer__inner .price{
+  color:#D06834 !important;
+  font-weight: 600 !important;
 }
 
 .drawer__header{
@@ -21,14 +26,13 @@
     color:#D06834 !important;
 }
 
+.dc_card-radius{
+    border-radius: 8px !important;
+}
+
 .drawer__content{
   background-color: #f5f5f5 !important;
 }
-
-
-/*.drawer__body{
-    background-color: #f5f5f5 !important;
-}*/
 
 .free-shipping-goal, cart-items{
     border:1px solid #CCD2D6 !important;
@@ -54,14 +58,104 @@ background-color: #f5f5f5 !important;
   border:none !important;
 }
 
+
 .swiper-pagination{
     display:none 
     !important;
 }
 
-.pcard-radius{
+.product-card{
+  background-color: #fff !important;
   border-radius: 8px !important;
+  border: 1px solid #E1E5E9 !important;
 }
+
+.product-card__wrapper{
+  column-gap:10px !important;
+}
+
+
+.dc_product-card__info-wrapper{
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  flex:2 !important;
+}
+
+.dc_product-card__info-wrapper{
+  order:1;
+  gap:0px !important;
+}
+
+.product-card__info,.product-card__info h3 {
+  color:#4A3A36 !important;
+}
+
+.reversed-link__text:hover {
+  color:#4A3A36 !important;
+}
+
+.dc_product-card__info-wrapper{
+  gap: 8px !important;
+}
+
+.dc_product-card__btn{
+  display:flex;
+  align-items: center ;
+  justify-content: center ;
+  background-color: #fff ;
+  border: 1px solid #E1E5E9 ;
+  border-radius: 100px ;
+  color: #4A3A36 ;
+  height:33px ;
+  width: 112px ;
+  padding: 8px 12px ;
+}
+
+.dc_product-card__btn:hover{
+  background-color: #D06834;
+  color:#fff;
+  border-color:#D06834;
+  transition: 0.3s;
+}
+
+.product-card__title{
+  line-height: 1 !important;
+}
+
+.product-card__info{
+gap: 0 !important;
+}
+
+
+.dc_btn__text{
+  font-size: 14px ;
+  text-transform: uppercase !important;
+}
+
+
+.dc_product-card__image-wrapper {
+  align-items: center;
+  border:1px solid #E1E5E9;
+  border-radius: 8px;
+  display: flex;
+  height: 100%; 
+  justify-content: center;
+  overflow: hidden;
+  order: 2;
+  position: relative;
+  width: 100%; 
+  flex:1 !important;
+}
+
+.dc_product-card__image {
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
 
 
 .drawer__footer{
@@ -70,6 +164,6 @@ background-color: #f5f5f5 !important;
 }
 
 
-
-
-
+.f-price__regular{
+  color:#D06834 !important;
+}
