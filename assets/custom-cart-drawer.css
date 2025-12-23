@@ -10,6 +10,7 @@
 
 .drawer__header{
   border-bottom: 1px solid #CCD2D6 !important;
+  background-color:#fff !important;
 }
 
 .free-shipping-goal__label{
@@ -20,10 +21,14 @@
     color:#D06834 !important;
 }
 
-
-.drawer__body{
-    background-color: #f5f5f5 !important;
+.drawer__content{
+  background-color: #f5f5f5 !important;
 }
+
+
+/*.drawer__body{
+    background-color: #f5f5f5 !important;
+}*/
 
 .free-shipping-goal, cart-items{
     border:1px solid #CCD2D6 !important;
@@ -40,6 +45,29 @@
   margin: 0px auto;
 }
 
+.drawer__body{
+  flex-grow: 0 !important;
+}
+
+.cart-drawer-products-recommendation{
+background-color: #f5f5f5 !important;
+  border:none !important;
+}
+
+.swiper-pagination{
+    display:none 
+    !important;
+}
+
+.pcard-radius{
+  border-radius: 8px !important;
+}
+
+
+.drawer__footer{
+  margin-top: auto !important;
+  background-color: #fff !important;
+}
 
 
 
