@@ -92,7 +92,7 @@ class CartItems extends HTMLElement {
 
     /* Bottomless: JS to update variant in the cart */
     this.addEventListener('change', (event) => {
-      const select = event.target.closest('.cart-item__variant-select');
+      const select = event.target.closest('.dc_cart-item__variant-select');
       if (!select) return;
 
       const line = Number(select.dataset.line);
