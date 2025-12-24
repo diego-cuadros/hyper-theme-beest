@@ -294,6 +294,10 @@ background-color: var(--dc_cart-drawer-light-gray-color)!important;
   font-family: 'Titillium Web', sans-serif !important;
 }
 
+.totals__subtotal-value{
+  font-weight: 700 !important;
+}
+
 .dc_checkout_btn{
   border-color: var(--dc_cart-drawer-black-color)!important;
   border-radius: 8px !important;
