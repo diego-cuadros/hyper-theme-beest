@@ -313,45 +313,54 @@ class CartItems extends HTMLElement {
 
   /* 2- Bottomless: JS to update variant in the cart */
      replaceVariant(line, quantity, newVariantId) {
-        this.showLoader(line);
+      this.showLoader(line);
 
-        let sectionsToBundle = [];
-        document.documentElement.dispatchEvent(
-          new CustomEvent('cart:grouped-sections', {
-            bubbles: true,
-            detail: { sections: sectionsToBundle },
-          })
-        );
-
-        fetch(FoxTheme.routes.cart_change_url, {
-          ...FoxTheme.utils.fetchConfig(),
-          body: JSON.stringify({
-            line,
-            quantity: 0,
-            sections: sectionsToBundle,
-          }),
+      let sectionsToBundle = [];
+      document.documentElement.dispatchEvent(
+        new CustomEvent('cart:grouped-sections', {
+          bubbles: true,
+          detail: { sections: sectionsToBundle },
         })
-          .then(() => {
-            return fetch(FoxTheme.routes.cart_add_url, {
-              ...FoxTheme.utils.fetchConfig(),
-              body: JSON.stringify({
-                id: newVariantId,
-                quantity,
-                sections: sectionsToBundle,
-              }),
-            });
-          })
-          .then((response) => response.json())
-          .then((parsedState) => {
-            FoxTheme.pubsub.publish(
-              FoxTheme.pubsub.PUB_SUB_EVENTS.cartUpdate,
-              { cart: parsedState }
-            );
-          })
-          .catch((error) => {
-            console.error('Variant replace error:', error);
+      );
+
+      fetch(FoxTheme.routes.cart_change_url, {
+        ...FoxTheme.utils.fetchConfig(),
+        body: JSON.stringify({
+          line,
+          quantity: 0,
+          sections: sectionsToBundle,
+        }),
+      })
+        .then(() => {
+          return fetch(FoxTheme.routes.cart_add_url, {
+            ...FoxTheme.utils.fetchConfig(),
+            body: JSON.stringify({
+              id: newVariantId,
+              quantity,
+            }),
           });
-      }      
+        })
+        .then(() => {
+          return fetch(FoxTheme.routes.cart_change_url, {
+            ...FoxTheme.utils.fetchConfig(),
+            body: JSON.stringify({
+              line: 1,
+              quantity,
+              sections: sectionsToBundle,
+            }),
+          });
+        })
+        .then((response) => response.json())
+        .then((parsedState) => {
+          FoxTheme.pubsub.publish(
+            FoxTheme.pubsub.PUB_SUB_EVENTS.cartUpdate,
+            { cart: parsedState }
+          );
+        })
+        .catch((error) => {
+          console.error('Variant replace error:', error);
+        });
+    }     
     /* End Bottomless code */
 
   showLoader(line) {
