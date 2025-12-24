@@ -289,6 +289,11 @@ background-color: var(--dc_cart-drawer-light-gray-color)!important;
   gap: 8px;
 }
 
+.totals__subtotal, .totals__subtotal-value{
+  font-size:14px;
+  font-family: 'Titillium Web', sans-serif !important;
+}
+
 .dc_checkout_btn{
   border-color: var(--dc_cart-drawer-black-color)!important;
   border-radius: 8px !important;
