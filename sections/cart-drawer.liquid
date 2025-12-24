@@ -205,10 +205,9 @@
                                 {%- endif -%}
                               </div>
                             {% else %}
-                              {% if item.product.variants.size > 1 %}
+                              <div class = "dc_cart-item__options">
+                                {% if item.product.variants.size > 1 %}
                                 <div class="cart-item__variant">
-                                  <label class="text-sm text-subtext">Variant</label>
-
                                   <select
                                     class="cart-item__variant-select"
                                     data-line="{{ forloop.index }}"
@@ -227,6 +226,41 @@
                                   </select>
                                 </div>
                               {% endif %}
+                              <quantity-input class="cart-quantity quantity flex items-center justify-center w-fit border rounded-md self-end">
+                                <label class="visually-hidden" for="Quantity-{{ section.id }}-{{ item.index | plus: 1 }}">{{ 'products.product.quantity.label' | t }}</label>
+                                <button type="button" name="minus" class="quantity__button" aria-label="{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}">
+                                  <svg width="16" height="16" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.6875 7H12.3125" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                </button>
+                                <input class="quantity__input"
+                                  type="number"
+                                  name="updates[]"
+                                  value="{{ item.quantity }}"
+                                  id="Quantity-{{ section.id }}-{{ item.index | plus: 1 }}"
+                                  aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
+                                  step="{{ item.variant.quantity_rule.increment }}"
+                                  size="2"
+                                  inputmode="numeric"
+                                  autocomplete="off"
+                                  data-index="{{ item.index | plus: 1 }}"
+                                  data-quantity-variant-id="{{ item.variant.id }}"
+                                  data-cart-quantity="{{ cart | item_count_for_variant: item.variant.id }}"
+                                  min="0"
+                                  data-min="{{ item.variant.quantity_rule.min }}"
+                                  {% if item.variant.quantity_rule.max != null %}
+                                    max="{{ item.variant.quantity_rule.max }}"
+                                  {% endif %}
+                                />
+                                <button type="button" name="plus" class="quantity__button" aria-label="{{ 'products.product.quantity.increase' | t: product: item.product.title | escape }}">
+                                  <svg width="16" height="16" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.6875 7H12.3125" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.5 2.1875V11.8125" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                </button>
+                              </quantity-input>
+                              </div>
+                              
                               {% endunless %}
                             {%- endif -%}
                           </div>
@@ -383,6 +417,7 @@
                           {%- endif -%}
                           <div class="flex items-center gap-2">
                             {%- unless is_gift_wrap_item -%}
+                              {% unless section.settings.use_custom_product_recommendations %}
                               <quantity-input class="cart-quantity quantity self-end">
                                 <label class="visually-hidden" for="Quantity-{{ section.id }}-{{ item.index | plus: 1 }}">{{ 'products.product.quantity.label' | t }}</label>
                                 <button type="button" name="minus" class="quantity__button" aria-label="{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}">
@@ -416,6 +451,7 @@
                                   </svg>
                                 </button>
                               </quantity-input>
+                              {% endunless %}
                             {%- else -%}
                               <div class="cart-quantity quantity cart-quantity-gift-wrap self-end">
                                 <label class="visually-hidden" for="Quantity-{{ section.id }}-{{ item.index | plus: 1 }}"></label>
