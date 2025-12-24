@@ -154,7 +154,7 @@
                   -%}
                   {%- capture cart_item -%}
                   <li id="CartDrawer-Item-{{ item.index | plus: 1 }}" class="cart-item flex flex-col" data-variant-id="{{ item.variant_id }}" data-handle="{{ item.product.handle }}" data-quantity="{{ item.quantity }}" data-price="{{ item.original_price }}">
-                    <div class="cart-item__product flex items-start gap-3">
+                    <div class="cart-item__product flex items-start {% unless section.settings.use_custom_product_recommendations %}gap-3"{% endunless %}>
                       {%- if item.image -%}
                         <a class="cart-item__media blocks-radius media-wrapper" href="{{ item.url }}" tabindex="-1" aria-label="{{ item.title }}">
                           {{- item.image 
@@ -168,7 +168,7 @@
                         </a>
                       {%- endif -%}
                       <div class="cart-item__details flex-grow flex flex-col gap-3">
-                        <div class="flex justify-between gap-3">
+                        <div class="flex justify-between {% unless section.settings.use_custom_product_recommendations %}gap-3{% endunless %}">
                           <div class="grid flex-1">
                             <div class="block"><a href="{{ item.url }}" class="cart-item__title text-pcard-title reversed-link">{{- item.product.title | escape -}}</a></div>
                             {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != null -%}
@@ -207,9 +207,9 @@
                             {% else %}
                               <div class = "dc_cart-item__options">
                                 {% if item.product.variants.size > 1 %}
-                                <div class="cart-item__variant">
+                                <div class="dc_cart-item__variant">
                                   <select
-                                    class="cart-item__variant-select"
+                                    class="dc_cart-item__variant-select"
                                     data-line="{{ forloop.index }}"
                                     data-quantity="{{ item.quantity }}"
                                     data-current-variant="{{ item.variant_id }}"
@@ -226,7 +226,7 @@
                                   </select>
                                 </div>
                               {% endif %}
-                              <quantity-input class="cart-quantity quantity flex items-center justify-center w-fit border rounded-md self-end">
+                              <quantity-input class="cart-quantity quantity self-end">
                                 <label class="visually-hidden" for="Quantity-{{ section.id }}-{{ item.index | plus: 1 }}">{{ 'products.product.quantity.label' | t }}</label>
                                 <button type="button" name="minus" class="quantity__button" aria-label="{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}">
                                   <svg width="16" height="16" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
