@@ -89,6 +89,24 @@ class CartItems extends HTMLElement {
         FoxTheme.utils.debounce(this.onChange(event), 300);
       }
     });
+
+    /* Bottomless: JS to update variant in the cart */
+    this.addEventListener('change', (event) => {
+      const select = event.target.closest('.cart-item__variant-select');
+      if (!select) return;
+
+      const line = Number(select.dataset.line);
+      const quantity = Number(select.dataset.quantity);
+      const newVariantId = Number(select.value);
+      const currentVariantId = Number(select.dataset.currentVariant);
+
+      if (newVariantId === currentVariantId) return;
+
+      this.replaceVariant(line, quantity, newVariantId);
+    });
+    /* End Bottomless code */
+
+
     this.cartUpdateUnsubscriber = FoxTheme.pubsub.subscribe(
       FoxTheme.pubsub.PUB_SUB_EVENTS.cartUpdate,
       this.onCartUpdate.bind(this)
@@ -293,6 +311,49 @@ class CartItems extends HTMLElement {
       });
   }
 
+  /* 2- Bottomless: JS to update variant in the cart */
+     replaceVariant(line, quantity, newVariantId) {
+        this.showLoader(line);
+
+        let sectionsToBundle = [];
+        document.documentElement.dispatchEvent(
+          new CustomEvent('cart:grouped-sections', {
+            bubbles: true,
+            detail: { sections: sectionsToBundle },
+          })
+        );
+
+        fetch(FoxTheme.routes.cart_change_url, {
+          ...FoxTheme.utils.fetchConfig(),
+          body: JSON.stringify({
+            line,
+            quantity: 0,
+            sections: sectionsToBundle,
+          }),
+        })
+          .then(() => {
+            return fetch(FoxTheme.routes.cart_add_url, {
+              ...FoxTheme.utils.fetchConfig(),
+              body: JSON.stringify({
+                id: newVariantId,
+                quantity,
+                sections: sectionsToBundle,
+              }),
+            });
+          })
+          .then((response) => response.json())
+          .then((parsedState) => {
+            FoxTheme.pubsub.publish(
+              FoxTheme.pubsub.PUB_SUB_EVENTS.cartUpdate,
+              { cart: parsedState }
+            );
+          })
+          .catch((error) => {
+            console.error('Variant replace error:', error);
+          });
+      }      
+    /* End Bottomless code */
+
   showLoader(line) {
     const sectionId = FoxTheme.utils.getSectionId(this);
     const loaders = document.querySelectorAll(`#Loader-${sectionId}-${line}`);
@@ -323,7 +384,7 @@ class CartRemoveItem extends HTMLAnchorElement {
       event.preventDefault();
 
       const cartItems = this.closest('cart-items');
-      cartItems.updateQuantity(this.dataset.index, 0);
+      cartItems.updateQuantity(this.dataset.index, 0);      
     });
   }
 }

@@ -207,10 +207,13 @@
                             {% else %}
                               {% if item.product.variants.size > 1 %}
                                 <div class="cart-item__variant">
+                                  <label class="text-sm text-subtext">Variant</label>
+
                                   <select
                                     class="cart-item__variant-select"
                                     data-line="{{ forloop.index }}"
                                     data-quantity="{{ item.quantity }}"
+                                    data-current-variant="{{ item.variant_id }}"
                                   >
                                     {% for variant in item.product.variants %}
                                       <option
