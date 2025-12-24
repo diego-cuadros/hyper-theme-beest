@@ -172,6 +172,7 @@
                           <div class="grid flex-1">
                             <div class="block"><a href="{{ item.url }}" class="cart-item__title text-pcard-title reversed-link">{{- item.product.title | escape -}}</a></div>
                             {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != null -%}
+                              {% unless section.settings.use_custom_product_recommendations %}
                               <div class="cart-item__options">
                                 {%- if item.product.has_only_default_variant == false -%}
                                   {%- assign last_index = item.options_with_values.size | minus: 1 -%}
@@ -203,14 +204,97 @@
                                   <p class="text-sm text-subtext">{{ item.selling_plan_allocation.selling_plan.name }}</p>
                                 {%- endif -%}
                               </div>
+                            {% else %}
+                              {% if item.product.variants.size > 1 %}
+                                <div class="cart-item__variant">
+                                  <select
+                                    class="cart-item__variant-select"
+                                    data-line="{{ forloop.index }}"
+                                    data-quantity="{{ item.quantity }}"
+                                  >
+                                    {% for variant in item.product.variants %}
+                                      <option
+                                        value="{{ variant.id }}"
+                                        {% if variant.id == item.variant_id %}selected{% endif %}
+                                        {% unless variant.available %}disabled{% endunless %}
+                                      >
+                                        {{ variant.title }}
+                                      </option>
+                                    {% endfor %}
+                                  </select>
+                                </div>
+                              {% endif %}
+                              {% endunless %}
                             {%- endif -%}
                           </div>
+                          {% unless section.settings.use_custom_product_recommendations %}
                           <a id="Loader-{{ section.id }}-{{ item.index | plus: 1 }}"{% unless is_gift_wrap_item %} is="cart-remove-item"{% else %} is="gift-wrap-remove-item"{% endunless %} class="cart-item__remove flex items-center justify-center relative btn-remove" href="{{ item.url_to_remove }}" data-index="{{ item.index | plus: 1 }}" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
                             <span class="flex">
                               {%- render 'icon-close', size: 'small' -%}
                             </span>
                             {% render 'loading-spinner' %}
                           </a>
+                        {% else %}
+                          <div class="cart-item__prices text-right flex flex-col gap-2">
+                            {%- if item.line_level_discount_allocations != blank -%}
+                              <ul class="cart-item__discounts discounts list-unstyled flex justify-end flex-wrap gap-1" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+                                {%- for discount_allocation in item.line_level_discount_allocations -%}
+                                  <li class="discount text-sm-extra font-body-bold inline-flex items-center">
+                                    {% render 'icon-discount' %}
+                                    <span>{{ discount_allocation.discount_application.title }}</span>
+                                  </li>
+                                {%- endfor -%}
+                              </ul>
+                            {%- endif -%}
+                            <div>
+                              <div class="price font-body-bolder{% if item.original_price != item.final_price %} price--on-sale{% endif %}">
+                                {%- liquid
+                                  assign money_price = item.original_price | money
+                                  if settings.currency_code_enabled
+                                    assign money_price = item.original_price | money_with_currency
+                                  endif
+                                -%}
+                                {%- if item.original_price != item.final_price -%}
+                                  <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
+                                  <s class="font-body text-sm text-subtext">{{ money_price }}</s>
+                                  <span class="visually-hidden">{{ 'products.product.price.sale_price' | t }}</span>
+                                  <span class="price__regular">
+                                    {%- liquid 
+                                      if settings.currency_code_enabled
+                                        echo item.final_price | money_with_currency
+                                      else
+                                        echo item.final_price | money
+                                      endif  
+                                    -%}
+                                  </span>
+                                {%- else -%}
+                                  {{- money_price -}}
+                                {%- endif -%}
+                              </div>
+                              {%- if item.variant.available and item.unit_price_measurement -%}
+                                <div>
+                                <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
+                                <span class="unit-price flex items-center text-sm font-body text-subtext">
+                                  {%- liquid
+                                    capture unit_price_base_unit
+                                      if item.variant.unit_price_measurement
+                                        if item.variant.unit_price_measurement.reference_value != 1
+                                          echo item.variant.unit_price_measurement.reference_value
+                                        endif
+                                        echo item.variant.unit_price_measurement.reference_unit
+                                      endif
+                                    endcapture
+                                  -%}
+                                  ({{ item.variant.unit_price | money }}
+                                  <span aria-hidden="true">/</span>
+                                  <span class="visually-hidden">&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
+                                  {{ unit_price_base_unit }})
+                                  </span>
+                                </div>
+                              {%- endif -%}
+                            </div>
+                          </div>
+                        {% endunless %}
                         </div>
                         <div class="cart-item__action cart-item__action flex items-center justify-between gap-3">
                           {%- liquid 
@@ -397,7 +481,7 @@
                               </cart-addon-modal>
                             {% endif %}
                           </div>
-
+                          {% unless section.settings.use_custom_product_recommendations %}
                           <div class="cart-item__prices text-right flex flex-col gap-2">
                             {%- if item.line_level_discount_allocations != blank -%}
                               <ul class="cart-item__discounts discounts list-unstyled flex justify-end flex-wrap gap-1" role="list" aria-label="{{ 'customer.order.discount' | t }}">
@@ -457,6 +541,7 @@
                               {%- endif -%}
                             </div>
                           </div>
+                        {% endunless %}
                         </div>
                       </div>
                       

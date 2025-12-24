@@ -65,39 +65,27 @@
 }
 
 /* Cart items styles */
-/* 1. Tighten the line height on the title */
-.cart-item__title {
-  line-height: 1.1 !important; /* Overrides the 1.5 in cart.css */
-  display: block;
-  margin-bottom: 2px;
-}
 
-/* 2. Change font size for all titles in the details area */
-.cart-item__details .cart-item__title {
-  font-size: 1.4rem; /* Adjust this number to your liking */
-}
-
-/* 3. Ensure content stays at the top (Vertical Alignment) */
 .cart-item__details .grid {
   align-content: start !important;
   display: flex !important;
   flex-direction: column;
-  gap: 0 !important; /* Removes gap between Title and "1 Gallon" */
+  gap: 0 !important; 
 }
 
-/* 4. Reduce space between the title block and the price/quantity block */
 .cart-item__details {
-  gap: 0.5rem !important; /* This overrides the 'gap-3' in your HTML */
+  gap: 0.5rem !important;
 }
 
-/* Disable the underline on hover */
+
 .cart-item__title.reversed-link:hover,
 .cart-item__title.reversed-link:after,
 .cart-item__title.reversed-link:hover:after {
   text-decoration: none !important;
+  text-transform: none !important;
   border-bottom: none !important;
-  background-size: 0 0 !important; /* Some themes use background-image for underlines */
-  display: block; /* Keeps it as a block element if needed */
+  background-size: 0 0 !important; 
+  display: block; 
 }
 .cart-item__product{
   gap:10px !important;
@@ -107,13 +95,25 @@
   max-width: 100px !important;
 }
 
+.cart-item__title {
+  line-height: 1.1 !important; 
+  display: block;
+  margin-bottom: 2px;
+}
+
 .cart-item__details .cart-item__title {
-  font-size: 14px !important;
+  text-transform: none !important;
   font-family: 'Titillium Web', sans-serif !important;
   font-weight: 700 !important;
   line-height: 130% !important;
+  font-size: 1.4rem;
 }
 
+.cart-item__prices .price{
+  font-size: 1.4rem !important;
+  font-weight: 700 !important;
+  color:#D06834 !important;
+}
 
 /* Recommendations Styles */
 .cart-drawer-products-recommendation{
