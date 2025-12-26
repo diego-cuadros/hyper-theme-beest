@@ -18,7 +18,7 @@
       unless promo_images == ',,,,'
         assign has_promo = true
       endunless
-    when 'product_list'
+    when 'product_list', '🔥custom_product_list'
       assign collections = block.settings.collections
       assign product_list = block.settings.product_list
       assign show_menu_column_divider = block.settings.show_menu_column_divider
