@@ -57,7 +57,8 @@
       ],
       "custom_css": [
         ".dc_wrapper {width: 528px;}",
-        "@media (min-width: 1440px) {.dc_wrapper {padding-left: calc((100vw - 1440px) / 2); padding-right: 0; width:50%; }}"
+        "@media (min-width: 1440px) {.dc_wrapper {padding-left: calc((100vw - 1440px) / 2); padding-right: 0; width: 50%; }}",
+        "@media only screen and (max-width: 768px) {.image-with-text-ovelay__content-wrapper > div {max-width: 100%; } .rich-text__heading {font-size: 32px; } .image-with-text-ovelay__content-wrapper .btn {width: 100%; }}"
       ],
       "name": "t:sections.image-with-text-overlay.name",
       "settings": {
@@ -104,6 +105,7 @@
         "feature_4bnaNA"
       ],
       "custom_css": [
+        "@media only screen and (max-width: 768px) {.dc_brand-promise__heading {text-align: center; font-size: 32px; }}",
         ".dc_brand-promise__features {background-color: #222;}",
         ".dc_brand-promise__feature {gap: 20px;}",
         ".dc_brand-promise__icon {width: 72px; height: 72px;}",
@@ -187,7 +189,7 @@
       "custom_css": [
         ".f-column {background-color: #f9f9f9; padding: 16px 24px; border-radius: 12px;}",
         ".multicolumn-card__image {width: 100px; height: 100px;}",
-        "@media only screen and (max-width: 748px) {.f-column {display: flex; justify-content: center; align-items: center; gap: 16px; } .multicolumn-card__image {width: 64px; height: 64px; }}"
+        "@media only screen and (max-width: 768px) {.f-column {display: flex; align-items: center; gap: 16px; } .multicolumn-card__image {width: 64px; height: 64px; }}"
       ],
       "name": "t:sections.multicolumn.name",
       "settings": {
@@ -339,6 +341,11 @@
         "collapsible_item_dwRtxR",
         "collapsible_item_yymbaT"
       ],
+      "custom_css": [
+        "@media only screen and (min-width:769px){.section__heading{margin-top:40px;}}",
+        "a.rich-text--fitted,.rich-text--tight {padding-bottom: 0px !important;}",
+        ".accordion-item svg {color: #ff5413;}"
+      ],
       "name": "t:sections.collapsible-tabs.name",
       "settings": {
         "container": "fixed",
@@ -359,6 +366,7 @@
         "button_link": "",
         "button_style": "btn--primary",
         "button_icon": "none",
+        "internal_heading": "",
         "column_gap": "large",
         "row_gap": "inherit",
         "item_style": "standard",
@@ -417,6 +425,10 @@
         "collapsible_item_UeJ7Wk",
         "collapsible_item_VdGGCt"
       ],
+      "custom_css": [
+        "a.rich-text--fitted,.rich-text--tight {padding-bottom: 0px !important;}",
+        ".accordion-item svg {color: #ff5413;}"
+      ],
       "name": "t:sections.collapsible-tabs.name",
       "settings": {
         "container": "fixed",
@@ -437,6 +449,7 @@
         "button_link": "",
         "button_style": "btn--primary",
         "button_icon": "none",
+        "internal_heading": "",
         "column_gap": "large",
         "row_gap": "inherit",
         "item_style": "standard",

@@ -178,7 +178,7 @@
     "form": {
       "type": "contact-form",
       "custom_css": [
-        ".contact-form__form {margin: auto; max-width: 668px;}",
+        "@media only screen and (min-width:769px{.contact-form__form {margin: auto; max-width: 668px;} }",
         "form {margin-top: 56px; margin-bottom: 56px;}"
       ],
       "settings": {

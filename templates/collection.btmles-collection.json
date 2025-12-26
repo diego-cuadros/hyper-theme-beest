@@ -130,7 +130,9 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
-      "custom_css": [],
+      "custom_css": [
+        ".dc_custom-atc-btn-collections{height: 46px;}"
+      ],
       "settings": {
         "container": "fixed",
         "color_scheme": "scheme-1",
@@ -145,6 +147,7 @@
         "expand_filter_groups": "Availability, Price, Color, Size, Category",
         "enable_sorting": true,
         "enable_layout_switching": false,
+        "enable_static_atc_btn": true,
         "columns_mobile": "2",
         "padding_top": 28,
         "padding_bottom": 60,

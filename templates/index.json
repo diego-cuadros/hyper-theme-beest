@@ -62,7 +62,8 @@
       ],
       "custom_css": [
         ".dc_wrapper {width: 528px;}",
-        "@media (min-width: 1440px) {.dc_wrapper {padding-left: calc((100vw - 1440px) / 2); padding-right: 0; width: 50%; }}"
+        "@media (min-width: 1440px) {.dc_wrapper {padding-left: calc((100vw - 1440px) / 2); padding-right: 0; width: 50%; }}",
+        "@media only screen and (max-width: 768px) {.image-with-text-ovelay__content-wrapper > div {max-width: 100%; } .rich-text__heading {font-size: 32px; } .image-with-text-ovelay__content-wrapper .btn{width: 100%; }}"
       ],
       "name": "t:sections.image-with-text-overlay.name",
       "settings": {

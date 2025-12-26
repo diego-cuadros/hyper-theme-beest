@@ -52,6 +52,12 @@
     max-width: 450px;
   }
 
+  @media only screen and (max-width:768px){
+    .collection-desc {
+       max-width: 65%;
+    }
+  }
+
   .features-grid {
     display: grid;
     gap: 8px;
@@ -73,7 +79,7 @@
   .feature-icon {
     width: 28px;
     height: 28px;
-    align-self: flex-end;
+    align-self: center;
   }
 
   .feature-text {
