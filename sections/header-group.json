@@ -49,6 +49,29 @@
     "header": {
       "type": "header",
       "blocks": {
+        "custom_product_list_QLL6gD": {
+          "type": "custom_product_list",
+          "settings": {
+            "menu_title": "Concrete & Pavers",
+            "menu_columns": 4,
+            "show_menu_column_divider": true,
+            "enable_hl_link": true,
+            "hl_link_style": "star_twinkle",
+            "hl_link_color": "#d06835",
+            "heading": "Heading Here!",
+            "promotions_width": 38,
+            "number_of_columns": 3,
+            "product_list": [
+              "beest-multipurpose-primer",
+              "beest-ps-8700-concrete-paver-and-stone-sealer",
+              "beest-rapid-joint-bond-polymeric-sand",
+              "beest-rv-seam-tape-waterproof-tape-rv-roof-sealant"
+            ],
+            "show_product_vendor": true,
+            "show_product_type": true,
+            "show_progress_bar": true
+          }
+        },
         "product_list_KxDD84": {
           "type": "product_list",
           "settings": {
@@ -73,6 +96,7 @@
         }
       },
       "block_order": [
+        "custom_product_list_QLL6gD",
         "product_list_KxDD84"
       ],
       "custom_css": [],

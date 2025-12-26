@@ -2,6 +2,7 @@
   assign menu_columns = block.settings.menu_columns
   assign promotions_width = block.settings.promotions_width
   assign promotion_columns = block.settings.promotion_columns
+  assign custom_product_list_on = false
   case block.type
     when 'promotion_banner'
       assign promo_images = block.settings.promo_image_1 | append: ',' | append: block.settings.promo_image_2 | append: ',' | append: block.settings.promo_image_3 | append: ',' | append: block.settings.promo_image_4 | append: ',' | append: block.settings.promo_image_5
@@ -18,13 +19,15 @@
       unless promo_images == ',,,,'
         assign has_promo = true
       endunless
-    when 'product_list', '🔥custom_product_list'
+    when 'product_list', 'custom_product_list'
       assign collections = block.settings.collections
       assign product_list = block.settings.product_list
       assign show_menu_column_divider = block.settings.show_menu_column_divider
       assign heading = block.settings.heading
       assign number_of_columns = block.settings.number_of_columns
       assign promotion_columns = number_of_columns
+    when 'custom_product_list'
+      assign custom_product_list_on = true
   endcase
 -%}
 
@@ -99,7 +102,12 @@
   </summary>
   <div class="mega-menu v-scrollable">
     <div class="mega-menu__container color-{{ settings.overlay_color_scheme }}">
-      <div class="page-width mega-menu__wrapper{{ mega_menu_wrapper_class }}">
+      <div
+        class="page-width mega-menu__wrapper{{ mega_menu_wrapper_class }}"
+        {% if custom_product_list_on == true %}
+          style="border-top: 1px solid {{  block.settings.border_color }};"
+        {% endif %}
+      >
         {%- if link.links != blank -%}
           {%- if block.type != 'sidebar' -%}
             <div class="mega-menu__list">
@@ -390,6 +398,233 @@
                 </menu-product-list>
               </div>
             {%- endif -%}
+          {% when 'custom_product_list' %}
+            {% assign custom_product_list_on = true %}
+            <style>
+              .mega-menu__container {
+                border-top: 1px solid black !important;
+              }
+
+              .mega-menu__wrapper {
+                border-top: 1px solid black;
+                display: flex;
+                gap: 2rem;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                width: 100%;
+              }
+              .dc_mega-menu__promos-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 30px;
+                width: 50%;
+              }
+
+              .dc_mega-menu__promos-container h2 {
+                font-size: 20px !important;
+              }
+
+              .dc_menu-featured-products-container {
+                border-left: 1px solid black;
+                padding: 30px;
+                width: 50%;
+              }
+              .dc_menu-featured-products-container h2 {
+                font-size: 20px !important;
+              }
+              .dc_product-list-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 96px);
+                gap: 1rem;
+              }
+
+              .dc_featured_products_grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+              }
+
+              .product-card__image-wrapper {
+                border-radius: 8px;
+              }
+
+              .product-card__info a {
+                font-family: 'titillium web', sans-serif;
+                font-size: 14px;
+                line-height: 1;
+                overflow: visible;
+                --line-clamp: 0;
+                text-transform: capitalize;
+              }
+
+              /* Override the underline text effect on mouse hover*/
+              .product-card__title a.reversed-link,
+              .product-card__title a.reversed-link:hover {
+                background-image: none !important;
+                background-size: 0% 0% !important;
+                text-decoration: none !important;
+              }
+
+              .product-card__title a.reversed-link {
+                --reversed-link-gap: 0 !important;
+              }
+
+              .product-card__wrapper:hover .reversed-link {
+                background-size: 0% 0% !important;
+                background-image: none !important;
+              }
+
+              .dc_mega-menu-btn {
+                background-color: black;
+                color: white;
+                align-self: start;
+                margin-top: 20px;
+                padding: 12px 40px;
+                height: 50px;
+                width: 155px;
+              }
+
+              .dc_mega-menu-btn:hover {
+                opacity: 0.9;
+              }
+            </style>
+            {%- liquid
+              assign is_carousel = false
+              if product_list.count > number_of_columns
+                assign is_carousel = true
+              endif
+            -%}
+            {% if product_list != blank %}
+              <div class="dc_mega-menu__promos-container">
+                {%- if heading != blank -%}
+                  <div
+                    class="mega-menu__product-list--header flex items-center justify-between promotion-item--product"
+                    style="--index: 1;"
+                  >
+                    <h2 class="h6 promotion-item">{{ heading | escape }}</h2>
+                  </div>
+                {%- endif -%}
+                <div class="dc_product-list-grid">
+                  {%- for product in product_list -%}
+                    {%- render 'card-product',
+                      product: product,
+                      parent_color_scheme: settings.overlay_color_scheme,
+                      use_short_text_for_atc_button: true,
+                      show_vendor: false,
+                      show_type: false,
+                      show_price: false,
+                      enable_quick_view: false,
+                      enable_quick_add: false,
+                      quick_view_suffix: 'megamenu-desktop'
+                    -%}
+                  {% endfor %}
+                </div>
+                <button
+                  class="dc_mega-menu-btn"
+                  style="background-color:{{ block.settings.btn_color }}; color:{{ block.settings.btn_text_color }}"
+                >
+                  Shop all
+                </button>
+              </div>
+            {% endif %}
+
+            {% comment %}
+              {%- if product_list != blank -%}
+                <div class="mega-menu__promotions mega-menu__column{% if link.links == blank %} no-links{% endif %}">
+                  <menu-product-list
+                    class="block w-full"
+                    data-columns="{{ number_of_columns }}"
+                    data-calc-button-position="true"
+                  >
+                    {%- if heading != blank -%}
+                      <div
+                        class="mega-menu__product-list--header flex items-center justify-between promotion-item--product"
+                        style="--index: 1;"
+                      >
+                        <h2 class="h6 promotion-item">{{ heading | escape }}</h2>
+                      </div>
+                    {%- endif -%}
+                    <div class="relative swiper-show-nav-on-hover">
+                      {%- if is_carousel -%}
+                        <div class="swiper swiper-equal-height">
+                      {%- endif -%}
+                      <div class="{% if is_carousel %}swiper-wrapper{% else %}mega-menu__promotions-grid{% endif %}">
+                        {%- for product in product_list -%}
+                          <div
+                            class="swiper-slide promotion-item promotion-item--product"
+                            style="--index: {{ forloop.index }};"
+                          >
+                            {%- render 'card-product',
+                              product: product,
+                              parent_color_scheme: settings.overlay_color_scheme,
+                              use_short_text_for_atc_button: true,
+                              show_vendor: block.settings.show_product_vendor,
+                              show_type: block.settings.show_product_type,
+                              enable_quick_view: false,
+                              enable_quick_add: false,
+                              quick_view_suffix: 'megamenu-desktop'
+                            -%}
+                          </div>
+                        {%- endfor -%}
+                      </div>
+                      {%- if is_carousel -%}
+                        </div>
+                      {%- endif -%}
+                      {%- if is_carousel -%}
+                        <div class="swiper-controls swiper-controls--nav-floating">
+                          <button
+                            class="btn swiper-button-prev swiper-button swiper-button--drop-shadow"
+                            name="previous"
+                            aria-label="{{ 'general.slider.previous_slide' | t }}"
+                          >
+                            <span class="btn__text">{%- render 'icon-slider-prev', size: 'small' -%}</span>
+                          </button>
+                          <button
+                            class="btn swiper-button-next swiper-button swiper-button--drop-shadow"
+                            name="next"
+                            aria-label="{{ 'general.slider.next_slide' | t }}"
+                          >
+                            <span class="btn__text">{%- render 'icon-slider-next', size: 'small' -%}</span>
+                          </button>
+                        </div>
+                      {%- endif -%}
+                    </div>
+                  </menu-product-list>
+                </div>
+              {%- endif -%}
+            {% endcomment %}
+            <div
+              class="dc_menu-featured-products-container"
+              style="border-left: 1px solid {{  block.settings.border_color }};"
+            >
+              <menu-featured-products>
+                <div
+                  class="mega-menu__product-list--header flex items-center justify-between promotion-item--product"
+                  style="--index: 1;"
+                >
+                  <h2 class="h6 promotion-item mb-3">Featured Products Heading</h2>
+                </div>
+                <div class="dc_featured_products_grid">
+                  {% for i in (1..2) %}
+                    {% assign card_product_key = 'custom_featured_product_' | append: i %}
+                    <div class="dc_card-product_container">
+                      {%- render 'card-product',
+                        product: block.settings[card_product_key],
+                        parent_color_scheme: settings.overlay_color_scheme,
+                        use_short_text_for_atc_button: true,
+                        show_vendor: block.settings.show_product_vendor,
+                        show_type: block.settings.show_product_type,
+                        show_price: true,
+                        enable_quick_view: false,
+                        enable_quick_add: false,
+                        quick_view_suffix: 'megamenu-desktop'
+                      -%}
+                    </div>
+                  {% endfor %}
+                </div>
+              </menu-featured-products>
+            </div>
         {%- endcase -%}
       </div>
     </div>
