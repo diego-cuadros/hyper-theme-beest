@@ -16,13 +16,22 @@
     </div>
 
     <table class="dc_table">
+      {%- assign heading_parts = table_block.settings.custom.discount_level_table_headings | split: ',' -%}
       <thead class="dc_table-header">
         <tr>
           <th class="dc_table__th dc_table__th--left">
-            {{ table_block.settings.heading_left }}
+            {%- if heading_parts[0] -%}
+              {{ heading_parts[0] | strip }}
+            {%- else -%}
+              {{ table_block.settings.heading_left }}
+            {%- endif -%}
           </th>
           <th class="dc_table__th dc_table__th--right">
-            {{ table_block.settings.heading_right }}
+            {%- if heading_parts[1] -%}
+              {{ heading_parts[1] | strip }}
+            {%- else -%}
+              {{ table_block.settings.heading_right }}
+            {%- endif -%}
           </th>
         </tr>
       </thead>
