@@ -35,7 +35,7 @@
             "block_width": 15,
             "heading": "About",
             "heading_size": "p",
-            "color_menu_heading": "#ADADAD",
+            "color_menu_heading": "#676767",
             "menu": "about-menu",
             "open_default": true,
             "show_divider": false
@@ -47,7 +47,7 @@
             "block_width": 15,
             "heading": "Contact",
             "heading_size": "p",
-            "color_menu_heading": "#ADADAD",
+            "color_menu_heading": "#676767",
             "menu": "contact",
             "open_default": true,
             "show_divider": false
@@ -60,13 +60,14 @@
         "menu_4eCrBB"
       ],
       "custom_css": [
-        "@media only screen and (max-width: 748px) {.accordion-details__summary {border-bottom: 0px; } .accordion-details__summary span {display: none; }}"
+        "@media only screen and (max-width: 748px) {.accordion-details__summary {border-bottom: 0px; } .accordion-details__summary span {display: none; }}",
+        ".social__item a {width: 48px !important; height: 48px !important;}"
       ],
       "settings": {
         "container": "fixed",
-        "color_scheme": "scheme-info",
+        "color_scheme": "scheme-6",
         "enable_logo_on_footer": true,
-        "color_for_link_at_bottom": "#ADADAD",
+        "color_for_link_at_bottom": "#676767",
         "enable_follow_on_shop": false,
         "show_social": false,
         "social_button_style": "btn--secondary",

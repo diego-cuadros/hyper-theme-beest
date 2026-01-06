@@ -23,7 +23,7 @@
   }
 
   .dc_brand-promise__logo {
-    width: 72px;
+    max-width: 241px;
   }
 
   .dc_brand-promise__heading {

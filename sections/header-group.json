@@ -69,7 +69,12 @@
             ],
             "show_product_vendor": true,
             "show_product_type": true,
-            "show_progress_bar": true
+            "show_progress_bar": true,
+            "custom_featured_product_1": "",
+            "custom_featured_product_2": "",
+            "border_color": "#f5f5f5",
+            "btn_color": "#d06834",
+            "btn_text_color": "#ffffff"
           }
         },
         "product_list_KxDD84": {
@@ -99,7 +104,10 @@
         "custom_product_list_QLL6gD",
         "product_list_KxDD84"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".header__bottom:after {background-color: #f5f5f5 !important;}",
+        ".header__bottom .header__menu span{font-weight: 500;}"
+      ],
       "settings": {
         "container": "fixed",
         "color_scheme": "scheme-1",
