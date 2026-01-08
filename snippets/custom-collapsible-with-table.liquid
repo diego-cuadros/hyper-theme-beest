@@ -73,7 +73,7 @@
                     {% assign row_content = block.settings[row_key] %}
 
                     {% if row_content != blank %}
-                      {% assign row_parts = row_content | split: '-' %}
+                      {% assign row_parts = row_content | split: '_' %}
                       <div class="dc_inner-table_cell dc_inner-table_cell-left">
                         {{ row_parts[0] | strip }}
                       </div>

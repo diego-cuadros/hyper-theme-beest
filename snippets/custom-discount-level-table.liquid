@@ -16,7 +16,8 @@
     </div>
 
     <table class="dc_table">
-      {%- assign heading_parts = table_block.settings.custom.discount_level_table_headings | split: ',' -%}
+      {%- assign meta_value = product.metafields.custom.discount_level_table_headings.value -%}
+      {%- assign heading_parts = meta_value | split: '_' -%}
       <thead class="dc_table-header">
         <tr>
           <th class="dc_table__th dc_table__th--left">

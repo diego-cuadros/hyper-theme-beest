@@ -41,7 +41,7 @@
         "text_VLLzk3": {
           "type": "text",
           "settings": {
-            "text": "Transform your patio with BEEST PS-8600, a professional-grade solution that seals, protects and revitalizes surfaces, leaving them with a glossy finish.",
+            "text": "ADJUST CODE HERE Transform your patio with BEEST PS-8600, a professional-grade solution that seals, protects and revitalizes surfaces, leaving them with a glossy finish.",
             "text_style": "body",
             "show_above_product_media_mobile": true
           }
@@ -114,8 +114,8 @@
           "settings": {
             "title": "Limited time only – more 20% off EVERYTHING",
             "subtitle": "Add more item to cart to get more discount!",
-            "heading_left": "Discount level",
-            "heading_right": "Total Gallons",
+            "heading_left": "Discount",
+            "heading_right": "Amount",
             "left_column_row_1": "20% OFF",
             "right_column_row_1": "1",
             "left_column_row_2": "25% OFF",
@@ -154,16 +154,16 @@
             "special_feature_text_color": "",
             "icon": "shopify://shop_images/Vector.png",
             "special_feature_text_heading": "What Makes it Special",
-            "special_feature_text_1": "Mix 32 oz of this concentrate with 32 oz of water.",
-            "special_feature_text_2": "1/3 of this concentrate mixed covers 50 Sq. Ft.",
-            "special_feature_text_3": "Apply 3 coats for the best hold (fully saturated mulch).",
-            "special_feature_text_4": "The entire bottle covers 50 Sq. Ft. when applied in three coats.",
-            "special_feature_text_5": "",
-            "special_feature_text_6": "",
-            "special_feature_text_7": "",
-            "special_feature_text_8": "",
-            "special_feature_text_9": "",
-            "special_feature_text_10": "",
+            "special_feature_text_1": "{{ product.metafields.custom.what_makes_it_special_features.value }}",
+            "special_feature_text_2": "{{ product.metafields.custom.what_makes_it_special_features.value }}",
+            "special_feature_text_3": "{{ product.metafields.custom.what_makes_it_special_features.value }}",
+            "special_feature_text_4": "{{ product.metafields.custom.what_makes_it_special_features.value }}",
+            "special_feature_text_5": "{{ product.metafields.custom.what_makes_it_special_features.value }}",
+            "special_feature_text_6": "{{ product.metafields.custom.what_makes_it_special_features.value }}",
+            "special_feature_text_7": "{{ product.metafields.custom.what_makes_it_special_features.value }}",
+            "special_feature_text_8": "{{ product.metafields.custom.what_makes_it_special_features.value }}",
+            "special_feature_text_9": "{{ product.metafields.custom.what_makes_it_special_features.value }}",
+            "special_feature_text_10": "{{ product.metafields.custom.what_makes_it_special_features.value }}",
             "show_below_product_media": true
           }
         },
@@ -178,9 +178,9 @@
             "info_title_1": "Specifications",
             "info_paragraph_1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
             "use_content_table_1": true,
-            "table_1_row_content_1": "Brand-Petramax",
-            "table_1_row_content_2": "Coverage-50 Sq.Ft.",
-            "table_1_row_content_3": "Safe For Pets & Kids-Yes",
+            "table_1_row_content_1": "{{ product.metafields.custom.collapsible_with_table1_row_1.value }}",
+            "table_1_row_content_2": "Coverage_50 Sq.Ft.",
+            "table_1_row_content_3": "Safe For Pets & Kids_Yes",
             "table_1_row_content_4": "",
             "table_1_row_content_5": "",
             "info_title_2": "Product Details",
@@ -301,49 +301,49 @@
         "product_YhYBYa": {
           "type": "product",
           "settings": {
-            "product": "beest-cs-9500-concrete-paver-stone-sealer"
+            "product": "{{ product.metafields.custom.compatible_accesory_1.value }}"
           }
         },
         "product_9BQVJy": {
           "type": "product",
           "settings": {
-            "product": "beest-cs-9500-concrete-paver-stone-sealer-ready-to-use-1-gallon"
+            "product": "{{ product.metafields.custom.compatible_accesory_2.value }}"
           }
         },
         "product_dLFHkp": {
           "type": "product",
           "settings": {
-            "product": "beest-closed-cell-spray-foam-insulation-for-wall-attic-240-board-ft-sq-ft-super-adhesive-for-perfect-heat-sound-proofing-one-component-polyurethane-foam-insulation-can-12-pack-27-3oz"
+            "product": "{{ product.metafields.custom.compatible_accesory_3.value }}"
           }
         },
         "product_pM3H9N": {
           "type": "product",
           "settings": {
-            "product": "beest-multipurpose-primer"
+            "product": "{{ product.metafields.custom.compatible_accesory_4.value }}"
           }
         },
         "product_qeGbtx": {
           "type": "product",
           "settings": {
-            "product": "beest-ps-8700-concrete-paver-and-stone-sealer"
+            "product": "{{ product.metafields.custom.compatible_accesory_5.value }}"
           }
         },
         "product_wEeTm6": {
           "type": "product",
           "settings": {
-            "product": "beest-rv-roof-cleaner-32oz"
+            "product": "{{ product.metafields.custom.compatible_accesory_6.value }}"
           }
         },
         "product_TwUP9m": {
           "type": "product",
           "settings": {
-            "product": "beest-rv-seam-tape-waterproof-tape-rv-roof-sealant"
+            "product": "{{ product.metafields.custom.compatible_accesory_7.value }}"
           }
         },
         "product_xqPQRH": {
           "type": "product",
           "settings": {
-            "product": "beest-seam-roller"
+            "product": "{{ product.metafields.custom.compatible_accesory_8.value }}"
           }
         }
       },
@@ -644,29 +644,36 @@
             "swipe_on_mobile": true
           }
         },
-        "tab_FcCxBQ": {
-          "type": "tab",
+        "list_of_images_7DDnDM": {
+          "type": "list_of_images",
           "settings": {
-            "navigation_title": "4 Gallon with Cart",
-            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
-            "custom_liquid": "",
-            "page": ""
+            "navigation_title": "",
+            "label_bg_color": "#f5f5f5",
+            "image_1": "shopify://shop_images/img-4.png",
+            "label_for_image_1": "LABEL",
+            "image_2": "shopify://shop_images/img-4.png",
+            "label_for_image_2": "LABEL",
+            "image_3": "shopify://shop_images/img-4.png",
+            "label_for_image_3": "LABEL",
+            "swipe_on_mobile": true
           }
         },
-        "tab_BMmUNt": {
-          "type": "tab",
+        "list_of_images_TmpPen": {
+          "type": "list_of_images",
           "settings": {
-            "navigation_title": "4 Gallon - Prokit",
-            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
-            "custom_liquid": "",
-            "page": ""
+            "navigation_title": "",
+            "label_bg_color": "#f5f5f5",
+            "label_for_image_1": "",
+            "label_for_image_2": "",
+            "label_for_image_3": "",
+            "swipe_on_mobile": true
           }
         }
       },
       "block_order": [
         "list_of_images_XJMfRn",
-        "tab_FcCxBQ",
-        "tab_BMmUNt"
+        "list_of_images_7DDnDM",
+        "list_of_images_TmpPen"
       ],
       "name": "t:sections.tabs-content.name",
       "settings": {
