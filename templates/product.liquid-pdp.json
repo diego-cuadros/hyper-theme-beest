@@ -41,7 +41,8 @@
         "text_VLLzk3": {
           "type": "text",
           "settings": {
-            "text": "ADJUST CODE HERE Transform your patio with BEEST PS-8600, a professional-grade solution that seals, protects and revitalizes surfaces, leaving them with a glossy finish.",
+            "text": "",
+            "richtext_field": "<p>{{ product.metafields.custom.short_description.value }}</p>",
             "text_style": "body",
             "show_above_product_media_mobile": true
           }
@@ -112,16 +113,16 @@
         "discount_level_table_Gtj3pT": {
           "type": "discount_level_table",
           "settings": {
-            "title": "Limited time only – more 20% off EVERYTHING",
-            "subtitle": "Add more item to cart to get more discount!",
-            "heading_left": "Discount",
-            "heading_right": "Amount",
-            "left_column_row_1": "20% OFF",
-            "right_column_row_1": "1",
-            "left_column_row_2": "25% OFF",
-            "right_column_row_2": "3-5",
-            "left_column_row_3": "30% OFF",
-            "right_column_row_3": "6+",
+            "title": "{{ product.metafields.custom.discount_level_table_title.value }}",
+            "subtitle": "{{ product.metafields.custom.discount_level_table_subtitle.value }}",
+            "heading_left": "{{ product.metafields.custom.discount_level_table_headings.value }}",
+            "heading_right": "{{ product.metafields.custom.discount_level_table_headings.value }}",
+            "left_column_row_1": "{{ product.metafields.custom.discount_level_table_percentage_off.value }}",
+            "right_column_row_1": "{{ product.metafields.custom.discount_level_table_amount.value }}",
+            "left_column_row_2": "{{ product.metafields.custom.discount_level_table_percentage_off.value }}",
+            "right_column_row_2": "{{ product.metafields.custom.discount_level_table_amount.value }}",
+            "left_column_row_3": "{{ product.metafields.custom.discount_level_table_percentage_off.value }}",
+            "right_column_row_3": "{{ product.metafields.custom.discount_level_table_amount.value }}",
             "text_before_timer": "Sale ends soon",
             "timer_start": "01:24:08"
           }
@@ -153,7 +154,7 @@
             "special_feature_border_color": "#ccd2d6",
             "special_feature_text_color": "",
             "icon": "shopify://shop_images/Vector.png",
-            "special_feature_text_heading": "What Makes it Special",
+            "special_feature_text_heading": "{{ product.metafields.custom.what_makes_it_special_title.value }}",
             "special_feature_text_1": "{{ product.metafields.custom.what_makes_it_special_features.value }}",
             "special_feature_text_2": "{{ product.metafields.custom.what_makes_it_special_features.value }}",
             "special_feature_text_3": "{{ product.metafields.custom.what_makes_it_special_features.value }}",
@@ -175,8 +176,8 @@
             "text_color": "#222222",
             "text_content_color": "#222222",
             "header_text": "",
-            "info_title_1": "Specifications",
-            "info_paragraph_1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            "info_title_1": "{{ product.metafields.custom.collapsible_with_table_title_1.value }}",
+            "info_paragraph_1": "{{ product.metafields.custom.collapsible_with_table1_row_1.value }}",
             "use_content_table_1": true,
             "table_1_row_content_1": "{{ product.metafields.custom.collapsible_with_table1_row_1.value }}",
             "table_1_row_content_2": "Coverage_50 Sq.Ft.",
