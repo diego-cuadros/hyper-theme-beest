@@ -47,9 +47,15 @@
         </div>
       {%- when 'text' -%}
         <div class="{{ block_classes }} rte dc_hide_on_desktop" {{ block.shopify_attributes }}>
-          <p class="product__text inline-richtext m-0{% if block.settings.text_style == 'uppercase' %} text-upper{% elsif block.settings.text_style == 'subtitle' %} text-upper text-subtext{% endif %}">
-            {{- block.settings.text -}}
-          </p>
+          {% if block.settings.richtext_field != blank %}
+            <div class="rte text-subtext">
+              {{ block.settings.richtext_field }}
+            </div>
+          {% else %}
+            <p class="product__text inline-richtext m-0{% if block.settings.text_style == 'uppercase' %} text-upper{% elsif block.settings.text_style == 'subtitle' %} text-upper text-subtext{% endif %}">
+              {{- block.settings.text -}}
+            </p>
+          {% endif %}
         </div>
     {%- endcase -%}
   {%- endfor -%}
