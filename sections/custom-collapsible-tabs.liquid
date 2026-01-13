@@ -111,8 +111,23 @@
               {%- for block in section.blocks -%}
                 {%- case block.type -%}
                   {%- when 'collapsible_item' -%}
+                    {% liquid
+                      assign is_info_in_metafield = false
+                      assign metafield_name = 'faq_question_' | append: forloop.index
+                      assign complete_metafield = product.metafields.custom[metafield_name]
+
+                      if complete_metafield != blank
+                        assign is_info_in_metafield = true
+                      else
+                        assign is_info_in_metafield = false
+                      endif
+                    %}
+
                     <div
                       class="accordion-item accordion-{{ section.settings.item_style }}{% if section.settings.item_style == 'card' %} blocks-radius{% endif %}"
+                      {% unless is_info_in_metafield %}
+                        style="display:none;"
+                      {% endunless %}
                       {{ block.shopify_attributes }}
                     >
                       <details

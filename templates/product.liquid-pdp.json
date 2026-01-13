@@ -753,10 +753,10 @@
         "divider_width": "fixed"
       }
     },
-    "collapsible_tabs_iwqmBM": {
-      "type": "collapsible-tabs",
+    "custom_collapsible_tabs_BiVTdN": {
+      "type": "custom-collapsible-tabs",
       "blocks": {
-        "collapsible_item_rEaqhq": {
+        "collapsible_item_gctjH3": {
           "type": "collapsible_item",
           "settings": {
             "icon": "none",
@@ -768,7 +768,7 @@
             "use_subtext_color": false
           }
         },
-        "collapsible_item_W8eWPE": {
+        "collapsible_item_k9tBJz": {
           "type": "collapsible_item",
           "settings": {
             "icon": "none",
@@ -780,31 +780,31 @@
             "use_subtext_color": false
           }
         },
-        "collapsible_item_xVYgJh": {
+        "collapsible_item_6X8Mrr": {
           "type": "collapsible_item",
           "settings": {
             "icon": "none",
             "heading": "{{ product.metafields.custom.faq_question_3.value }}",
-            "content": "<p></p>{{ product.metafields.custom.faq_answer_3 | metafield_tag }}",
+            "content": "{{ product.metafields.custom.faq_answer_3 | metafield_tag }}",
             "custom_liquid": "",
             "page": "",
             "open": false,
             "use_subtext_color": false
           }
         },
-        "collapsible_item_i9hkhM": {
+        "collapsible_item_nrjxLX": {
           "type": "collapsible_item",
           "settings": {
             "icon": "none",
             "heading": "{{ product.metafields.custom.faq_question_4.value }}",
-            "content": "<p></p>{{ product.metafields.custom.faq_answer_4 | metafield_tag }}",
+            "content": "{{ product.metafields.custom.faq_answer_4 | metafield_tag }}",
             "custom_liquid": "",
             "page": "",
             "open": false,
             "use_subtext_color": false
           }
         },
-        "collapsible_item_7PQnye": {
+        "collapsible_item_aRHJUR": {
           "type": "collapsible_item",
           "settings": {
             "icon": "none",
@@ -816,19 +816,19 @@
             "use_subtext_color": false
           }
         },
-        "collapsible_item_VEFgTt": {
+        "collapsible_item_tEYGYi": {
           "type": "collapsible_item",
           "settings": {
             "icon": "none",
             "heading": "{{ product.metafields.custom.faq_question_6.value }}",
-            "content": "<p></p>{{ product.metafields.custom.faq_answer_6 | metafield_tag }}",
+            "content": "{{ product.metafields.custom.faq_answer_6 | metafield_tag }}",
             "custom_liquid": "",
             "page": "",
             "open": false,
             "use_subtext_color": false
           }
         },
-        "collapsible_item_RUfgnQ": {
+        "collapsible_item_GFbpGi": {
           "type": "collapsible_item",
           "settings": {
             "icon": "none",
@@ -840,7 +840,7 @@
             "use_subtext_color": false
           }
         },
-        "collapsible_item_dbUrk6": {
+        "collapsible_item_yqPqdE": {
           "type": "collapsible_item",
           "settings": {
             "icon": "none",
@@ -854,19 +854,16 @@
         }
       },
       "block_order": [
-        "collapsible_item_rEaqhq",
-        "collapsible_item_W8eWPE",
-        "collapsible_item_xVYgJh",
-        "collapsible_item_i9hkhM",
-        "collapsible_item_7PQnye",
-        "collapsible_item_VEFgTt",
-        "collapsible_item_RUfgnQ",
-        "collapsible_item_dbUrk6"
+        "collapsible_item_gctjH3",
+        "collapsible_item_k9tBJz",
+        "collapsible_item_6X8Mrr",
+        "collapsible_item_nrjxLX",
+        "collapsible_item_aRHJUR",
+        "collapsible_item_tEYGYi",
+        "collapsible_item_GFbpGi",
+        "collapsible_item_yqPqdE"
       ],
-      "custom_css": [
-        ".section__wrapper {max-width: 960px; margin: auto;}"
-      ],
-      "name": "t:sections.collapsible-tabs.name",
+      "name": "🔥Custom Collapsible Tabs",
       "settings": {
         "container": "fixed",
         "color_scheme": "scheme-10",
@@ -961,7 +958,7 @@
     "custom_product_comparison_ThMX3w",
     "custom_tabs_content_Kgafe9",
     "tabs_content_VeqDj6",
-    "collapsible_tabs_iwqmBM",
+    "custom_collapsible_tabs_BiVTdN",
     "custom_brand_promise_DpUeMH"
   ]
 }
