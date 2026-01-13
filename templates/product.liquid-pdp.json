@@ -178,7 +178,8 @@
             "header_text": "",
             "info_title_1": "{{ product.metafields.custom.collapsible_with_table_title_1.value }}",
             "info_paragraph_1": "{{ product.metafields.custom.collapsible_with_table_content_1.value }}",
-            "use_content_table_1": true,
+            "use_content_table_from_metafields_1": true,
+            "use_content_table_1": false,
             "table_1_row_content_1": "{{ product.metafields.custom.collapsible_with_table1_row_1.value }}",
             "table_1_row_content_2": "{{ product.metafields.custom.collapsible_with_table1_row_2.value }}",
             "table_1_row_content_3": "{{ product.metafields.custom.collapsible_with_table1_row_3.value }}",
@@ -186,7 +187,8 @@
             "table_1_row_content_5": "",
             "info_title_2": "{{ product.metafields.custom.collapsible_with_table2_title_2.value }}",
             "info_paragraph_2": "{{ product.metafields.custom.collapsible_with_table2_content_2.value }}",
-            "use_content_table_2": true,
+            "use_content_table_from_metafields_2": true,
+            "use_content_table_2": false,
             "table_2_row_content_1": "{{ product.metafields.custom.collapsible_with_table2_row_1.value }}",
             "table_2_row_content_2": "{{ product.metafields.custom.collapsible_with_table2_row_2.value }}",
             "table_2_row_content_3": "{{ product.metafields.custom.collapsible_with_table2_row_3.value }}",
@@ -194,7 +196,8 @@
             "table_2_row_content_5": "",
             "info_title_3": "{{ product.metafields.custom.collapsible_with_table3_title_3.value }}",
             "info_paragraph_3": "{{ product.metafields.custom.collapsible_with_table3_content_3.value }}",
-            "use_content_table_3": true,
+            "use_content_table_from_metafields_3": true,
+            "use_content_table_3": false,
             "table_3_row_content_1": "{{ product.metafields.custom.collapsible_with_table3_row_1.value }}",
             "table_3_row_content_2": "{{ product.metafields.custom.collapsible_with_table3_row_2.value }}",
             "table_3_row_content_3": "{{ product.metafields.custom.collapsible_with_table3_row_3.value }}",
@@ -247,33 +250,33 @@
         "card_9jmLNp": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/Frame_48102345.png",
-            "title": "No More Messy Mulch",
-            "text": "Reduces washouts from heavy rain and even helps stop leaf blowers from blowing your mulch around."
+            "image": "{{ product.metafields.custom.pdp_featured_card_image_1.value }}",
+            "title": "{{ product.metafields.custom.pdp_featured_card_title_1.value }}",
+            "description": "{{ product.metafields.custom.pdp_featured_card_description_1.value }}"
           }
         },
         "card_4jQNdk": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/Frame_48102345_1.png",
-            "title": "Non-Toxic, Safe for Pets",
-            "text": "Lockdown sticky MULCH is a non-toxic formula that is water permeable, safe for pets, and not harmful to plants."
+            "image": "{{ product.metafields.custom.pdp_featured_card_image_2.value }}",
+            "title": "{{ product.metafields.custom.pdp_featured_card_title_2.value }}",
+            "description": "{{ product.metafields.custom.pdp_featured_card_description_2.value }}"
           }
         },
         "card_Cnx4eD": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/Frame_48102345_2.png",
-            "title": "No More Sweeping",
-            "text": "Make your life easier and stop the constant sweeping and landscape"
+            "image": "{{ product.metafields.custom.pdp_featured_card_image_3.value }}",
+            "title": "{{ product.metafields.custom.pdp_featured_card_title_3.value }}",
+            "description": "{{ product.metafields.custom.pdp_featured_card_description_3.value }}"
           }
         },
         "card_PCrTNE": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/Frame_48102345_3.png",
-            "title": "American-Ownder. Backed for Life.",
-            "text": "Since 2019, we’ve built reliable sprayers with 24/7 U.S. support."
+            "image": "{{ product.metafields.custom.pdp_featured_card_image_4.value }}",
+            "title": "{{ product.metafields.custom.pdp_featured_card_title_4.value }}",
+            "description": "{{ product.metafields.custom.pdp_featured_card_description_4.value }}"
           }
         }
       },
@@ -289,7 +292,7 @@
         "text-color": "#ffffff",
         "box-bg-color": "#2d2d2d",
         "box-text-color": "#ffffff",
-        "heading": "No More Sweeping",
+        "heading": "{{ product.metafields.custom.pdp_image_text_title.value }}",
         "padding_top": 64,
         "padding_bottom": 64,
         "mobile_padding_top": 32,
@@ -363,7 +366,7 @@
         "container": "fixed",
         "color_scheme": "scheme-14",
         "card_background_color": "#2d2d2d",
-        "title": "Compatible Accessories",
+        "title": "{{ product.metafields.custom.compatible_accesories_title.value }}",
         "button_background_color": "#ff5413",
         "button_label_color": "#ffffff",
         "padding_top": 50,
@@ -380,7 +383,7 @@
             "desktop_image_position": "right",
             "image_width": 50,
             "alignment": "center",
-            "image": "shopify://shop_images/Frame_48102400.jpg",
+            "image": "{{ product.metafields.custom.tabs_with_image_image.value }}",
             "image_ratio": "adapt",
             "image_overlay_opacity": 0,
             "content_position": "top-center",
@@ -409,8 +412,8 @@
           "type": "collapsible_item",
           "settings": {
             "icon": "none",
-            "heading": "Spray Longer. Work Smarter",
-            "content": "<p>No more pumping—the HD4000 battery-powered sprayer delivers continuous spraying with 40–90 PSI adjustable pressure, perfect for any job.</p>",
+            "heading": "{{ product.metafields.custom.tabs_with_image_question_1.value }}",
+            "content": "{{ product.metafields.custom.tabs_with_image_answer_1 | metafield_tag }}",
             "custom_liquid": "",
             "page": "",
             "open": false,
@@ -421,8 +424,8 @@
           "type": "collapsible_item",
           "settings": {
             "icon": "none",
-            "heading": "Built for Comfort & Control",
-            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
+            "heading": "{{ product.metafields.custom.tabs_with_image_question_1.value }}",
+            "content": "{{ product.metafields.custom.tabs_with_image_answer_2 | metafield_tag }}",
             "custom_liquid": "",
             "page": "",
             "open": false,
@@ -433,8 +436,8 @@
           "type": "collapsible_item",
           "settings": {
             "icon": "none",
-            "heading": "American-Owned. Backed for Life.",
-            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
+            "heading": "{{ product.metafields.custom.tabs_with_image_question_3.value }}",
+            "content": "{{ product.metafields.custom.tabs_with_image_answer_3 | metafield_tag }}",
             "custom_liquid": "",
             "page": "",
             "open": false,
@@ -445,8 +448,8 @@
           "type": "collapsible_item",
           "settings": {
             "icon": "none",
-            "heading": "Lorem ipsum dolor sit amet",
-            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
+            "heading": "{{ product.metafields.custom.tabs_with_image_question_4.value }}",
+            "content": "<p>{{ product.metafields.custom.tabs_with_image_answer_4 | metafield_tag }}</p>",
             "custom_liquid": "",
             "page": "",
             "open": false,
@@ -489,7 +492,7 @@
         "button_link": "",
         "button_style": "btn--primary",
         "button_icon": "none",
-        "internal_heading": "Lorem ipsum dolor sit .",
+        "internal_heading": "{{ product.metafields.custom.tabs_with_image_title.value }}",
         "column_gap": "large",
         "row_gap": "inherit",
         "item_style": "standard",
@@ -520,7 +523,7 @@
           "settings": {
             "row_label": "Price",
             "product_1": "$189.99",
-            "product_2": "$299.99"
+            "product_2": "$500"
           }
         },
         "comparison_row_pnTKWh": {
@@ -618,71 +621,73 @@
       ],
       "name": "🔥Product Comparison",
       "settings": {
-        "heading": "Why Use Petramax Mulch Glue Max",
+        "use_metafields": true,
+        "heading": "{{ section.settings.product_1.metafields.custom.comparison_chart_title.value }}",
         "product_1": "beest-cs-9500-concrete-paver-stone-sealer",
         "product_1_name": "Petramax",
-        "product_1_reviews": "3,940",
         "product_2": "",
         "product_2_image": "shopify://shop_images/Mulch_Glue_Max_main_image_1Gal_2.png",
-        "product_2_name": "Others",
-        "product_2_reviews": "897"
+        "product_2_name": "Others"
       }
     },
-    "tabs_content_ic83Jk": {
-      "type": "tabs-content",
+    "custom_tabs_content_Kgafe9": {
+      "type": "custom-tabs-content",
       "blocks": {
-        "list_of_images_XJMfRn": {
+        "list_of_images_AFndce": {
           "type": "list_of_images",
           "settings": {
-            "navigation_title": "4 Gallon",
+            "navigation_title": "{{ product.metafields.custom.whats_included_tab1_images_1_title.value }}",
             "label_bg_color": "#f5f5f5",
-            "image_1": "shopify://shop_images/tank.webp",
-            "label_for_image_1": "HD 4000",
-            "image_2": "shopify://shop_images/New_Project.webp",
-            "label_for_image_2": "Sprayer Stick",
-            "image_3": "shopify://shop_images/New_Project_1.webp",
-            "label_for_image_3": "Nozzle",
+            "image_1": "{{ product.metafields.custom.whats_included_tab1_image_1.value }}",
+            "label_for_image_1": "{{ product.metafields.custom.whats_included_tab1_labels_1.value }}",
+            "image_2": "{{ product.metafields.custom.whats_included_tab1_image_2.value }}",
+            "label_for_image_2": "{{ product.metafields.custom.whats_included_tab1_labels_1.value }}",
+            "image_3": "{{ product.metafields.custom.whats_included_tab1_image_3.value }}",
+            "label_for_image_3": "{{ product.metafields.custom.whats_included_tab1_labels_1.value }}",
             "swipe_on_mobile": true
           }
         },
-        "list_of_images_7DDnDM": {
+        "list_of_images_CdQNyF": {
           "type": "list_of_images",
           "settings": {
-            "navigation_title": "",
+            "navigation_title": "{{ product.metafields.custom.whats_included_tab2_images_1_title.value }}",
             "label_bg_color": "#f5f5f5",
-            "image_1": "shopify://shop_images/img-4.png",
-            "label_for_image_1": "LABEL",
-            "image_2": "shopify://shop_images/img-4.png",
-            "label_for_image_2": "LABEL",
-            "image_3": "shopify://shop_images/img-4.png",
-            "label_for_image_3": "LABEL",
+            "image_1": "{{ product.metafields.custom.whats_included_tab2_image_1.value }}",
+            "label_for_image_1": "{{ product.metafields.custom.whats_included_tab2_labels_1.value }}",
+            "image_2": "{{ product.metafields.custom.whats_included_tab2_image_2.value }}",
+            "label_for_image_2": "{{ product.metafields.custom.whats_included_tab2_labels_1.value }}",
+            "image_3": "{{ product.metafields.custom.whats_included_tab2_image_3.value }}",
+            "label_for_image_3": "{{ product.metafields.custom.whats_included_tab2_labels_1.value }}",
             "swipe_on_mobile": true
           }
         },
-        "list_of_images_TmpPen": {
+        "list_of_images_MB8Aea": {
           "type": "list_of_images",
           "settings": {
-            "navigation_title": "",
+            "navigation_title": "{{ product.metafields.custom.whats_included_tab3_images_1_title.value }}",
             "label_bg_color": "#f5f5f5",
-            "label_for_image_1": "",
-            "label_for_image_2": "",
-            "label_for_image_3": "",
+            "image_1": "{{ product.metafields.custom.whats_included_tab1_image_1.value }}",
+            "label_for_image_1": "{{ product.metafields.custom.whats_included_tab3_labels_1.value }}",
+            "image_2": "{{ product.metafields.custom.whats_included_tab1_image_2.value }}",
+            "label_for_image_2": "{{ product.metafields.custom.whats_included_tab3_labels_1.value }}",
+            "image_3": "{{ product.metafields.custom.whats_included_tab1_image_3.value }}",
+            "label_for_image_3": "{{ product.metafields.custom.whats_included_tab3_labels_1.value }}",
             "swipe_on_mobile": true
           }
         }
       },
       "block_order": [
-        "list_of_images_XJMfRn",
-        "list_of_images_7DDnDM",
-        "list_of_images_TmpPen"
+        "list_of_images_AFndce",
+        "list_of_images_CdQNyF",
+        "list_of_images_MB8Aea"
       ],
-      "name": "t:sections.tabs-content.name",
+      "name": "🔥Custom tabs content",
       "settings": {
         "container": "fixed",
         "color_scheme": "",
         "navigation_style": "headings",
         "navigation_alignment": "center",
-        "section_heading": "What's Included",
+        "section_heading": "{{ product.metafields.custom.whats_included_heading.value }}",
         "padding_top": 50,
         "padding_bottom": 50,
         "show_section_divider": false,
@@ -755,8 +760,8 @@
           "type": "collapsible_item",
           "settings": {
             "icon": "none",
-            "heading": "How do I contact you?",
-            "content": "<p>Our customer success team can be reached at 1-800-613-6889; 7 days a week.</p><p>Monday-Friday: 8 AM-12 MN ESTSaturday & Sunday: 9 AM-5 PM EST, or reach out to us via email at support@petratools.com</p><p>You agree to receive follow-up text messages and calls by calling or texting this number. If you no longer wish to receive text messages or calls, you may opt-out at any time by replying \"STOP\"</p>",
+            "heading": "{{ product.metafields.custom.faq_question_1.value }}",
+            "content": "{{ product.metafields.custom.faq_answer_1 | metafield_tag }}",
             "custom_liquid": "",
             "page": "",
             "open": false,
@@ -767,8 +772,8 @@
           "type": "collapsible_item",
           "settings": {
             "icon": "none",
-            "heading": "How long does it take to deliver?",
-            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
+            "heading": "{{ product.metafields.custom.faq_question_2.value }}",
+            "content": "{{ product.metafields.custom.faq_answer_2 | metafield_tag }}",
             "custom_liquid": "",
             "page": "",
             "open": false,
@@ -779,8 +784,68 @@
           "type": "collapsible_item",
           "settings": {
             "icon": "none",
-            "heading": "Where are you located?",
-            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
+            "heading": "{{ product.metafields.custom.faq_question_3.value }}",
+            "content": "<p></p>{{ product.metafields.custom.faq_answer_3 | metafield_tag }}",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_i9hkhM": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "{{ product.metafields.custom.faq_question_4.value }}",
+            "content": "<p></p>{{ product.metafields.custom.faq_answer_4 | metafield_tag }}",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_7PQnye": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "{{ product.metafields.custom.faq_question_5.value }}",
+            "content": "{{ product.metafields.custom.faq_answer_5 | metafield_tag }}",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_VEFgTt": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "{{ product.metafields.custom.faq_question_6.value }}",
+            "content": "<p></p>{{ product.metafields.custom.faq_answer_6 | metafield_tag }}",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_RUfgnQ": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "{{ product.metafields.custom.faq_question_7.value }}",
+            "content": "{{ product.metafields.custom.faq_answer_7 | metafield_tag }}",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_dbUrk6": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "{{ product.metafields.custom.faq_question_8.value }}",
+            "content": "{{ product.metafields.custom.faq_answer_8 | metafield_tag }}",
             "custom_liquid": "",
             "page": "",
             "open": false,
@@ -791,7 +856,12 @@
       "block_order": [
         "collapsible_item_rEaqhq",
         "collapsible_item_W8eWPE",
-        "collapsible_item_xVYgJh"
+        "collapsible_item_xVYgJh",
+        "collapsible_item_i9hkhM",
+        "collapsible_item_7PQnye",
+        "collapsible_item_VEFgTt",
+        "collapsible_item_RUfgnQ",
+        "collapsible_item_dbUrk6"
       ],
       "custom_css": [
         ".section__wrapper {max-width: 960px; margin: auto;}"
@@ -804,7 +874,7 @@
         "section_header_alignment": "center",
         "section_header_alignment_mobile": "inherit",
         "subheading": "",
-        "heading": "Frequently Asked Questions",
+        "heading": "{{ product.metafields.custom.faq_title.value }}",
         "highlight_style": "none",
         "highlight_font_style": "italic",
         "highlight_style_color": "",
@@ -889,7 +959,7 @@
     "compatible_accesories_cAaBkL",
     "collapsible_tabs_eTAhFK",
     "custom_product_comparison_ThMX3w",
-    "tabs_content_ic83Jk",
+    "custom_tabs_content_Kgafe9",
     "tabs_content_VeqDj6",
     "collapsible_tabs_iwqmBM",
     "custom_brand_promise_DpUeMH"

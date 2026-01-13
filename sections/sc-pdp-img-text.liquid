@@ -46,8 +46,8 @@
               <h3 class="sc-pdp-card-title">{{ block.settings.title }}</h3>
             {% endif %}
 
-            {% if block.settings.text != blank %}
-              <p class="sc-pdp-card-text">{{ block.settings.text }}</p>
+            {% if block.settings.description != blank %}
+              <p class="sc-pdp-card-text">{{ block.settings.description }}</p>
             {% endif %}
           </div>
 
@@ -150,8 +150,8 @@
           "default": "No More Messy Mulch"
         },
         {
-          "type": "textarea",
-          "id": "text",
+          "type": "text",
+          "id": "description",
           "label": "Description",
           "default": "Reduces washouts from heavy rain and even helps stop leaf blowers from blowing your mulch around."
         }
