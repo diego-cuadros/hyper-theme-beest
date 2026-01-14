@@ -61,11 +61,13 @@
                   -%}
                 </div>
               {%- endif -%}
+
               {%- if enable_filtering -%}
                 <div class="dc_custom_filter_btn dc_hide_on_desktop">
                   {%- render 'facets-drawer',
                     results: collection,
                     enable_sorting: enable_sorting,
+                    enable_mobile_sorting: section.settings.enable_sorting_on_mobile_drawer,
                     filter_type: filter_type
                   -%}
                 </div>
@@ -90,6 +92,7 @@
                 {%- render 'facets-drawer',
                   results: collection,
                   enable_sorting: enable_sorting,
+                  enable_mobile_sorting: section.settings.enable_sorting_on_mobile_drawer,
                   filter_type: filter_type
                 -%}
               </div>
@@ -478,6 +481,12 @@
       "id": "enable_sorting",
       "default": true,
       "label": "t:sections.main-collection-product-grid.settings.enable_sorting.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sorting_on_mobile_drawer",
+      "default": true,
+      "label": "Enable sorting on mobile drawer"
     },
     {
       "type": "checkbox",

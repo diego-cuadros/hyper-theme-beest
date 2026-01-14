@@ -68,9 +68,9 @@
       "name": "t:sections.image-with-text-overlay.name",
       "settings": {
         "container": "full",
-        "image": "shopify://shop_images/hero_image.avif",
+        "image": "shopify://shop_images/New_Project_811b487e-7e2a-4d9a-b8a5-226b42e8e9dc.webp",
         "desktop_height": "extra-medium",
-        "overlay_opacity": 30,
+        "overlay_opacity": 0,
         "enable_parallax": false,
         "parallax_direction": "vertical",
         "color_scheme": "scheme-info",
@@ -78,6 +78,7 @@
         "container_color": "#ffffff",
         "content_position": "middle-left",
         "content_alignment": "left",
+        "image_mobile": "shopify://shop_images/New_Project.jpg",
         "mobile_height": "extra-large",
         "content_position_mobile": "top-center-mobile",
         "content_alignment_mobile": "center",
@@ -477,7 +478,7 @@
         ".dc_p {font-size: 16px;}",
         ".btn {height: 50px; width: 196px;}",
         ".text-subheading {font-size: 14px; font-weight: 500; margin: 6px; width: 196px; text-align: center;}",
-        "@media only screen and (max-width: 749px) {.dc_h2 {font-size: 24px; text-align: center; } .dc_p {text-align: center; } .btn {width: 100%; } .btn__text {font-size: 16px; } .text-subheading {text-align: center; } .dc_wrapper > motion-element:nth-of-type(3) {width: 100%;}}"
+        "@media only screen and (max-width: 749px) {.dc_h2 {font-size: 24px; text-align: center; } .dc_p {text-align: center; } .btn {width: 100%; } .btn__text {font-size: 16px; } .text-subheading {text-align: center; } .dc_wrapper > motion-element:nth-of-type(3) {width: 100%; }}"
       ],
       "name": "t:sections.image-with-text-overlay.name",
       "settings": {
@@ -569,23 +570,6 @@
             "buyer_name": "Nancyb",
             "verified": true
           }
-        },
-        "review_kKWTTr": {
-          "type": "review",
-          "settings": {
-            "stars": "★★★★★",
-            "date": "07/11/2025",
-            "review": "Outstanding sprayer sustem. Great assortment of application nozzles. Great capacity and easy to carry",
-            "buyer_name": "John Doe",
-            "verified": true,
-            "image": "shopify://shop_images/7d777eb48f8fe3ec7a783f8ec768fe2b6e1ebcfb.png"
-          }
-        },
-        "image_only_L3mMGD": {
-          "type": "image_only",
-          "settings": {
-            "image": "shopify://shop_images/Screenshot_2025-12-11_at_1.28.13_PM.png"
-          }
         }
       },
       "block_order": [
@@ -596,9 +580,7 @@
         "image_only_xpNCqy",
         "image_only_yrVy6p",
         "image_only_ckhDcf",
-        "review_KA7Uzm",
-        "review_kKWTTr",
-        "image_only_L3mMGD"
+        "review_KA7Uzm"
       ],
       "custom_css": [
         "@media only screen and (min-width: 769px) {.dc_reviews-title h2 {font-size: 40px; }}"

@@ -91,7 +91,7 @@
       ],
       "name": "🔥Custom banner",
       "settings": {
-        "image": "shopify://shop_images/Collection_sample_banner.jpg",
+        "image": "shopify://shop_images/collections_desktop_banner.webp",
         "image_mobile": "shopify://shop_images/squared_image_banner.webp",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
         "title_color": "#ffffff",
@@ -131,7 +131,8 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "custom_css": [
-        ".dc_custom-atc-btn-collections{height: 46px;}"
+        ".dc_custom-atc-btn-collections {height: 46px;}",
+        ".f-price__regular .f-price-item--regular {font-weight: 600; color: #005d88; letter-spacing: 1px;}"
       ],
       "settings": {
         "container": "fixed",
@@ -146,6 +147,7 @@
         "filter_type": "vertical",
         "expand_filter_groups": "Availability, Price, Color, Size, Category",
         "enable_sorting": true,
+        "enable_sorting_on_mobile_drawer": false,
         "enable_layout_switching": false,
         "enable_static_atc_btn": true,
         "columns_mobile": "2",

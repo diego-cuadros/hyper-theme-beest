@@ -56,7 +56,7 @@
 }
 
 .drawer__content{
-  background-color: var(--dc_cart-drawer-light-gray-color)!important;
+  background-color: var(--dc_cart-drawer-light-gray-color);
 }
 
 .free-shipping-goal, cart-items{
