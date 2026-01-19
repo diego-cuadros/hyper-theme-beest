@@ -65,11 +65,28 @@
     is="basic-header"
   {% endif %}
 >
+  <style>
+        .dc_extra-menu-on-top__selected{
+        border-bottom: 2px solid {{  section.settings.extra_menu_label_selector }};
+    }
+  </style>
   <div class="dc_extra-menu-on-top__container page-width">
     <ul class="dc_extra-menu-on-top__menu">
-      <li class="dc_extra-menu-on-top-menu__link dc_extra-menu-on-top__selected">Main Site</li>
-      <li class="dc_extra-menu-on-top-menu__link">Site Two</li>
-      <li class="dc_extra-menu-on-top-menu__link">Site Three</li>
+      {% for i in (1..3) %}
+        {% assign label_key = 'extra_menu_label_' | append: forloop.index %}
+        {% assign link_key = 'extra_menu_link_' | append: forloop.index %}
+
+        {% assign extra_menu_label = section.settings[label_key] %}
+        {% assign extra_menu_link = section.settings[link_key] %}
+
+        {% if extra_menu_label != blank %}
+          <li class="dc_extra-menu-on-top-menu__link">
+            <a href="{{ extra_menu_link | default: '#' }}">
+              {{ extra_menu_label }}
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
     </ul>
   </div>
   <div class="header__top header__top--{{ header_layout }} items-center relative section--padding page-width page-width--{{ section.settings.container }}">
@@ -465,6 +482,46 @@
       "label": "t:general.show_country_selector.label",
       "info": "t:general.show_country_selector.info",
       "default": true
+    },
+    {
+      "type": "header",
+      "content": "Extra menu on top"
+    },
+    {
+      "type": "url",
+      "id": "extra_menu_url_1",
+      "label": "Enter URL 1"
+    },
+    {
+      "type": "text",
+      "id": "extra_menu_label_1",
+      "label": "Enter a label for URL 1"
+    },
+    {
+      "type": "url",
+      "id": "extra_menu_url_2",
+      "label": "Enter URL 2"
+    },
+    {
+      "type": "text",
+      "id": "extra_menu_label_2",
+      "label": "Enter a label for URL 2"
+    },
+    {
+      "type": "url",
+      "id": "extra_menu_url_3",
+      "label": "Enter URL 3"
+    },
+    {
+      "type": "text",
+      "id": "extra_menu_label_3",
+      "label": "Enter a label for URL 3"
+    },
+    {
+      "type": "color",
+      "id": "extra_menu_label_selector",
+      "default": "#D06835",
+      "label": "Select a color for your link selector"
     },
     {
       "type": "header",
