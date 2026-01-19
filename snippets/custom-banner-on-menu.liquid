@@ -1,8 +1,9 @@
 {{ 'custom-banner-on-menu.css' | asset_url | stylesheet_tag }}
 
-<div
+<a
   class="dc_banner-on-menu__container"
   style="background-color:{{ block.settings.banner_menu_bg_color }}; color: {{ block.settings.banner_menu_text_color }};"
+  href="{{ block.settings.main_banner_link }}"
 >
   <div class="dc_banner-on-menu__text">
     <p class="dc_banner-on-menu_main-text">{{ block.settings.main_banner_text }}</p>
@@ -16,4 +17,4 @@
       height="{{ image.height }}"
     >
   </div>
-</div>
+</a>
