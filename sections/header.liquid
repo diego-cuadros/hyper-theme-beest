@@ -5,6 +5,8 @@
   fetchpriority="low"
   onload="this.media='all'"
 >
+{{ 'custom-extra-menu-on-top.css' | asset_url | stylesheet_tag }}
+
 <script src="{{ 'header.js' | asset_url }}" defer="defer"></script>
 {%- if request.page_type != 'search' -%}
   <script src="{{ 'search.js' | asset_url }}" defer="defer"></script>
@@ -63,6 +65,13 @@
     is="basic-header"
   {% endif %}
 >
+  <div class="dc_extra-menu-on-top__container page-width">
+    <ul class="dc_extra-menu-on-top__menu">
+      <li class="dc_extra-menu-on-top-menu__link dc_extra-menu-on-top__selected">Main Site</li>
+      <li class="dc_extra-menu-on-top-menu__link">Site Two</li>
+      <li class="dc_extra-menu-on-top-menu__link">Site Three</li>
+    </ul>
+  </div>
   <div class="header__top header__top--{{ header_layout }} items-center relative section--padding page-width page-width--{{ section.settings.container }}">
     {%- if request.page_type == 'index' -%}
       <h1 class="header__logo flex justify-center items-center z-1">

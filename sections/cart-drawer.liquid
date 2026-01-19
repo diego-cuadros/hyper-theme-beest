@@ -228,7 +228,7 @@
                               {% endif %}
                               <quantity-input class="cart-quantity quantity self-end">
                                 <label class="visually-hidden" for="Quantity-{{ section.id }}-{{ item.index | plus: 1 }}">{{ 'products.product.quantity.label' | t }}</label>
-                                <button type="button" name="minus" class="quantity__button" aria-label="{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}">
+                                <button type="button" name="minus" class="quantity__button {% if item.quantity == 1 %}is-minimum{% endif %}" aria-label="{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}">
                                   <svg width="16" height="16" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2.6875 7H12.3125" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                   </svg>
@@ -420,7 +420,7 @@
                               {% unless section.settings.use_custom_product_recommendations %}
                               <quantity-input class="cart-quantity quantity self-end">
                                 <label class="visually-hidden" for="Quantity-{{ section.id }}-{{ item.index | plus: 1 }}">{{ 'products.product.quantity.label' | t }}</label>
-                                <button type="button" name="minus" class="quantity__button" aria-label="{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}">
+                                <button type="button" name="minus" class="quantity__button {% if item.quantity == 1 %}is-minimum{% endif %}" aria-label="{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}">
                                   <svg width="16" height="16" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2.6875 7H12.3125" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                   </svg>
