@@ -63,7 +63,7 @@
         "custom_product_list_QLL6gD": {
           "type": "custom_product_list",
           "settings": {
-            "menu_title": "Concrete & Pavers",
+            "menu_title": "Rust & Corrosion",
             "menu_columns": 4,
             "show_menu_column_divider": true,
             "enable_hl_link": true,
@@ -73,16 +73,15 @@
             "promotions_width": 38,
             "number_of_columns": 3,
             "product_list": [
-              "beest-multipurpose-primer",
-              "beest-ps-8700-concrete-paver-and-stone-sealer",
-              "beest-rapid-joint-bond-polymeric-sand",
-              "beest-rv-seam-tape-waterproof-tape-rv-roof-sealant"
+              "beest-rv-seam-tape-waterproof-tape-rv-roof-sealant",
+              "beest-rv-roof-sealant-liquid-rubber-coating",
+              "beest-rv-roof-cleaner-32oz"
             ],
             "show_product_vendor": true,
             "show_product_type": true,
             "show_progress_bar": true,
-            "custom_featured_product_1": "",
-            "custom_featured_product_2": "",
+            "custom_featured_product_1": "beest-multipurpose-primer",
+            "custom_featured_product_2": "beest-ps-8600-concrete-paver-and-stone-sealer",
             "border_color": "#f5f5f5",
             "btn_color": "#d06834",
             "btn_text_color": "#ffffff"
@@ -101,9 +100,9 @@
             "promotions_width": 38,
             "number_of_columns": 3,
             "product_list": [
-              "beest-rv-roof-sealant-liquid-rubber-coating",
+              "beest-cs-9500-concrete-paver-stone-sealer-ready-to-use-1-gallon",
               "beest-rv-roof-cleaner-32oz",
-              "beest-rv-solar-sparkle-32oz"
+              "beest-seam-roller"
             ],
             "show_product_vendor": false,
             "show_product_type": false,
