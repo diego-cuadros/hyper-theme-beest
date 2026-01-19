@@ -106,7 +106,7 @@
       ],
       "custom_css": [
         ".header__bottom:after {background-color: #f5f5f5 !important;}",
-        ".header__bottom .header__menu span{font-weight: 500;}"
+        ".header__bottom .header__menu span {font-weight: 500;}"
       ],
       "settings": {
         "container": "fixed",
@@ -123,6 +123,13 @@
         "show_social_media_icons": false,
         "enable_language_selector": false,
         "enable_country_selector": false,
+        "extra_menu_url_1": "https://www.beestusa.com",
+        "extra_menu_label_1": "Main Site",
+        "extra_menu_url_2": "https://www.google.com",
+        "extra_menu_label_2": "Site Two",
+        "extra_menu_url_3": "https://www.bottomlesslabs.com",
+        "extra_menu_label_3": "Site Three",
+        "extra_menu_label_selector": "#d06835",
         "header_top_padding_top": 20,
         "header_top_padding_bottom": 20,
         "navigation_color_scheme": "",

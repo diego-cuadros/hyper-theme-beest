@@ -74,13 +74,13 @@
     <ul class="dc_extra-menu-on-top__menu">
       {% for i in (1..3) %}
         {% assign label_key = 'extra_menu_label_' | append: forloop.index %}
-        {% assign link_key = 'extra_menu_link_' | append: forloop.index %}
+        {% assign link_key = 'extra_menu_url_' | append: forloop.index %}
 
         {% assign extra_menu_label = section.settings[label_key] %}
         {% assign extra_menu_link = section.settings[link_key] %}
 
         {% if extra_menu_label != blank %}
-          <li class="dc_extra-menu-on-top-menu__link">
+          <li class="dc_extra-menu-on-top-menu__link {% if extra_menu_link contains 'beestusa' %}dc_extra-menu-on-top__selected{% endif %}">
             <a href="{{ extra_menu_link | default: '#' }}">
               {{ extra_menu_label }}
             </a>
