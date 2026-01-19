@@ -552,6 +552,12 @@
       "content": "t:sections.header.settings.header__navigation.content"
     },
     {
+      "type": "color",
+      "id": "menu_drawer_color_on_mobile",
+      "label": "Select a background color for the menu drawer (mobile)",
+      "default": "#ffffff"
+    },
+    {
       "type": "color_scheme",
       "id": "navigation_color_scheme",
       "label": "t:general.colors.label"
@@ -597,6 +603,41 @@
     }
   ],
   "blocks": [
+    {
+      "type": "banner_on_menu",
+      "name": "🔥Banner on menu",
+      "settings": [
+        {
+          "type": "text",
+          "id": "main_banner_text",
+          "default": "Up to 50% Off",
+          "label": "Enter a main promo text"
+        },
+        {
+          "type": "text",
+          "id": "companion_banner_text",
+          "default": "Shop Black Friday Sale",
+          "label": "Enter a companion text"
+        },
+        {
+          "type": "image_picker",
+          "id": "banner_menu_image",
+          "label": "Select an image for the banner"
+        },
+        {
+          "type": "color",
+          "id": "banner_menu_bg_color",
+          "label": "Select a background color",
+          "default": "#005d88"
+        },
+        {
+          "type": "color",
+          "id": "banner_menu_text_color",
+          "label": "Select a text color",
+          "default": "#ffffff"
+        }
+      ]
+    },
     {
       "type": "hightlight_link",
       "name": "t:sections.header.blocks.all.hightlight_link.header.content",
