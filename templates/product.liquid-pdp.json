@@ -51,6 +51,14 @@
           "type": "description",
           "settings": {}
         },
+        "unlock_free_gift_QH9PP3": {
+          "type": "unlock_free_gift",
+          "settings": {
+            "free_gift_title_tag": "Free Gift Unlocked",
+            "free_gift_product": "",
+            "free_gift_product_feature": "4lts more than usual"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -214,6 +222,7 @@
         "price",
         "text_VLLzk3",
         "description",
+        "unlock_free_gift_QH9PP3",
         "variant_picker",
         "buy_buttons",
         "grid_icon_box_kpRHWF",
