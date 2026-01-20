@@ -116,6 +116,36 @@
     <div class="product-card__image-wrapper{% if second_image == blank %} product-card__image-wrapper--main-only{% endif %} {% if list_on_mobile %}desktop-{% endif %}color-{{ settings.pcard_overlay_color_scheme }} bg-none">
       <a href="{{ product.url }}" aria-label="{{ product.title | escape }}" tabindex="-1">
         <motion-element data-motion="zoom-out-sm" class="block">
+          <style>
+            .product-card__image-wrapper {
+              position: relative;
+            }
+
+            .dc_best-seller-tag {
+              position: absolute;
+              top: 10px;
+              left: 10px;
+              padding: 2px 6px;
+              font-size: 14px;
+              font-weight: 600;
+              text-transform: uppercase;
+              border-radius: 4px;
+              width: 98px;
+              height: 24px;
+              z-index: 10;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          </style>
+          {% if product.metafields.custom.mark_as_a_best_seller == true %}
+            <div
+              class="dc_best-seller-tag"
+              style="background-color:{{ section.settings.best_seller_bg_color }}; color:{{ section.settings.best_seller_text_color }};"
+            >
+              {{ 'products.product.best_seller' | t }}
+            </div>
+          {% endif %}
           {%- if featured_media -%}
             {%- unless first_media_type == 'video' or first_media_type == 'external_video' -%}
               <div
@@ -140,6 +170,7 @@
                   class="media-wrapper product-card__image product-card__image--second inset-full hidden md:block"
                   style="--aspect-ratio: {{ image_ratio }}"
                 >
+                  test2
                   {%- assign second_image_widths = image_widths | append: ', ' | append: second_image.width -%}
                   {{
                     second_image
