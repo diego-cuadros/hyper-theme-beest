@@ -489,6 +489,34 @@
               </quantity-input>
             </div>
           {%- endif -%}
+
+          <style>
+            .dc_calculator {
+              border-bottom: 1px solid #333232;
+              display: flex;
+              align-items: center;
+              gap: 6px;
+              font-size: 16px;
+              color: #333232;
+              margin-left: auto;
+              margin-right: auto;
+              margin-bottom: 20px;
+            }
+            .dc_calculator-icon {
+              width: 16px;
+              height: 16px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            .dc_calculator-icon svg {
+              width: 100%;
+            }
+          </style>
+          <a href="#" class="dc_calculator">
+            <div class="dc_calculator-icon">{% render 'icon-calculator' %}</div>
+            <span class="dc_calculator-trigger-label"> Calculate how many you need </span>
+          </a>
           <button
             id="ProductSubmitButton-{{ section_id }}"
             type="submit"
