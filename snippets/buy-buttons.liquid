@@ -512,11 +512,334 @@
             .dc_calculator-icon svg {
               width: 100%;
             }
+
+            .dc_calculator-modal {
+              display: none; /* Hidden by default */
+              position: fixed;
+              z-index: 1000;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+            }
+
+            /* Modal Box */
+            .dc_calculator-modal-content {
+              background-color: #fff;
+              margin: 15% auto;
+              padding: 20px;
+              border-radius: 8px;
+              width: 90%;
+              max-width: 600px;
+              position: relative;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+              padding: 0;
+              overflow: hidden;
+            }
+
+            /* Close Button */
+            .dc_calculator-close-button {
+              position: absolute;
+              right: 15px;
+              top: 10px;
+              font-size: 24px;
+              cursor: pointer;
+            }
+
+            body.dc_modal-open {
+              overflow: hidden;
+            }
+
+            .dc_calc-header {
+              background: #333232;
+              color: white;
+              padding: 12px 20px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            }
+
+            .dc_calc-title {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              font-size: 18px;
+            }
+
+            .dc_calc-body {
+              padding: 25px;
+              color: #333232;
+            }
+
+            .dc_calc-instruction {
+              margin-bottom: 20px;
+              font-size: 15px;
+            }
+
+            .dc_calc-inputs-row {
+              display: flex;
+              gap: 12px;
+              background: #f4f4f4;
+              padding: 15px;
+              border: 1px solid #e0e0e0;
+              border-radius: 6px;
+              align-items: flex-end;
+              margin-bottom: 25px;
+            }
+
+            .dc_input-group {
+              display: flex;
+              flex-direction: column;
+              flex: 1;
+            }
+
+            .dc_input-group label {
+              font-size: 14px;
+              margin-bottom: 8px;
+              font-weight: 500;
+            }
+
+            .dc_input-group input {
+              padding: 10px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              font-size: 16px;
+            }
+
+            .dc_calc-btn {
+              background: #2c5e83;
+              color: white;
+              border: none;
+              padding: 0 20px;
+              border-radius: 4px;
+              cursor: pointer;
+              font-weight: bold;
+              height: 42px;
+              text-transform: uppercase;
+            }
+
+            .dc_calc-result-line {
+              display: flex;
+              justify-content: space-between;
+              padding: 15px 0;
+              border-bottom: 1px solid #eee;
+              font-size: 16px;
+            }
+
+            .dc_total-row {
+              border-bottom: none;
+              align-items: center;
+            }
+
+            .dc_total-actions {
+              display: flex;
+              align-items: center;
+              gap: 12px;
+            }
+
+            .dc_gallons-box {
+              border: 1px solid #ced4da;
+              padding: 4px 14px;
+              background: #f8fff8;
+              color: #2e7d32;
+              font-weight: bold;
+              border-radius: 4px;
+              font-size: 18px;
+            }
+
+            .dc_add-to-order {
+              color: #2e7d32;
+              text-decoration: underline;
+              font-weight: bold;
+            }
           </style>
-          <a href="#" class="dc_calculator">
+          <a href="javascript:void(0)" id="dc_calcTrigger" class="dc_calculator">
             <div class="dc_calculator-icon">{% render 'icon-calculator' %}</div>
             <span class="dc_calculator-trigger-label"> Calculate how many you need </span>
           </a>
+          <div
+            id="dc_calculator-modal"
+            class="dc_calculator-modal"
+            data-coverage="{{ block.settings.dc_coverage_sqft }}"
+            data-unit-name="{{ block.settings.dc_unit_name }}"
+          >
+            <div class="dc_calculator-modal-content">
+              <div class="dc_calc-header">
+                <div class="dc_calc-title">
+                  <span class="dc_calculator-icon">{% render 'icon-calculator' %}</span>
+                  <span>Calculate how many you need</span>
+                </div>
+                <span class="dc_calculator-close-button">&times;</span>
+              </div>
+
+              <div class="dc_calc-body">
+                <p class="dc_calc-instruction">
+                  Tell us your project/lawn dimension, and we tell you how many you need.
+                </p>
+
+                <div class="dc_calc-inputs-row">
+                  <div class="dc_input-group">
+                    <label>Width (m)</label>
+                    <input type="number" id="dc_calc-width" value="5">
+                  </div>
+                  <div class="dc_input-group">
+                    <label>Length (m)</label>
+                    <input type="number" id="dc_calc-length" value="7">
+                  </div>
+                  <button id="dc_do-calculate" class="dc_calc-btn">CALCULATE</button>
+                </div>
+
+                <div class="dc_calc-result-line">
+                  <span>Your project area</span>
+                  <span id="dc_area-display"><strong>35m2 = 376 Sq. Ft.</strong></span>
+                </div>
+
+                <div class="dc_calc-result-line dc_total-row">
+                  <span>Total {{ block.settings.dc_unit_name }} you need</span>
+                  <div class="dc_total-actions">
+                    <span id="dc_gallons-display" class="dc_gallons-box">3</span>
+                    <a href="#" id="dc_add-to-cart-trigger" class="dc_add-to-order">Add To Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <script>
+            const dc_modal = document.getElementById('dc_calculator-modal');
+            const dc_trigger = document.getElementById('dc_calcTrigger');
+            const dc_closeBtn = document.querySelector('.dc_calculator-close-button');
+            const dc_calcBtn = document.getElementById('dc_do-calculate');
+            const dc_addToOrderBtn = document.getElementById('dc_add-to-cart-trigger');
+
+            // Store reference to what opened the modal
+            let dc_previousActiveElement = null;
+
+            // --- MODAL HELPERS ---
+            const dc_openModal = () => {
+              // Store the current active element BEFORE opening modal
+              dc_previousActiveElement = document.activeElement;
+
+              dc_modal.style.display = 'block';
+              document.body.classList.add('dc_modal-open');
+
+              // IMPORTANT: Release any existing focus traps
+              if (typeof FoxTheme !== 'undefined' && FoxTheme.a11y) {
+                FoxTheme.a11y.removeTrapFocus();
+              }
+            };
+
+            const dc_closeModal = () => {
+              dc_modal.style.display = 'none';
+              document.body.classList.remove('dc_modal-open');
+
+              // Restore focus after a small delay to ensure modal is closed
+              setTimeout(() => {
+                if (dc_previousActiveElement && document.body.contains(dc_previousActiveElement)) {
+                  dc_previousActiveElement.focus();
+                }
+                dc_previousActiveElement = null;
+              }, 50);
+            };
+
+            // Event listeners for modal
+            if (dc_trigger) {
+              dc_trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation(); // Prevent event bubbling
+                dc_openModal();
+              });
+            }
+
+            if (dc_closeBtn) {
+              dc_closeBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                dc_closeModal();
+              });
+            }
+
+            window.addEventListener('click', (e) => {
+              if (e.target === dc_modal) {
+                dc_closeModal();
+              }
+            });
+
+            // --- CALCULATION ---
+            if (dc_calcBtn) {
+              dc_calcBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                const cov = parseFloat(dc_modal.getAttribute('data-coverage')) || 1;
+                const w = parseFloat(document.getElementById('dc_calc-width').value) || 0;
+                const l = parseFloat(document.getElementById('dc_calc-length').value) || 0;
+
+                const areaM2 = w * l;
+                const areaSqFt = areaM2 * 10.764;
+                const total = Math.ceil(areaSqFt / cov);
+
+                document.getElementById('dc_area-display').innerHTML = `
+        <strong>${areaM2}m2 = ${Math.round(areaSqFt)} Sq. Ft.</strong>
+      `;
+                document.getElementById('dc_gallons-display').innerText = total;
+              });
+            }
+
+            // --- ADD TO ORDER (UI SIMULATION VERSION) ---
+            if (dc_addToOrderBtn) {
+              dc_addToOrderBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                // 1. Get the target quantity from the calculator
+                const targetQty = parseInt(document.getElementById('dc_gallons-display').innerText) || 1;
+
+                // 2. Find the UI elements on the product page
+                const quantityInput = document.querySelector('.quantity__input');
+                const plusButton = document.querySelector('button[name="plus"]');
+                const minusButton = document.querySelector('button[name="minus"]');
+                const mainAddToCartButton = document.querySelector('.product-form__submit');
+
+                if (!quantityInput || !mainAddToCartButton) {
+                  console.error('Required product form elements not found.');
+                  return;
+                }
+
+                // 3. Close the modal first for a clean handoff
+                dc_closeModal();
+
+                // 4. Adjust the quantity by simulating button clicks
+                // We do this to ensure all theme-specific "on change" logic is triggered
+                let currentQty = parseInt(quantityInput.value) || 1;
+
+                if (currentQty < targetQty) {
+                  // Need to increase
+                  const clicksNeeded = targetQty - currentQty;
+                  for (let i = 0; i < clicksNeeded; i++) {
+                    if (plusButton) plusButton.click();
+                  }
+                } else if (currentQty > targetQty) {
+                  // Need to decrease
+                  const clicksNeeded = currentQty - targetQty;
+                  for (let i = 0; i < clicksNeeded; i++) {
+                    if (minusButton && !minusButton.disabled) minusButton.click();
+                  }
+                }
+
+                // Double check: if buttons didn't work for some reason, force the value
+                quantityInput.value = targetQty;
+                quantityInput.dispatchEvent(new Event('change', { bubbles: true }));
+
+                // 5. Final Step: Simulate clicking the main "Add to Cart" button
+                // This allows the theme's native Ajax and Drawer logic to take over
+                setTimeout(() => {
+                  mainAddToCartButton.click();
+                }, 200);
+              });
+            }
+          </script>
           <button
             id="ProductSubmitButton-{{ section_id }}"
             type="submit"
