@@ -96,7 +96,13 @@
             </a>
           </div>
         {% when 'unlock_free_gift' %}
-          {% render 'unlock-free-gift', block: block %}
+          {% if block.settings.control_content_from_metafields == true
+            and product.metafields.custom.use_free_gift_unlocked == true
+          %}
+            {% render 'custom-unlock-free-gift', block: block %}
+          {% elsif block.settings.control_content_from_metafields == false %}
+            {% render 'custom-unlock-free-gift', block: block %}
+          {% endif %}
         {%- when 'price' -%}
           <div
             class="{{ block_classes }} {% if block.settings.show_above_product_media_mobile %}dc_hide_on_mobile{% endif %}"
