@@ -489,8 +489,9 @@
               </quantity-input>
             </div>
           {%- endif -%}
-
-          {%- render 'custom-calculator', block: block -%}
+          {% if block.settings.show_calculator %}
+            {%- render 'custom-calculator', block: block -%}
+          {% endif %}
 
           <button
             id="ProductSubmitButton-{{ section_id }}"
